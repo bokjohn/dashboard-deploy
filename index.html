@@ -17,10 +17,37 @@
         .status-yellow { border-left: 4px solid #ffc107; }
         .status-red { border-left: 4px solid #dc3545; }
         .mobile-first { padding: 10px; }
-        .todo-item { padding: 8px 12px; border-left: 3px solid #007bff; margin-bottom: 8px; background: #f8f9fa; }
+        .todo-item { 
+            padding: 8px 12px; 
+            border-left: 3px solid #007bff; 
+            margin-bottom: 8px; 
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .todo-item:hover { background: #e9ecef; }
+        .todo-item.done { 
+            opacity: 0.6; 
+            text-decoration: line-through; 
+            background: #d4edda;
+        }
         .todo-item.sean { border-left-color: #28a745; }
         .todo-item.jon { border-left-color: #007bff; }
         .todo-item.urgent { border-left-color: #dc3545; animation: pulse 2s infinite; }
+        .todo-item .checkbox { 
+            float: right; 
+            font-size: 18px;
+            color: #28a745;
+        }
+        .todo-details { 
+            display: none; 
+            margin-top: 10px; 
+            padding-top: 10px; 
+            border-top: 1px solid #dee2e6;
+            font-size: 12px;
+        }
+        .todo-item.expanded .todo-details { display: block; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
         .progress-text { font-size: 12px; color: #6c757d; }
         .revenue-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
@@ -29,7 +56,6 @@
 </head>
 <body class="hold-transition layout-top-nav">
     <div class="wrapper">
-        <!-- Navbar -->
         <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
             <div class="container">
                 <span class="navbar-brand">
@@ -44,7 +70,6 @@
             </div>
         </nav>
 
-        <!-- Content Wrapper -->
         <div class="content-wrapper mobile-first">
             <div class="content">
                 <div class="container">
@@ -90,28 +115,52 @@
 
                     <!-- Action Items Row -->
                     <div class="row mb-3">
-                        <!-- Your Todos -->
+                        <!-- Sean's Todos -->
                         <div class="col-12 col-md-6">
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title"><i class="fas fa-user text-success"></i> Sean's Todos</h3>
                                 </div>
                                 <div class="card-body p-2">
-                                    <div class="todo-item sean urgent">
+                                    <div class="todo-item sean urgent" data-id="sean-1">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>🔥 Create 3 YouTube channels</strong><br>
                                         <small>Finance, Tech, Travel - 30 min</small>
+                                        <div class="todo-details">
+                                            <strong>Why:</strong> Need channels before content creation<br>
+                                            <strong>How:</strong> YouTube Studio → Create Channel<br>
+                                            <strong>Blocks:</strong> All video uploads
+                                        </div>
                                     </div>
-                                    <div class="todo-item sean">
+                                    <div class="todo-item sean" data-id="sean-2">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>Sign up: ElevenLabs ($11/mo)</strong><br>
                                         <small>Need for voiceovers</small>
+                                        <div class="todo-details">
+                                            <strong>Link:</strong> elevenlabs.io<br>
+                                            <strong>Plan:</strong> Creator plan<br>
+                                            <strong>Use:</strong> AI voiceovers for videos
+                                        </div>
                                     </div>
-                                    <div class="todo-item sean">
+                                    <div class="todo-item sean" data-id="sean-3">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>Sign up: InVideo AI ($20/mo)</strong><br>
                                         <small>Video creation tool</small>
+                                        <div class="todo-details">
+                                            <strong>Link:</strong> invideo.io<br>
+                                            <strong>Plan:</strong> Plus plan<br>
+                                            <strong>Features:</strong> Text-to-video AI
+                                        </div>
                                     </div>
-                                    <div class="todo-item sean">
+                                    <div class="todo-item sean" data-id="sean-4">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>Apply to 5 affiliate programs</strong><br>
                                         <small>Amazon, Webull, Skillshare, etc.</small>
+                                        <div class="todo-details">
+                                            <strong>Programs:</strong> Amazon Associates, Webull, Skillshare, Bluehost, CJ Affiliate<br>
+                                            <strong>Time:</strong> ~1 hour total<br>
+                                            <strong>Rev potential:</strong> $500-2000/mo
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,21 +173,45 @@
                                     <h3 class="card-title"><i class="fas fa-robot text-primary"></i> Jon's Tasks</h3>
                                 </div>
                                 <div class="card-body p-2">
-                                    <div class="todo-item jon">
+                                    <div class="todo-item jon" data-id="jon-1">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>✅ Dashboard MVP</strong><br>
                                         <small>Building now - 80% done</small>
+                                        <div class="todo-details">
+                                            <strong>Status:</strong> In progress<br>
+                                            <strong>Features:</strong> Todos, projects, stats<br>
+                                            <strong>Deploy:</strong> GitHub Pages
+                                        </div>
                                     </div>
-                                    <div class="todo-item jon">
+                                    <div class="todo-item jon" data-id="jon-2">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>Cost optimization implementation</strong><br>
-                                        <small>DeepSeek routing - in progress</small>
+                                        <small>Token reduction strategies</small>
+                                        <div class="todo-details">
+                                            <strong>Goal:</strong> Cut token costs by 60%<br>
+                                            <strong>Methods:</strong> Caching, pruning, model routing<br>
+                                            <strong>Impact:</strong> ~$15-30/mo savings
+                                        </div>
                                     </div>
-                                    <div class="todo-item jon">
+                                    <div class="todo-item jon" data-id="jon-3">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>YouTube automation scripts</strong><br>
                                         <small>CLI tools - ready for testing</small>
+                                        <div class="todo-details">
+                                            <strong>Tools:</strong> Upload, schedule, analytics<br>
+                                            <strong>Status:</strong> Research complete<br>
+                                            <strong>Next:</strong> Build & test
+                                        </div>
                                     </div>
-                                    <div class="todo-item jon">
+                                    <div class="todo-item jon" data-id="jon-4">
+                                        <span class="checkbox"><i class="far fa-square"></i></span>
                                         <strong>Fix DeepSeek integration</strong><br>
                                         <small>Tool-use configuration issue</small>
+                                        <div class="todo-details">
+                                            <strong>Issue:</strong> Tool calling incompatibility<br>
+                                            <strong>Solution:</strong> Route text-only to DeepSeek<br>
+                                            <strong>Fallback:</strong> Use Gemini Flash
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -150,61 +223,43 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title"><i class="fas fa-chart-line"></i> Project Status</h3>
+                                    <h3 class="card-title"><i class="fas fa-project-diagram"></i> Active Projects</h3>
                                 </div>
-                                <div class="card-body">
-                                    <!-- YouTube Shorts Project -->
-                                    <div class="project-card card status-yellow mb-2">
-                                        <div class="card-body p-3">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <h5>YouTube Shorts Affiliate</h5>
-                                                    <p class="mb-1">Research: ✅ | Setup: 🟡 | Launch: ⏳</p>
-                                                    <small class="text-muted">Target: $2-5K/month by Month 3</small>
-                                                </div>
-                                                <div class="col-4 text-right">
-                                                    <div class="progress mb-1">
+                                <div class="card-body p-2">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div class="card project-card status-yellow">
+                                                <div class="card-body">
+                                                    <h5>🎬 YouTube Shorts Automation</h5>
+                                                    <div class="progress" style="height: 8px;">
                                                         <div class="progress-bar bg-warning" style="width: 35%"></div>
                                                     </div>
-                                                    <small class="progress-text">35% Complete</small>
+                                                    <p class="progress-text mt-1">35% complete</p>
+                                                    <small><strong>Next:</strong> Create channels</small>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <!-- Dashboard Project -->
-                                    <div class="project-card card status-green mb-2">
-                                        <div class="card-body p-3">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <h5>Mission Control Dashboard</h5>
-                                                    <p class="mb-1">Design: ✅ | Build: ✅ | Deploy: ✅</p>
-                                                    <small class="text-muted">Mobile-first, saves conversation time</small>
-                                                </div>
-                                                <div class="col-4 text-right">
-                                                    <div class="progress mb-1">
-                                                        <div class="progress-bar bg-success" style="width: 90%"></div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div class="card project-card status-green">
+                                                <div class="card-body">
+                                                    <h5>🤖 Jon (Clawdbot Setup)</h5>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-success" style="width: 85%"></div>
                                                     </div>
-                                                    <small class="progress-text">90% Complete</small>
+                                                    <p class="progress-text mt-1">85% complete</p>
+                                                    <small><strong>Next:</strong> Cost optimization</small>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <!-- Cost Optimization -->
-                                    <div class="project-card card status-yellow mb-2">
-                                        <div class="card-body p-3">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <h5>AI Cost Optimization</h5>
-                                                    <p class="mb-1">Analysis: ✅ | Implementation: 🟡 | Testing: ⏳</p>
-                                                    <small class="text-muted">Target: 60-80% cost reduction</small>
-                                                </div>
-                                                <div class="col-4 text-right">
-                                                    <div class="progress mb-1">
-                                                        <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div class="card project-card status-red">
+                                                <div class="card-body">
+                                                    <h5>📊 Dashboard & Analytics</h5>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-danger" style="width: 15%"></div>
                                                     </div>
-                                                    <small class="progress-text">45% Complete</small>
+                                                    <p class="progress-text mt-1">15% complete</p>
+                                                    <small><strong>Blocked:</strong> Waiting on channels</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -214,34 +269,12 @@
                         </div>
                     </div>
 
-                    <!-- Check Later & Quick Links -->
+                    <!-- Quick Links -->
                     <div class="row mb-3">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title"><i class="fas fa-bookmark"></i> Check Later</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="mb-2">
-                                        <strong>OpenRouter $5 spend investigation</strong><br>
-                                        <small>Why costs higher than expected - need dashboard check</small>
-                                    </div>
-                                    <div class="mb-2">
-                                        <strong>DeepSeek tool-use issue</strong><br>
-                                        <small>Configuration problem preventing cost savings</small>
-                                    </div>
-                                    <div class="mb-2">
-                                        <strong>VA hiring timeline</strong><br>
-                                        <small>When to start recruiting after channel setup</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title"><i class="fas fa-external-link-alt"></i> Quick Links</h3>
+                                    <h3 class="card-title"><i class="fas fa-link"></i> Quick Links</h3>
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2">
@@ -297,26 +330,81 @@
 
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
     <script>
+        // Load saved state
+        function loadState() {
+            const saved = localStorage.getItem('todoState');
+            if (saved) {
+                const state = JSON.parse(saved);
+                Object.keys(state).forEach(id => {
+                    const item = document.querySelector(`[data-id="${id}"]`);
+                    if (item && state[id].done) {
+                        item.classList.add('done');
+                        item.querySelector('.checkbox i').className = 'fas fa-check-square';
+                    }
+                });
+            }
+            updateCounts();
+        }
+
+        // Save state
+        function saveState() {
+            const state = {};
+            document.querySelectorAll('.todo-item').forEach(item => {
+                state[item.dataset.id] = {
+                    done: item.classList.contains('done')
+                };
+            });
+            localStorage.setItem('todoState', JSON.stringify(state));
+        }
+
+        // Update counts
+        function updateCounts() {
+            const total = document.querySelectorAll('.todo-item').length;
+            const done = document.querySelectorAll('.todo-item.done').length;
+            const pending = total - done;
+            
+            document.getElementById('completedTasks').textContent = 27 + done;
+            document.getElementById('pendingTasks').textContent = Math.max(0, 8 - done);
+        }
+
+        // Toggle todo done
+        function toggleDone(item) {
+            item.classList.toggle('done');
+            const checkbox = item.querySelector('.checkbox i');
+            if (item.classList.contains('done')) {
+                checkbox.className = 'fas fa-check-square';
+            } else {
+                checkbox.className = 'far fa-square';
+            }
+            saveState();
+            updateCounts();
+        }
+
+        // Toggle expanded details
+        function toggleExpanded(item) {
+            item.classList.toggle('expanded');
+        }
+
+        // Add click handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            loadState();
+            
+            document.querySelectorAll('.todo-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (e.target.closest('.checkbox')) {
+                        toggleDone(item);
+                    } else {
+                        toggleExpanded(item);
+                    }
+                });
+            });
+        });
+
         // Update timestamp
         function updateTimestamp() {
             document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
         }
-        
-        // Update every 30 seconds
         setInterval(updateTimestamp, 30000);
-        
-        // Make it work offline
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-        
-        // Auto-refresh data (placeholder for future)
-        function refreshData() {
-            // Will connect to JSON data files later
-            console.log('Refreshing data...');
-        }
     </script>
 </body>
 </html>
