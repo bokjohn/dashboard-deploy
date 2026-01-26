@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon & Sean - Mission Control</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .content-wrapper { margin-left: 0 !important; }
+        .main-sidebar { display: none; }
+        .brand-link { display: none; }
+        .card-header { border-bottom: 1px solid #dee2e6; }
+        .project-card { cursor: pointer; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .status-green { border-left: 4px solid #28a745; }
+        .status-yellow { border-left: 4px solid #ffc107; }
+        .status-red { border-left: 4px solid #dc3545; }
+        .mobile-first { padding: 10px; }
+        .todo-item { padding: 8px 12px; border-left: 3px solid #007bff; margin-bottom: 8px; background: #f8f9fa; }
+        .todo-item.sean { border-left-color: #28a745; }
+        .todo-item.jon { border-left-color: #007bff; }
+        .todo-item.urgent { border-left-color: #dc3545; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .progress-text { font-size: 12px; color: #6c757d; }
+        .revenue-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .quick-link { padding: 5px 10px; margin: 2px; background: #e9ecef; border-radius: 15px; font-size: 12px; }
+    </style>
+</head>
+<body class="hold-transition layout-top-nav">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+            <div class="container">
+                <span class="navbar-brand">
+                    <i class="fas fa-rocket"></i>
+                    <strong>Mission Control</strong>
+                </span>
+                <div class="navbar-nav ml-auto">
+                    <span class="nav-item">
+                        <small class="text-muted">Last Updated: <span id="lastUpdate">Just now</span></small>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper mobile-first">
+            <div class="content">
+                <div class="container">
+                    <!-- Overview Cards -->
+                    <div class="row mb-3">
+                        <div class="col-6 col-md-3">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3 id="activeProjects">3</h3>
+                                    <p>Active Projects</p>
+                                </div>
+                                <div class="icon"><i class="fas fa-tasks"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3 id="completedTasks">27</h3>
+                                    <p>Completed</p>
+                                </div>
+                                <div class="icon"><i class="fas fa-check"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3 id="pendingTasks">8</h3>
+                                    <p>Pending</p>
+                                </div>
+                                <div class="icon"><i class="fas fa-clock"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="small-box revenue-card">
+                                <div class="inner">
+                                    <h3 id="projectedRevenue">$2.4K</h3>
+                                    <p>Monthly Target</p>
+                                </div>
+                                <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Items Row -->
+                    <div class="row mb-3">
+                        <!-- Your Todos -->
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-user text-success"></i> Sean's Todos</h3>
+                                </div>
+                                <div class="card-body p-2">
+                                    <div class="todo-item sean urgent">
+                                        <strong>🔥 Create 3 YouTube channels</strong><br>
+                                        <small>Finance, Tech, Travel - 30 min</small>
+                                    </div>
+                                    <div class="todo-item sean">
+                                        <strong>Sign up: ElevenLabs ($11/mo)</strong><br>
+                                        <small>Need for voiceovers</small>
+                                    </div>
+                                    <div class="todo-item sean">
+                                        <strong>Sign up: InVideo AI ($20/mo)</strong><br>
+                                        <small>Video creation tool</small>
+                                    </div>
+                                    <div class="todo-item sean">
+                                        <strong>Apply to 5 affiliate programs</strong><br>
+                                        <small>Amazon, Webull, Skillshare, etc.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jon's Todos -->
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-robot text-primary"></i> Jon's Tasks</h3>
+                                </div>
+                                <div class="card-body p-2">
+                                    <div class="todo-item jon">
+                                        <strong>✅ Dashboard MVP</strong><br>
+                                        <small>Building now - 80% done</small>
+                                    </div>
+                                    <div class="todo-item jon">
+                                        <strong>Cost optimization implementation</strong><br>
+                                        <small>DeepSeek routing - in progress</small>
+                                    </div>
+                                    <div class="todo-item jon">
+                                        <strong>YouTube automation scripts</strong><br>
+                                        <small>CLI tools - ready for testing</small>
+                                    </div>
+                                    <div class="todo-item jon">
+                                        <strong>Fix DeepSeek integration</strong><br>
+                                        <small>Tool-use configuration issue</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Status -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-chart-line"></i> Project Status</h3>
+                                </div>
+                                <div class="card-body">
+                                    <!-- YouTube Shorts Project -->
+                                    <div class="project-card card status-yellow mb-2">
+                                        <div class="card-body p-3">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h5>YouTube Shorts Affiliate</h5>
+                                                    <p class="mb-1">Research: ✅ | Setup: 🟡 | Launch: ⏳</p>
+                                                    <small class="text-muted">Target: $2-5K/month by Month 3</small>
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                                                    </div>
+                                                    <small class="progress-text">35% Complete</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dashboard Project -->
+                                    <div class="project-card card status-green mb-2">
+                                        <div class="card-body p-3">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h5>Mission Control Dashboard</h5>
+                                                    <p class="mb-1">Design: ✅ | Build: ✅ | Deploy: ✅</p>
+                                                    <small class="text-muted">Mobile-first, saves conversation time</small>
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-success" style="width: 90%"></div>
+                                                    </div>
+                                                    <small class="progress-text">90% Complete</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cost Optimization -->
+                                    <div class="project-card card status-yellow mb-2">
+                                        <div class="card-body p-3">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h5>AI Cost Optimization</h5>
+                                                    <p class="mb-1">Analysis: ✅ | Implementation: 🟡 | Testing: ⏳</p>
+                                                    <small class="text-muted">Target: 60-80% cost reduction</small>
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                                    </div>
+                                                    <small class="progress-text">45% Complete</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Check Later & Quick Links -->
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-bookmark"></i> Check Later</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <strong>OpenRouter $5 spend investigation</strong><br>
+                                        <small>Why costs higher than expected - need dashboard check</small>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>DeepSeek tool-use issue</strong><br>
+                                        <small>Configuration problem preventing cost savings</small>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>VA hiring timeline</strong><br>
+                                        <small>When to start recruiting after channel setup</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-external-link-alt"></i> Quick Links</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="quick-link">📊 YouTube Research</span>
+                                        <span class="quick-link">💰 Cost Analysis</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="quick-link">🎯 Marketing Strategy</span>
+                                        <span class="quick-link">🛠️ Tool Comparison</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="quick-link">📝 Scripts (20)</span>
+                                        <span class="quick-link">🤖 CLI Tools</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="quick-link">🧠 Memory Files</span>
+                                        <span class="quick-link">⚙️ Principles</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Today's Focus -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card bg-light">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-bullseye"></i> Today's Priority</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <h5>🎯 Sean's Focus</h5>
+                                            <p><strong>Create YouTube channels & sign up for tools</strong></p>
+                                            <small>ETA: 1-2 hours | Impact: Unblocks entire project</small>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h5>🤖 Jon's Focus</h5>
+                                            <p><strong>Dashboard completion & cost optimization</strong></p>
+                                            <small>ETA: Today | Impact: Saves time & money immediately</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <script>
+        // Update timestamp
+        function updateTimestamp() {
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
+        }
+        
+        // Update every 30 seconds
+        setInterval(updateTimestamp, 30000);
+        
+        // Make it work offline
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+        
+        // Auto-refresh data (placeholder for future)
+        function refreshData() {
+            // Will connect to JSON data files later
+            console.log('Refreshing data...');
+        }
+    </script>
+</body>
+</html>

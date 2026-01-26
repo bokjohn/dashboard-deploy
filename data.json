@@ -1,0 +1,108 @@
+{
+  "lastUpdated": "2026-01-26T11:50:00Z",
+  "overview": {
+    "activeProjects": 3,
+    "completedTasks": 27,
+    "pendingTasks": 8,
+    "projectedRevenue": "$2.4K"
+  },
+  "seanTodos": [
+    {
+      "task": "Create 3 YouTube channels",
+      "description": "Finance, Tech, Travel - 30 min",
+      "urgent": true,
+      "id": "youtube-channels"
+    },
+    {
+      "task": "Sign up: ElevenLabs ($11/mo)",
+      "description": "Need for voiceovers",
+      "urgent": false,
+      "id": "elevenlabs"
+    },
+    {
+      "task": "Sign up: InVideo AI ($20/mo)",
+      "description": "Video creation tool",
+      "urgent": false,
+      "id": "invideo"
+    },
+    {
+      "task": "Apply to 5 affiliate programs",
+      "description": "Amazon, Webull, Skillshare, etc.",
+      "urgent": false,
+      "id": "affiliates"
+    }
+  ],
+  "jonTodos": [
+    {
+      "task": "Dashboard MVP",
+      "description": "Building now - 80% done",
+      "completed": false,
+      "progress": 90,
+      "id": "dashboard"
+    },
+    {
+      "task": "Cost optimization implementation",
+      "description": "DeepSeek routing - in progress",
+      "completed": false,
+      "progress": 45,
+      "id": "cost-opt"
+    },
+    {
+      "task": "YouTube automation scripts",
+      "description": "CLI tools - ready for testing",
+      "completed": false,
+      "progress": 80,
+      "id": "automation"
+    },
+    {
+      "task": "Fix DeepSeek integration",
+      "description": "Tool-use configuration issue",
+      "completed": false,
+      "progress": 20,
+      "id": "deepseek-fix"
+    }
+  ],
+  "projects": [
+    {
+      "name": "YouTube Shorts Affiliate",
+      "status": "yellow",
+      "progress": 35,
+      "description": "Research: ✅ | Setup: 🟡 | Launch: ⏳",
+      "target": "Target: $2-5K/month by Month 3",
+      "id": "youtube"
+    },
+    {
+      "name": "Mission Control Dashboard",
+      "status": "green",
+      "progress": 90,
+      "description": "Design: ✅ | Build: ✅ | Deploy: ✅",
+      "target": "Mobile-first, saves conversation time",
+      "id": "dashboard"
+    },
+    {
+      "name": "AI Cost Optimization",
+      "status": "yellow",
+      "progress": 45,
+      "description": "Analysis: ✅ | Implementation: 🟡 | Testing: ⏳",
+      "target": "Target: 60-80% cost reduction",
+      "id": "cost-optimization"
+    }
+  ],
+  "checkLater": [
+    {
+      "item": "OpenRouter $5 spend investigation",
+      "description": "Why costs higher than expected - need dashboard check",
+      "priority": "high"
+    },
+    {
+      "item": "DeepSeek tool-use issue",
+      "description": "Configuration problem preventing cost savings",
+      "priority": "medium"
+    },
+    {
+      "item": "VA hiring timeline",
+      "description": "When to start recruiting after channel setup",
+      "priority": "low"
+    }
+  ]
+}
