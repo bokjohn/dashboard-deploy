@@ -1,9 +1,10 @@
 {
-  "lastUpdate": "2026-01-26T15:09:00",
+  "lastUpdate": "2026-01-26T15:34:00",
   "stats": {
     "activeProjects": 3,
     "completedTasks": 27,
     "pendingTasks": 8,
+    "futureIdeas": 5,
     "monthlyTarget": "$2.4K"
   },
   "todos": {
@@ -11,241 +12,451 @@
       {
         "id": "sean-1",
         "title": "🔥 Create 3 YouTube channels",
-        "summary": "Finance, Tech, Travel - 30 min",
+        "summary": "Finance, Tech, Travel - 30 min setup",
         "priority": "urgent",
+        "owner": "Sean",
         "steps": [
           "1. Go to youtube.com/create",
           "2. Click 'Create a channel' (top right)",
-          "3. Channel 1: 'MoneyFlow Finance' → Category: Education → Description: 'Personal finance tips for millennials'",
-          "4. Upload logo (can use Canva free templates)",
-          "5. Repeat for 'TechSnap Reviews' (Tech category)",
-          "6. Repeat for 'WanderBites Travel' (Travel category)",
-          "7. Screenshot channel URLs and send to Jon",
-          "⏱️ Time: 30-45 minutes",
-          "🔗 Link: https://youtube.com/create",
-          "💡 Tip: Don't overthink branding - can change later"
+          "3. **Channel 1: MoneyFlow Finance**",
+          "   - Category: Education",
+          "   - Description: 'Personal finance tips for millennials - budgets, investing, side hustles'",
+          "   - Upload logo (use Canva free templates)",
+          "4. **Channel 2: TechSnap Reviews**",
+          "   - Category: Science & Technology",
+          "   - Description: 'Quick tech reviews, gadget comparisons, app recommendations'",
+          "5. **Channel 3: WanderBites Travel**",
+          "   - Category: Travel & Events",
+          "   - Description: 'Travel hacks, hidden gems, food spots around the world'",
+          "6. Screenshot all 3 channel URLs",
+          "7. Send URLs to Jon via Telegram"
         ],
-        "blocksWhat": "All video uploads, monetization applications",
-        "impact": "Unblocks entire YouTube Shorts project"
+        "meta": {
+          "time": "30-45 minutes",
+          "link": "https://youtube.com/create",
+          "tip": "Don't overthink branding - can update anytime",
+          "blocksWhat": "All video uploads, monetization, affiliate links",
+          "impact": "Unblocks entire YouTube project"
+        }
       },
       {
         "id": "sean-2",
         "title": "Sign up: ElevenLabs ($11/mo)",
-        "summary": "AI voice for videos",
+        "summary": "AI voice for video narration",
         "priority": "normal",
+        "owner": "Sean",
         "steps": [
           "1. Go to elevenlabs.io",
           "2. Click 'Get Started Free'",
-          "3. Sign up with Gmail (bokjohnkim@gmail.com preferred)",
-          "4. Skip to 'Creator' plan ($11/mo) - need commercial rights",
-          "5. Test voice: Type 'This is a test' → Listen to 5-6 voices",
-          "6. Pick favorite voice (Jon recommends: 'Adam' for finance, 'Aria' for travel)",
-          "7. Copy API key: Settings → API Keys → Create",
-          "8. Send API key to Jon (I'll integrate with automation)",
-          "⏱️ Time: 15 minutes",
-          "🔗 Link: https://elevenlabs.io/pricing",
-          "💰 Cost: $11/mo (cancel anytime)"
+          "3. Sign up with Gmail: bokjohnkim@gmail.com",
+          "4. Browse voice library - listen to 5-6 different voices",
+          "5. Test each: Type 'Hey everyone, in today's video...' and listen",
+          "6. Pick 3 favorites (1 per channel type):",
+          "   - Finance: Professional, trustworthy (try 'Adam' or 'Antoni')",
+          "   - Tech: Energetic, clear (try 'Josh' or 'Sam')",
+          "   - Travel: Warm, conversational (try 'Bella' or 'Elli')",
+          "7. Upgrade to Creator plan ($11/mo) - need commercial rights",
+          "8. Settings → API Keys → Create New",
+          "9. Copy API key and send to Jon (I'll integrate with automation)"
         ],
-        "why": "Need high-quality voiceovers for faceless YouTube Shorts",
-        "alternatives": "Free tier exists but limits commercial use"
+        "meta": {
+          "time": "15-20 minutes",
+          "cost": "$11/mo (cancel anytime)",
+          "link": "https://elevenlabs.io/pricing",
+          "why": "High-quality AI voiceovers sound way better than TTS",
+          "alternatives": "Free tier exists but blocks commercial use"
+        }
       },
       {
         "id": "sean-3",
         "title": "Sign up: InVideo AI ($20/mo)",
-        "summary": "Text-to-video tool",
+        "summary": "Text-to-video generator",
         "priority": "normal",
+        "owner": "Sean",
         "steps": [
           "1. Go to invideo.io",
           "2. Click 'Try InVideo AI'",
           "3. Sign up with Gmail",
-          "4. Upgrade to 'Plus' plan ($20/mo) - removes watermark",
-          "5. Test it: 'Create a 60-second video about saving $1000 in 30 days'",
-          "6. Watch output - should take 3-5 minutes",
-          "7. If quality good → keep, if meh → cancel within 7 days (full refund)",
-          "8. Send me 1-2 sample videos to review",
-          "⏱️ Time: 20 minutes",
-          "🔗 Link: https://invideo.io/ai",
-          "💰 Cost: $20/mo (7-day money-back guarantee)",
-          "🎯 Goal: Generate 1 video in under 10 minutes"
+          "4. **Test it first (free trial):**",
+          "   - Try: 'Create a 60-second video about saving $1000 in 30 days'",
+          "   - Wait 3-5 minutes for generation",
+          "   - Watch the output - check quality, pacing, visuals",
+          "5. **If quality is good:**",
+          "   - Upgrade to Plus plan ($20/mo) to remove watermark",
+          "   - Generate 2-3 more test videos",
+          "   - Send me links to review",
+          "6. **If quality is meh:**",
+          "   - Cancel immediately (7-day money-back guarantee)",
+          "   - Try Pictory.ai instead ($23/mo)",
+          "7. Once confirmed, send me login so I can automate bulk uploads"
         ],
-        "alternatives": "Pictory.ai ($23/mo), Opus Clip (more expensive)",
-        "testFirst": true
+        "meta": {
+          "time": "20-30 minutes",
+          "cost": "$20/mo (7-day refund window)",
+          "link": "https://invideo.io/ai",
+          "goal": "Generate 1 video in under 10 minutes",
+          "alternatives": "Pictory ($23/mo), Opus Clip ($$), Lumen5 (basic)",
+          "testFirst": "Yes - don't commit until you've seen output quality"
+        }
       },
       {
         "id": "sean-4",
         "title": "Apply to 5 affiliate programs",
-        "summary": "Amazon, Webull, Skillshare, etc.",
+        "summary": "Amazon, Webull, Skillshare, Bluehost, CJ",
         "priority": "normal",
+        "owner": "Sean",
         "steps": [
-          "**Amazon Associates** (15 min)",
-          "1. Go to affiliate-program.amazon.com",
-          "2. Click 'Sign Up' → Use bokjohnkim@gmail.com",
-          "3. Website: List your YouTube channel URLs",
-          "4. Tax info: Fill out W-9 (US citizen) or W-8BEN (non-US)",
-          "5. Approval: Usually instant if account is good standing",
+          "**1. Amazon Associates (15 min)**",
+          "   - Go to: affiliate-program.amazon.com",
+          "   - Sign up with bokjohnkim@gmail.com",
+          "   - Website field: Add your YouTube channel URLs",
+          "   - Tax form: W-9 (US) or W-8BEN (non-US)",
+          "   - Approval: Usually instant if account good standing",
+          "   - Commission: 1-10% depending on product category",
           "",
-          "**Webull** (10 min)",
-          "1. Go to webull.com/affiliate",
-          "2. Apply → Need 1000+ followers (may get rejected initially)",
-          "3. If rejected: Reapply after 1000 subscribers",
+          "**2. Webull (10 min)**",
+          "   - Go to: webull.com/affiliate",
+          "   - Apply → Requires 1000+ followers usually",
+          "   - If rejected: Reapply after hitting 1K subs",
+          "   - Commission: $50-100 per funded account",
           "",
-          "**Skillshare** (10 min)",
-          "1. Go to skillshare.com/teach → Bottom: 'Affiliate Program'",
-          "2. Apply → Usually approved within 2-3 days",
-          "3. Commission: $7-10 per signup",
+          "**3. Skillshare (10 min)**",
+          "   - Go to: skillshare.com/teach → 'Affiliate Program'",
+          "   - Apply with YouTube channel links",
+          "   - Approval: 2-3 days typically",
+          "   - Commission: $7-10 per signup",
           "",
-          "**Bluehost** (10 min)",
-          "1. Go to bluehost.com/affiliates",
-          "2. Apply with Impact.com (affiliate network)",
-          "3. Commission: $65-100 per sale",
+          "**4. Bluehost (10 min)**",
+          "   - Go to: bluehost.com/affiliates",
+          "   - Sign up through Impact.com (affiliate network)",
+          "   - Commission: $65-100 per hosting sale",
+          "   - Great for 'how to start a blog' content",
           "",
-          "**CJ Affiliate** (15 min)",
-          "1. Go to cj.com → 'Publishers' → Sign up",
-          "2. Access to 3000+ brands (Target, Home Depot, etc.)",
-          "3. Apply to individual brands after approval",
+          "**5. CJ Affiliate (15 min)**",
+          "   - Go to: cj.com → 'Publishers' → Sign up",
+          "   - Access 3000+ brands after approval",
+          "   - Apply individually: Target, Home Depot, etc.",
+          "   - Commissions vary: 2-20% typically",
           "",
-          "⏱️ Total time: 1 hour",
-          "💰 Potential: $500-2000/mo after 6 months",
-          "📝 Save all affiliate links in 1Password or spreadsheet"
+          "**Final step: Organize links**",
+          "   - Create Google Sheet: 'Affiliate Links Tracker'",
+          "   - Columns: Platform | Link | Commission | Notes",
+          "   - Share with Jon so I can auto-insert in video descriptions"
         ],
-        "blockers": "Some require min followers (reapply after growth)",
-        "priority": "Do after channels created + first 5 videos posted"
+        "meta": {
+          "time": "60-75 minutes total",
+          "potential": "$500-2000/mo after 6 months of growth",
+          "timing": "Do AFTER channels created + 5 videos posted",
+          "blockers": "Some require minimum follower counts",
+          "tip": "Track every click/conversion in the sheet"
+        }
       }
     ],
     "jon": [
       {
         "id": "jon-1",
-        "title": "✅ Dashboard MVP",
-        "summary": "Building now - 90% done",
-        "priority": "normal",
+        "title": "Deploy dashboard v2 to GitHub",
+        "summary": "Live workflow hub - in progress",
+        "priority": "urgent",
+        "owner": "Jon",
         "steps": [
-          "✅ AdminLTE integration",
-          "✅ Mobile-first design",
-          "✅ Todo tracking with localStorage",
-          "⏳ Add detailed step-by-step instructions (in progress)",
-          "⏳ Add project milestone breakdowns (in progress)",
-          "⏳ Make stats clickable → scroll to sections",
-          "⏳ Export data.json for easy updates",
-          "⏳ Set up 4-hour auto-refresh",
-          "Deploy to GitHub Pages"
+          "✅ Build interactive dashboard with AdminLTE",
+          "✅ Add clickable stats → scroll to sections",
+          "✅ Make todos expandable with full instructions",
+          "✅ Add project milestone tracking",
+          "⏳ Push to GitHub Pages (IN PROGRESS)",
+          "⏳ Test live deployment",
+          "⏳ Set up auto-update every 4 hours via heartbeat",
+          "Add future projects section",
+          "Add decision log (why we chose X over Y)"
         ],
-        "eta": "Today",
-        "completion": 90
+        "meta": {
+          "status": "90% complete",
+          "eta": "Today (within 1 hour)",
+          "url": "https://bokjohn.github.io/dashboard-deploy/",
+          "purpose": "Single source of truth for all projects, todos, decisions"
+        }
       },
       {
         "id": "jon-2",
-        "title": "Cost optimization implementation",
-        "summary": "Token reduction strategies",
+        "title": "Cost optimization sprint",
+        "summary": "Cut token costs 60%",
         "priority": "high",
+        "owner": "Jon",
         "steps": [
-          "✅ Archive 280KB research docs",
+          "✅ Archive 280KB of old research docs",
           "✅ Set up daily token audit (11pm)",
-          "⏳ Test cheaper models in sub-agents (next)",
-          "⏳ Implement model routing (Claude for complex, Haiku for simple)",
-          "⏳ Enable prompt caching properly",
-          "⏳ Auto-prune old sessions >7 days"
+          "✅ Add cost tracking to heartbeat",
+          "Test cheaper models in isolated sub-agents:",
+          "   - Claude Haiku for simple tasks",
+          "   - DeepSeek for text-only work",
+          "   - Gemini Flash (retry with better prompts)",
+          "Benchmark: quality, speed, tool-use, cost per 1M tokens",
+          "Document results in memory/model-testing.md",
+          "Implement smart routing:",
+          "   - Complex reasoning → Claude Sonnet",
+          "   - Simple tasks → Haiku",
+          "   - Bulk text work → DeepSeek",
+          "Enable prompt caching (save 90% on repeated context)",
+          "Auto-prune old sessions >7 days"
         ],
-        "goal": "Cut costs 60% ($30-50/mo → $12-20/mo)",
-        "impact": "$15-30/mo savings"
+        "meta": {
+          "currentCost": "$30-50/mo",
+          "targetCost": "$12-20/mo",
+          "savings": "$15-30/mo",
+          "eta": "3-4 days of testing",
+          "priority": "High - this unlocks sustainable 24/7 operation"
+        }
       },
       {
         "id": "jon-3",
-        "title": "YouTube automation scripts",
-        "summary": "CLI tools - ready for testing",
+        "title": "Build YouTube automation scripts",
+        "summary": "Upload, schedule, analytics",
         "priority": "normal",
+        "owner": "Jon",
         "steps": [
-          "✅ Research youtube-cli tools",
-          "Build upload script (yt-upload)",
-          "Build scheduler (batch upload 7 videos)",
-          "Build analytics fetcher (check performance daily)",
-          "Integrate with InVideo AI output",
-          "Test end-to-end: Generate → Upload → Schedule"
+          "✅ Research youtube-cli tools (completed)",
+          "Build upload script: yt-upload.sh",
+          "   - Input: video file, title, description, tags",
+          "   - Output: YouTube URL + video ID",
+          "   - Error handling + retry logic",
+          "Build scheduler: yt-schedule.sh",
+          "   - Input: 7 video files + metadata JSON",
+          "   - Schedule: Mon-Sun at 8am PST",
+          "   - Confirm all uploads successful",
+          "Build analytics fetcher: yt-stats.sh",
+          "   - Fetch daily: views, CTR, watch time, revenue",
+          "   - Save to dashboard/youtube-stats.json",
+          "   - Auto-update dashboard every 4 hours",
+          "Integrate with InVideo output:",
+          "   - Download generated videos",
+          "   - Auto-upload with optimized titles/descriptions",
+          "   - Insert affiliate links in descriptions",
+          "Test end-to-end: Generate → Upload → Schedule → Track"
         ],
-        "blockedBy": "Waiting for Sean's YouTube channels",
-        "eta": "2 days after channels ready"
+        "meta": {
+          "blockedBy": "Waiting for Sean's YouTube channels",
+          "eta": "2 days after channels ready",
+          "impact": "Enables true hands-off content pipeline",
+          "goal": "21 videos/week uploaded with zero manual work"
+        }
       },
       {
         "id": "jon-4",
-        "title": "Test cheaper models (sub-agents)",
-        "summary": "Find Claude alternatives",
+        "title": "Test & document cheaper models",
+        "summary": "Find Claude alternatives for sub-tasks",
         "priority": "high",
+        "owner": "Jon",
         "steps": [
-          "Research candidates: Haiku, Gemini Flash, DeepSeek",
-          "Spawn sub-agent #1: Test Haiku (simple tasks)",
-          "Spawn sub-agent #2: Test Gemini Flash (if failed before, retry)",
-          "Spawn sub-agent #3: Test DeepSeek (text-only)",
-          "Compare: quality, tool-use, speed, cost",
-          "Document results in memory/model-testing.md",
-          "Implement routing: Primary=Claude, Sub-agents=cheaper"
+          "**Research phase:**",
+          "   - List candidates: Haiku ($0.25/$1.25), Gemini Flash (free), DeepSeek ($0.14/$0.28)",
+          "   - Compare: cost, speed, tool-use, context window",
+          "",
+          "**Testing phase (isolated sub-agents):**",
+          "   Test 1: Claude Haiku",
+          "      - Task: 'Summarize this 5-page doc'",
+          "      - Task: 'List 10 video title ideas'",
+          "      - Task: 'Check email and flag urgent ones'",
+          "   Test 2: Gemini Flash",
+          "      - Task: Same as above",
+          "      - Note: Previous failure might be prompt issue",
+          "   Test 3: DeepSeek",
+          "      - Task: Pure text work (no complex tool use)",
+          "      - Task: 'Generate 50 video script outlines'",
+          "",
+          "**Analysis:**",
+          "   - Compare output quality (1-10 scale)",
+          "   - Measure: tokens used, time taken, success rate",
+          "   - Document: What works well, what fails, when to use each",
+          "   - Save results: memory/model-testing.md",
+          "",
+          "**Implementation:**",
+          "   - Set up routing logic in gateway config",
+          "   - 80% of tasks → cheaper models",
+          "   - 20% complex reasoning → Claude Sonnet",
+          "   - Monitor: track cost savings over 1 week"
         ],
-        "goal": "80% of work on cheaper models, 20% on Claude",
-        "impact": "60%+ cost reduction"
+        "meta": {
+          "goal": "60-80% cost reduction",
+          "targetMix": "80% cheap models, 20% Claude",
+          "eta": "3-4 days",
+          "risk": "Quality might suffer - need careful testing",
+          "fallback": "Can always revert to 100% Claude if needed"
+        }
       }
     ]
   },
-  "projects": [
+  "futureProjects": [
     {
-      "id": "youtube-shorts",
-      "name": "🎬 YouTube Shorts Automation",
-      "status": "yellow",
-      "completion": 35,
-      "nextStep": "Create channels",
-      "milestones": [
-        {"name": "Research & Planning", "done": true},
-        {"name": "Tool Selection", "done": true},
-        {"name": "Create Channels", "done": false, "blocker": "Waiting on Sean"},
-        {"name": "First 5 Videos", "done": false},
-        {"name": "Automation Setup", "done": false},
-        {"name": "Monetization", "done": false}
+      "id": "future-1",
+      "name": "🌏 Hire Philippines VA ($4-6/hr)",
+      "status": "researched",
+      "priority": "medium",
+      "reasoning": "Scale video production beyond automation limits. VA can handle: custom thumbnails, manual editing for high-value content, community management (reply to comments), research trending topics.",
+      "nextSteps": [
+        "Wait until: 3 channels running + $500/mo revenue",
+        "Post on onlinejobs.ph: 'YouTube Shorts VA - video editing + research'",
+        "Test task: 'Create 5 thumbnail variations for this video'",
+        "Start 5-10 hrs/week, scale to 20 hrs/week if profitable"
       ],
-      "blockers": [
-        "No YouTube channels created yet"
-      ],
-      "timeline": "3-4 weeks to first revenue",
-      "details": "Faceless YouTube Shorts across 3 niches (finance, tech, travel). Using AI for scripts, voiceovers, and video generation. Goal: 3 channels × 7 videos/week = 21 videos/week automated."
+      "estimatedCost": "$80-120/mo (10-20 hrs/week)",
+      "estimatedROI": "2-3x (VA time → better CTR → more revenue)",
+      "timeline": "Month 2-3 after launch"
     },
     {
-      "id": "clawdbot",
-      "name": "🤖 Jon (Clawdbot Setup)",
-      "status": "green",
-      "completion": 85,
-      "nextStep": "Cost optimization",
-      "milestones": [
-        {"name": "Initial Setup", "done": true},
-        {"name": "Telegram Integration", "done": true},
-        {"name": "Workspace Organization", "done": true},
-        {"name": "Dashboard MVP", "done": false, "progress": 90},
-        {"name": "Cost Optimization", "done": false, "progress": 30},
-        {"name": "Sub-agent Testing", "done": false}
+      "id": "future-2",
+      "name": "📧 Email List Building",
+      "status": "idea",
+      "priority": "low",
+      "reasoning": "Own your audience - YouTube can ban/demonetize anytime. Email list = insurance + direct sales channel. Can sell digital products, courses, coaching.",
+      "nextSteps": [
+        "Wait until: 10K total subscribers across channels",
+        "Set up: ConvertKit ($25/mo) or Beehiiv (free tier)",
+        "Lead magnet: '30-Day Money Challenge PDF' (finance channel)",
+        "Link in video descriptions + pinned comments",
+        "Send 1 email/week: mix of tips + product recommendations"
       ],
-      "blockers": [],
-      "timeline": "Ongoing optimization",
-      "details": "Personal AI assistant with Telegram access, email monitoring, task automation, and proactive project management. Currently burning $5-10/week on tokens, targeting $2-3/week."
+      "estimatedCost": "$25-50/mo",
+      "estimatedRevenue": "$200-500/mo from affiliate emails",
+      "timeline": "Month 4-6"
     },
     {
-      "id": "analytics",
-      "name": "📊 Dashboard & Analytics",
-      "status": "red",
-      "completion": 15,
-      "nextStep": "Deploy dashboard",
-      "milestones": [
-        {"name": "Dashboard Design", "done": true},
-        {"name": "Build MVP", "done": false, "progress": 90},
-        {"name": "Deploy to GitHub Pages", "done": false},
-        {"name": "Add YouTube Analytics", "done": false, "blocker": "No channels yet"},
-        {"name": "Add Revenue Tracking", "done": false}
+      "id": "future-3",
+      "name": "🎙️ Podcast Repurposing",
+      "status": "idea",
+      "priority": "low",
+      "reasoning": "YouTube Shorts → Gateway drug. Podcast = deeper engagement + sponsor opportunities ($500-5K per episode after growth).",
+      "nextSteps": [
+        "Wait until: 50K subs on one channel",
+        "Equipment: $200-300 (mic, interface)",
+        "Format: 20-30 min deep dives on Shorts topics",
+        "Repurpose: 1 podcast → 10 Shorts",
+        "Platforms: YouTube (video podcast), Spotify, Apple"
       ],
-      "blockers": [
-        "No YouTube channels to track yet",
-        "Sean needs to set up GitHub for deployment"
+      "estimatedCost": "$300 setup + $50/mo hosting",
+      "estimatedRevenue": "$1-5K/mo from sponsors (after 6-12 months)",
+      "timeline": "Month 9-12"
+    },
+    {
+      "id": "future-4",
+      "name": "🛒 Dropshipping or FBA (Revisit)",
+      "status": "shelved",
+      "priority": "none",
+      "reasoning": "Sean has experience but projects didn't finish. Higher upfront cost + inventory risk. YouTube Shorts is better for current situation: lower risk, faster feedback, builds personal brand.",
+      "revisitWhen": "After YouTube hits $2K/mo sustainable OR if strong product idea emerges",
+      "pros": "Physical products = higher margins sometimes",
+      "cons": "Inventory risk, logistics headaches, competition is brutal"
+    },
+    {
+      "id": "future-5",
+      "name": "🎓 Skill Development Focus Areas",
+      "status": "ongoing",
+      "priority": "high",
+      "reasoning": "Sean identified 'lack of certain skills' as blocker. YouTube Shorts project intentionally uses AI/automation to compensate. But long-term: developing these skills = unlock bigger opportunities.",
+      "skillsToLearn": [
+        {
+          "skill": "Video editing (Premiere/Final Cut)",
+          "why": "More control over quality + can offer services",
+          "how": "YouTube tutorials + 30 min/day practice",
+          "timeline": "3-6 months to proficiency"
+        },
+        {
+          "skill": "Copywriting",
+          "why": "Better titles/descriptions = higher CTR = more revenue",
+          "how": "Study top channels + A/B test variations",
+          "timeline": "Ongoing - improves with practice"
+        },
+        {
+          "skill": "Basic coding (Python)",
+          "why": "Automate even more - scraping, data analysis, custom tools",
+          "how": "15-30 min/day on Codecademy or freeCodeCamp",
+          "timeline": "6-12 months to useful level"
+        },
+        {
+          "skill": "SEO & YouTube algorithm",
+          "why": "Understand what makes videos go viral",
+          "how": "Study VidIQ tutorials + analyze successful channels",
+          "timeline": "3-4 months to solid understanding"
+        }
       ],
-      "timeline": "Dashboard: today. Analytics: after channels exist",
-      "details": "Central mission control dashboard showing todos, project progress, revenue, and YouTube performance metrics. Will auto-update every 4 hours via Jon's heartbeat."
+      "approach": "Learn by doing - apply immediately to YouTube project. 80% execution, 20% learning."
     }
   ],
+  "decisions": [
+    {
+      "date": "2026-01-26",
+      "decision": "YouTube Shorts over podcast/blog/dropshipping",
+      "reasoning": "Lowest barrier to entry, fastest feedback loop, can automate heavily with AI, builds audience for future products. Sean's pattern: struggles finishing projects. Shorts = small wins every week = maintains momentum.",
+      "alternatives": "Podcast (too much upfront work), Blog (SEO takes 6-12 months), Dropshipping (inventory risk + past failures)"
+    },
+    {
+      "date": "2026-01-26",
+      "decision": "3 channels (finance/tech/travel) over 1 focused channel",
+      "reasoning": "Diversification = risk reduction. If one niche flops, others might succeed. Also: tests Sean's interests - will naturally gravitate to favorite after 30 days.",
+      "tradeoff": "Slower growth per channel vs hedged bets"
+    },
+    {
+      "date": "2026-01-26",
+      "decision": "InVideo AI ($20/mo) over hiring editor",
+      "reasoning": "Speed. Can generate video in 10 min vs hours for human editor. Quality good enough for Shorts. Budget: editor = $200-500/mo vs tool = $20/mo.",
+      "fallback": "If InVideo quality poor, switch to Pictory or hire VA part-time"
+    },
+    {
+      "date": "2026-01-26",
+      "decision": "Claude Sonnet primary, test cheaper for sub-tasks",
+      "reasoning": "Current burn rate unsustainable ($5-10/week). Need to cut 60% but maintain quality. Strategy: use Claude for complex decisions, cheaper models for bulk work.",
+      "risk": "Cheaper models might fail at tool use - need careful testing"
+    }
+  ],
+  "weeklyGoals": {
+    "week1": {
+      "dates": "Jan 26 - Feb 1",
+      "sean": [
+        "✅ Understand YouTube Shorts business model",
+        "Create 3 YouTube channels",
+        "Sign up for tools (ElevenLabs, InVideo)",
+        "Apply to affiliate programs",
+        "Generate + upload first 5 videos (1-2 per channel)"
+      ],
+      "jon": [
+        "✅ Research + recommend tools",
+        "✅ Build dashboard MVP",
+        "Deploy dashboard to GitHub",
+        "Test cheaper AI models",
+        "Build YouTube upload automation"
+      ],
+      "milestone": "All channels created + tools ready + first videos live"
+    },
+    "week2": {
+      "dates": "Feb 2-8",
+      "sean": [
+        "Upload 21 videos total (7 per channel)",
+        "Monitor performance - which videos get traction?",
+        "Apply for YouTube Partner Program (need 1K subs + 4K watch hours)",
+        "Start building email list (if growth strong)"
+      ],
+      "jon": [
+        "Automate: script generation → video → upload → schedule",
+        "Implement cost optimization (cheaper models)",
+        "Build analytics dashboard (track views, CTR, revenue)",
+        "Set up alerts: 'Video hit 10K views!'"
+      ],
+      "milestone": "Automation running smoothly + consistent upload schedule"
+    },
+    "week3-4": {
+      "dates": "Feb 9-22",
+      "goals": [
+        "Scale to full automation: 21 videos/week with minimal manual work",
+        "Analyze: which niche performing best? Double down.",
+        "Optimize: A/B test titles, thumbnails, posting times",
+        "Revenue goal: First $100 from AdSense + affiliates"
+      ]
+    }
+  },
   "updateSchedule": {
-    "automatic": "Every 4 hours during heartbeat",
-    "manual": "After major milestones",
-    "method": "Jon updates data.json → Git commit → Auto-refresh"
+    "automatic": "Every 4 hours via Jon's heartbeat",
+    "manual": "After major milestones or decisions",
+    "method": "Jon updates data.json → Git commit → Auto-push to GitHub → Live site refreshes",
+    "nextUpdate": "~4 hours from now"
   }
 }
