@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Mission Control Dashboard Data Schema",
+  "description": "Schema for the data.json file used by the Mission Control dashboard",
+  "type": "object",
+  "required": ["lastUpdate", "stats", "todos", "projects"],
+  "additionalProperties": false,
+  "properties": {
+    "lastUpdate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "progress": {
+      "type": "object",
+      "description": "Today's progress tracking (optional)",
+      "additionalProperties": true
+    },
+    "stats": {
+      "type": "object",
+      "required": ["activeProjects", "monthlyTarget"],
+      "additionalProperties": false,
+      "properties": {
+        "activeProjects": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of active projects"
+        },
+        "monthlyTarget": {
+          "type": "string",
+          "pattern": "^\\$[0-9,]+$",
+          "description": "Monthly revenue target (formatted as currency, e.g. '$5,000')"
+        }
+      }
+    },
+    "todos": {
+      "type": "object",
+      "required": ["sean", "jon"],
+      "additionalProperties": false,
+      "properties": {
+        "sean": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/todo" }
+        },
+        "jon": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/todo" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/project" }
+    }
+  },
+  "definitions": {
+    "todo": {
+      "type": "object",
+      "required": ["id", "title", "summary", "priority", "steps"],
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(sean|jon)-[0-9]+$",
+          "description": "Unique ID in format 'owner-number' (e.g. 'sean-1')"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Short title of the task"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "One-line summary of what needs to be done"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["urgent", "normal", "low"],
+          "description": "Task priority level"
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Array of step-by-step instructions"
+        },
+        "why": {
+          "type": "string",
+          "description": "Optional: Why this task matters"
+        },
+        "blocksWhat": {
+          "type": "string",
+          "description": "Optional: What this task is blocking"
+        },
+        "alternatives": {
+          "type": "string",
+          "description": "Optional: Alternative approaches"
+        },
+        "impact": {
+          "type": "string",
+          "description": "Optional: Impact of completing this task"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "required": ["id", "name", "status", "completion", "nextStep", "details", "milestones", "blockers", "timeline"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^proj-[0-9]+$",
+          "description": "Unique project ID in format 'proj-number'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Project name"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["green", "yellow", "red"],
+          "description": "Project health status"
+        },
+        "completion": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Completion percentage (0-100)"
+        },
+        "nextStep": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What needs to happen next"
+        },
+        "details": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Detailed project description"
+        },
+        "milestones": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/milestone" }
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Array of current blockers"
+        },
+        "timeline": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Timeline or deadline information"
+        }
+      }
+    },
+    "milestone": {
+      "type": "object",
+      "required": ["name", "done"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Milestone name"
+        },
+        "done": {
+          "type": "boolean",
+          "description": "Whether this milestone is complete"
+        },
+        "progress": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Optional: Progress percentage (0-100)"
+        },
+        "blocker": {
+          "type": "string",
+          "description": "Optional: What's blocking this milestone"
+        }
+      }
+    }
+  }
+}
