@@ -78,5 +78,9 @@
     "tokensUsed": 130400,
     "cost": 0.82,
     "activeAgents": 5
+  },
+  "todos": {
+    "sean": [],
+    "jon": []
   }
 }
