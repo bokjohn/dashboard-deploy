@@ -422,5 +422,110 @@
       "blockers": [],
       "timeline": "Complete tonight"
     }
+  ],
+  "futureProjects": [
+    {
+      "id": "future-1",
+      "name": "Content Production Pipeline",
+      "priority": "high",
+      "timeline": "Week 2-3",
+      "description": "Batch create 30-50 YouTube Shorts per channel with VA support",
+      "prereqs": ["YouTube channels created", "Affiliate signups approved"],
+      "estimatedRevenue": "$500-2,000/month by Month 3",
+      "steps": [
+        "Hire VA for video editing (OnlineJobs.ph)",
+        "Create content templates and scripts",
+        "Set up InVideo AI or similar automation",
+        "Batch record 50+ Shorts",
+        "Schedule uploads across 3 channels"
+      ]
+    },
+    {
+      "id": "future-2",
+      "name": "Additional Affiliate Networks",
+      "priority": "medium",
+      "timeline": "Week 3-4",
+      "description": "Apply to tier 2 programs once channels have content",
+      "prereqs": ["10-15 Shorts published per channel", "Initial traffic data"],
+      "estimatedRevenue": "$200-1,000/month additional",
+      "programs": [
+        "Rakuten Advertising (needs traffic proof)",
+        "FlexOffers (mid-size network)",
+        "CJ Affiliate (Commission Junction)",
+        "Booking.com Partners (travel niche)",
+        "VPN affiliates (NordVPN, ExpressVPN - high commission)"
+      ]
+    },
+    {
+      "id": "future-3",
+      "name": "YouTube Monetization",
+      "priority": "medium",
+      "timeline": "Month 2-3",
+      "description": "Enable AdSense once channels hit thresholds",
+      "prereqs": ["1,000 subscribers", "4,000 watch hours OR 10M Shorts views"],
+      "estimatedRevenue": "$100-500/month from ads (secondary to affiliates)",
+      "steps": [
+        "Apply for YouTube Partner Program",
+        "Link AdSense account",
+        "Continue optimizing for watch time",
+        "Affiliates remain primary revenue"
+      ]
+    },
+    {
+      "id": "future-4",
+      "name": "Custom CLI Tools",
+      "priority": "low",
+      "timeline": "Month 3-4",
+      "description": "Build automation tools if revenue justifies investment",
+      "prereqs": ["$2k+/month revenue consistently"],
+      "estimatedCost": "$13,000 initial investment",
+      "roi": "6-9 months",
+      "tools": [
+        "Content Management CLI ($4,500)",
+        "VA Automation CLI ($3,750)",
+        "Affiliate Link Manager ($3,000)",
+        "Analytics Scripts ($1,125)"
+      ]
+    },
+    {
+      "id": "future-5",
+      "name": "Premium Tools Upgrade",
+      "priority": "low",
+      "timeline": "When profitable (Month 2-3)",
+      "description": "Upgrade to paid tools for better quality",
+      "prereqs": ["$1k+/month revenue"],
+      "estimatedCost": "$30/month",
+      "tools": [
+        "ElevenLabs TTS ($22/month - professional voiceovers)",
+        "FAL.ai images ($10/month - high-quality thumbnails)",
+        "InVideo AI or similar ($15-30/month - video automation)"
+      ]
+    },
+    {
+      "id": "future-6",
+      "name": "Scale to 10+ Channels",
+      "priority": "low",
+      "timeline": "Month 4-6",
+      "description": "Replicate successful niches, diversify revenue",
+      "prereqs": ["3 channels profitable", "Proven content system"],
+      "estimatedRevenue": "$5k-15k/month at scale",
+      "approach": [
+        "Identify top-performing niche from first 3",
+        "Create 3-5 sub-niches within winner",
+        "Hire additional VAs for content production",
+        "Build custom automation (if not done yet)",
+        "Target: 10 channels, 5-10 Shorts/day each"
+      ]
+    },
+    {
+      "id": "future-7",
+      "name": "Amazon Associates (Manual)",
+      "priority": "high",
+      "timeline": "Week 2 (after channels have content)",
+      "description": "Manually sign up after bot detection failure",
+      "prereqs": ["YouTube channels live", "5-10 Shorts published"],
+      "estimatedRevenue": "$300-1,500/month",
+      "approach": "Manual signup with established channel proof reduces bot flags"
+    }
   ]
 }

@@ -51,6 +51,14 @@
     "projects": {
       "type": "array",
       "items": { "$ref": "#/definitions/project" }
+    },
+    "futureProjects": {
+      "type": "array",
+      "description": "Upcoming/planned projects (optional)",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
     }
   },
   "definitions": {
