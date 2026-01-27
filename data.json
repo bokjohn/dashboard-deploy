@@ -57,21 +57,21 @@
       "name": "Security & Privacy",
       "progress": 45,
       "health": "warning",
-      "nextMilestone": "Rotate credentials + Google Voice verified"
+      "milestones": ["Rotate credentials + Google Voice verified"]
     },
     {
       "id": 2,
       "name": "YouTube Channels",
       "progress": 30,
       "health": "warning",
-      "nextMilestone": "Finish 3 channels (needs browser)"
+      "milestones": ["Finish 3 channels (needs browser)"]
     },
     {
       "id": 3,
       "name": "Affiliate Signups",
       "progress": 50,
       "health": "good",
-      "nextMilestone": "Amazon + Skillshare (needs browser)"
+      "milestones": ["Amazon + Skillshare (needs browser)"]
     }
   ],
   "stats": {
