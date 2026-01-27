@@ -1,89 +1,173 @@
 {
-  "lastUpdate": "2026-01-26T19:14:00-08:00",
-  "blockers": [
-    {
-      "id": 0,
-      "title": "🔴 ACTION: Attach Browser (30 sec)",
-      "description": "5 sub-agents waiting for browser access",
-      "action": "**DO THIS NOW:**\n\n1. Open Chrome\n2. Any tab\n3. Click **Clawdbot icon** (toolbar)\n4. Badge: 'ON'\n\n**Unlocks:**\n✅ Google Voice (949) 264-2761\n✅ Bitwarden setup\n✅ Amazon & Skillshare signups\n✅ 3 YouTube channels",
-      "urgency": "critical",
-      "timestamp": "2026-01-26T18:58:00"
-    },
-    {
-      "id": 1,
-      "title": "🔴 SECURITY: Rotate GitHub Token",
-      "description": "Token exposed in git history - needs rotation",
-      "action": "https://github.com/settings/tokens\n\n1. Delete/Regenerate token\n2. Send new token to Jon\n\nDetails: security-rotation-guide.md",
-      "urgency": "high",
-      "timestamp": "2026-01-26T18:49:00"
-    },
-    {
-      "id": 2,
-      "title": "📱 Google Voice Verification",
-      "description": "Check phone for 6-digit SMS code",
-      "action": "Check 949-482-0329 for SMS from Google\nSend 6-digit code to Jon\n\nNew number: (949) 264-2761",
-      "urgency": "medium",
-      "timestamp": "2026-01-26T18:56:00"
-    }
-  ],
-  "completed": [
-    {
-      "id": 1,
-      "title": "Google Voice Number Created",
-      "description": "(949) 264-2761 - forwards to real number for privacy",
-      "timestamp": "2026-01-26T18:56:00"
-    },
-    {
-      "id": 2,
-      "title": "Bitwarden Setup Ready",
-      "description": "Sub-agent waiting for browser to complete setup",
-      "timestamp": "2026-01-26T18:53:00"
-    },
-    {
-      "id": 3,
-      "title": "Security: .gitignore Added",
-      "description": "Future credentials protected from git commits",
-      "timestamp": "2026-01-26T18:47:00"
-    },
-    {
-      "id": 4,
-      "title": "YouTube Channel Created",
-      "description": "Finance Fast Track (@FinanceFastTrack-f2i)",
-      "timestamp": "2026-01-26T18:34:00"
-    }
-  ],
-  "projects": [
-    {
-      "id": 1,
-      "name": "Security & Privacy",
-      "progress": 45,
-      "health": "warning",
-      "milestones": ["Rotate credentials + Google Voice verified"]
-    },
-    {
-      "id": 2,
-      "name": "YouTube Channels",
-      "progress": 30,
-      "health": "warning",
-      "milestones": ["Finish 3 channels (needs browser)"]
-    },
-    {
-      "id": 3,
-      "name": "Affiliate Signups",
-      "progress": 50,
-      "health": "good",
-      "milestones": ["Amazon + Skillshare (needs browser)"]
-    }
-  ],
+  "lastUpdate": "2026-01-26T20:14:00-08:00",
   "stats": {
-    "tokensUsed": 130400,
-    "cost": 0.82,
-    "activeAgents": 5,
     "activeProjects": 3,
-    "monthlyTarget": 5000
+    "monthlyTarget": "$5,000"
   },
   "todos": {
-    "sean": [],
+    "sean": [
+      {
+        "id": "sean-1",
+        "title": "Affiliate Signups (15 min)",
+        "summary": "3 low-risk platforms ready - manual signup guides created",
+        "priority": "urgent",
+        "steps": [
+          "1. ShareASale (5 min) - Access 1000+ merchants",
+          "2. Awin (5 min) - Access 15,000+ advertisers",
+          "3. Skillshare/Impact (5 min) - 20% commission"
+        ],
+        "why": "Unlocks 2500+ affiliate programs total",
+        "impact": "Start earning commissions immediately after approval"
+      },
+      {
+        "id": "sean-2",
+        "title": "Create YouTube Channels (5 min)",
+        "summary": "2 more Brand Account channels under bokjohnkim@gmail.com",
+        "priority": "urgent",
+        "steps": [
+          "1. YouTube Studio → Create Brand Account 'Tech Stack Daily'",
+          "2. Switch account → Create 'Budget Nomad'",
+          "3. All channels under ONE Google account (corrected approach)"
+        ],
+        "why": "Need channels for affiliate content + merchant applications",
+        "impact": "3 revenue streams ready for content"
+      },
+      {
+        "id": "sean-3",
+        "title": "API Keys Setup (5 min)",
+        "summary": "Enable web search + image generation",
+        "priority": "normal",
+        "steps": [
+          "1. Brave Search API (free) - web research",
+          "2. Together.ai API (free $25) - image generation"
+        ],
+        "why": "Unlock YouTube research + thumbnail creation",
+        "impact": "Autonomous research & content creation"
+      }
+    ],
     "jon": []
-  }
+  },
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Affiliate Programs",
+      "status": "yellow",
+      "completion": 40,
+      "nextStep": "Sean completes 3 manual signups (15 min total)",
+      "details": "Access to 2500+ affiliate programs via ShareASale, Awin, and Impact.com networks.",
+      "milestones": [
+        {
+          "name": "Research programs",
+          "done": true,
+          "progress": 100
+        },
+        {
+          "name": "Amazon Associates",
+          "done": false,
+          "progress": 0,
+          "blocker": "Bot detected - manual signup only"
+        },
+        {
+          "name": "Google Voice",
+          "done": false,
+          "progress": 0,
+          "blocker": "Account blocked - using real number instead"
+        },
+        {
+          "name": "ShareASale signup",
+          "done": false,
+          "progress": 0,
+          "blocker": "Waiting for Sean (guide ready)"
+        },
+        {
+          "name": "Awin signup",
+          "done": false,
+          "progress": 0,
+          "blocker": "Waiting for Sean (guide ready)"
+        },
+        {
+          "name": "Skillshare/Impact signup",
+          "done": false,
+          "progress": 0,
+          "blocker": "Waiting for Sean (guide ready)"
+        }
+      ],
+      "blockers": [],
+      "timeline": "Target: All signups complete this week"
+    },
+    {
+      "id": "proj-2",
+      "name": "YouTube Channels",
+      "status": "yellow",
+      "completion": 33,
+      "nextStep": "Create 2 more Brand Account channels (5 min)",
+      "details": "3 channels under ONE Google account (bokjohnkim@gmail.com): Finance Fast Track, Tech Stack Daily, Budget Nomad.",
+      "milestones": [
+        {
+          "name": "Finance Fast Track",
+          "done": true,
+          "progress": 100
+        },
+        {
+          "name": "Setup guides created",
+          "done": true,
+          "progress": 100
+        },
+        {
+          "name": "Tech Stack Daily",
+          "done": false,
+          "progress": 0,
+          "blocker": "Needs Brand Account creation"
+        },
+        {
+          "name": "Budget Nomad",
+          "done": false,
+          "progress": 0,
+          "blocker": "Needs Brand Account creation"
+        },
+        {
+          "name": "Channel branding",
+          "done": false,
+          "progress": 0
+        }
+      ],
+      "blockers": [],
+      "timeline": "Target: All channels live by tonight"
+    },
+    {
+      "id": "proj-3",
+      "name": "Tool Setup",
+      "status": "green",
+      "completion": 70,
+      "nextStep": "Get 2 free API keys (5 min)",
+      "details": "Video tools installed, need API keys for web search and image generation.",
+      "milestones": [
+        {
+          "name": "Video tools (yt-dlp, FFmpeg, ImageMagick)",
+          "done": true,
+          "progress": 100
+        },
+        {
+          "name": "Brave Search API",
+          "done": false,
+          "progress": 0,
+          "blocker": "Need API key from Sean"
+        },
+        {
+          "name": "Together.ai image generation",
+          "done": false,
+          "progress": 0,
+          "blocker": "Need API key from Sean"
+        },
+        {
+          "name": "CLI tools analysis",
+          "done": false,
+          "progress": 50,
+          "blocker": "Sub-agent researching build vs buy"
+        }
+      ],
+      "blockers": [],
+      "timeline": "Target: All tools ready tonight"
+    }
+  ]
 }
