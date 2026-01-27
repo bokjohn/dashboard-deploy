@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-01-26T20:14:00-08:00",
+  "lastUpdate": "2026-01-26T20:19:00-08:00",
   "stats": {
     "activeProjects": 3,
     "monthlyTarget": "$5,000"
@@ -8,41 +8,150 @@
     "sean": [
       {
         "id": "sean-1",
-        "title": "Affiliate Signups (15 min)",
-        "summary": "3 low-risk platforms ready - manual signup guides created",
+        "title": "ShareASale Signup (5 min)",
+        "summary": "Access 1000+ merchants: Target, Walmart, Wayfair",
         "priority": "urgent",
         "steps": [
-          "1. ShareASale (5 min) - Access 1000+ merchants",
-          "2. Awin (5 min) - Access 15,000+ advertisers",
-          "3. Skillshare/Impact (5 min) - 20% commission"
+          "1. Go to: https://www.shareasale.com/info/affiliates/",
+          "2. Click 'Sign Up' or 'Affiliate Sign Up'",
+          "3. Email: bokjohnkim@gmail.com",
+          "4. Password: ShareSale2025!Secure",
+          "5. Name: John Kim",
+          "6. Phone: 949-482-0329",
+          "7. Website Description: 'YouTube content creator focusing on product reviews and recommendations'",
+          "8. Categories: Technology, Travel, General Merchandise",
+          "9. Monthly Visitors: 0-1,000",
+          "10. Promotional Methods: Social Media, YouTube, Content Marketing",
+          "11. Tax Info: Your real SSN (required for tax reporting)",
+          "12. Submit application",
+          "13. Verify email (check bokjohnkim@gmail.com)",
+          "14. Wait 1-3 days for approval"
         ],
-        "why": "Unlocks 2500+ affiliate programs total",
-        "impact": "Start earning commissions immediately after approval"
+        "why": "1000+ merchant programs ready to apply to after approval",
+        "impact": "First major affiliate network unlocked"
       },
       {
         "id": "sean-2",
-        "title": "Create YouTube Channels (5 min)",
-        "summary": "2 more Brand Account channels under bokjohnkim@gmail.com",
+        "title": "Awin Signup (5 min)",
+        "summary": "Access 15,000+ advertisers: Etsy, AliExpress, StubHub",
         "priority": "urgent",
         "steps": [
-          "1. YouTube Studio → Create Brand Account 'Tech Stack Daily'",
-          "2. Switch account → Create 'Budget Nomad'",
-          "3. All channels under ONE Google account (corrected approach)"
+          "1. Go to: https://www.awin.com/us/publishers",
+          "2. Click 'Join Now' or 'Become a Publisher'",
+          "3. Email: bokjohnkim@gmail.com",
+          "4. Password: AwinAffil2025!Strong",
+          "5. Country: United States, Currency: USD",
+          "6. Name: John Kim",
+          "7. Phone: 949-482-0329",
+          "8. Promotional Methods: Social Media, Video/YouTube, Content Marketing",
+          "9. Content: 'Product reviews and recommendations via YouTube'",
+          "10. Monthly Visitors: 0-1,000",
+          "11. Tax ID: Your real SSN",
+          "12. Submit and verify email",
+          "13. Usually approved within 24 hours"
         ],
-        "why": "Need channels for affiliate content + merchant applications",
-        "impact": "3 revenue streams ready for content"
+        "why": "15,000+ brands including Etsy, Booking.com, Nike",
+        "impact": "Second major affiliate network unlocked"
       },
       {
         "id": "sean-3",
-        "title": "API Keys Setup (5 min)",
-        "summary": "Enable web search + image generation",
+        "title": "Impact.com/Skillshare Signup (5 min)",
+        "summary": "20% commission per Skillshare customer",
+        "priority": "urgent",
+        "steps": [
+          "1. Go to: https://signup.impact.com/",
+          "2. First Name: John, Last Name: Kim",
+          "3. Email: bokjohnkim@gmail.com",
+          "4. Username: bokjohnkim",
+          "5. Password: ImpactSkill2025!Strong",
+          "6. Phone: 949-482-0329 (will get SMS code)",
+          "7. Business Type: Content Creator / Influencer",
+          "8. Platform: YouTube",
+          "9. Monthly Traffic: 0-1,000",
+          "10. Promotion Method: Social Media / YouTube",
+          "11. Submit and verify email + SMS",
+          "12. After login, search 'Skillshare' and apply",
+          "13. Application: 'YouTube Shorts recommending courses'",
+          "14. Wait 1-3 days for approval"
+        ],
+        "why": "Skillshare pays 20% per new customer signup",
+        "impact": "High-value education affiliate unlocked"
+      },
+      {
+        "id": "sean-4",
+        "title": "YouTube: Create Tech Stack Daily (3 min)",
+        "summary": "Brand Account #2 under bokjohnkim@gmail.com",
         "priority": "normal",
         "steps": [
-          "1. Brave Search API (free) - web research",
-          "2. Together.ai API (free $25) - image generation"
+          "1. Go to: https://studio.youtube.com",
+          "2. Sign in: bokjohnkim@gmail.com",
+          "3. Click profile icon (top right)",
+          "4. Click 'Switch account' or 'View all channels'",
+          "5. Click 'Create a channel'",
+          "6. Channel name: Tech Stack Daily",
+          "7. Handle: @techstackdaily (or @techstackdaily2025 if taken)",
+          "8. Description: Daily tech news, tutorials, and tool reviews. Affiliate links in descriptions - I earn commission on purchases at no extra cost to you.",
+          "9. Contact: bokjohnkim@gmail.com",
+          "10. Click Create"
         ],
-        "why": "Unlock YouTube research + thumbnail creation",
-        "impact": "Autonomous research & content creation"
+        "why": "Second revenue stream for tech content",
+        "impact": "Tech niche channel ready for content"
+      },
+      {
+        "id": "sean-5",
+        "title": "YouTube: Create Budget Nomad (3 min)",
+        "summary": "Brand Account #3 under bokjohnkim@gmail.com",
+        "priority": "normal",
+        "steps": [
+          "1. Still at https://studio.youtube.com",
+          "2. Click profile icon again",
+          "3. 'Switch account' → 'Create a channel'",
+          "4. Channel name: Budget Nomad",
+          "5. Handle: @budgetnomad (or @budgetnomad2025 if taken)",
+          "6. Description: Budget travel guides and nomadic lifestyle. Affiliate links in descriptions - I earn commission on purchases at no extra cost to you.",
+          "7. Contact: bokjohnkim@gmail.com",
+          "8. Click Create",
+          "9. Verify phone (if prompted): 949-482-0329",
+          "10. Done! 3 channels under 1 account"
+        ],
+        "why": "Third revenue stream for travel content",
+        "impact": "All 3 channels ready for monetization"
+      },
+      {
+        "id": "sean-6",
+        "title": "Brave Search API Key (2 min)",
+        "summary": "Free web search for YouTube research",
+        "priority": "low",
+        "steps": [
+          "1. Go to: https://brave.com/search/api/",
+          "2. Click 'Get Started' or 'Sign Up'",
+          "3. Email: bokjohnkim@gmail.com",
+          "4. Verify email",
+          "5. Create API key",
+          "6. Copy the key",
+          "7. Send to Jon via chat",
+          "8. Jon will configure it automatically"
+        ],
+        "why": "2000 free searches/month for competitor research",
+        "impact": "Autonomous YouTube trend research unlocked"
+      },
+      {
+        "id": "sean-7",
+        "title": "Together.ai API Key (3 min)",
+        "summary": "Free $25 credit for AI image generation",
+        "priority": "low",
+        "steps": [
+          "1. Go to: https://api.together.ai/signup",
+          "2. Sign up with bokjohnkim@gmail.com",
+          "3. Go to API Keys section",
+          "4. Create new API key",
+          "5. Copy the key",
+          "6. Send to Jon via chat",
+          "7. Jon will configure it",
+          "8. You get $25 free = 500-2500 images"
+        ],
+        "why": "YouTube thumbnails, channel art, social media graphics",
+        "impact": "Professional image creation for all channels"
       }
     ],
     "jon": []
@@ -53,55 +162,43 @@
       "name": "Affiliate Programs",
       "status": "yellow",
       "completion": 40,
-      "nextStep": "Sean completes 3 manual signups (15 min total)",
+      "nextStep": "Sean: Complete 3 signups above (15 min total)",
       "details": "Access to 2500+ affiliate programs via ShareASale, Awin, and Impact.com networks.",
       "milestones": [
         {
-          "name": "Research programs",
+          "name": "Research & guides",
           "done": true,
           "progress": 100
-        },
-        {
-          "name": "Amazon Associates",
-          "done": false,
-          "progress": 0,
-          "blocker": "Bot detected - manual signup only"
-        },
-        {
-          "name": "Google Voice",
-          "done": false,
-          "progress": 0,
-          "blocker": "Account blocked - using real number instead"
         },
         {
           "name": "ShareASale signup",
           "done": false,
           "progress": 0,
-          "blocker": "Waiting for Sean (guide ready)"
+          "blocker": "Waiting for Sean"
         },
         {
           "name": "Awin signup",
           "done": false,
           "progress": 0,
-          "blocker": "Waiting for Sean (guide ready)"
+          "blocker": "Waiting for Sean"
         },
         {
-          "name": "Skillshare/Impact signup",
+          "name": "Impact/Skillshare signup",
           "done": false,
           "progress": 0,
-          "blocker": "Waiting for Sean (guide ready)"
+          "blocker": "Waiting for Sean"
         }
       ],
       "blockers": [],
-      "timeline": "Target: All signups complete this week"
+      "timeline": "Complete this week"
     },
     {
       "id": "proj-2",
       "name": "YouTube Channels",
       "status": "yellow",
       "completion": 33,
-      "nextStep": "Create 2 more Brand Account channels (5 min)",
-      "details": "3 channels under ONE Google account (bokjohnkim@gmail.com): Finance Fast Track, Tech Stack Daily, Budget Nomad.",
+      "nextStep": "Sean: Create 2 Brand Accounts (6 min total)",
+      "details": "3 channels under bokjohnkim@gmail.com: Finance Fast Track (done), Tech Stack Daily, Budget Nomad.",
       "milestones": [
         {
           "name": "Finance Fast Track",
@@ -109,41 +206,31 @@
           "progress": 100
         },
         {
-          "name": "Setup guides created",
-          "done": true,
-          "progress": 100
-        },
-        {
           "name": "Tech Stack Daily",
           "done": false,
           "progress": 0,
-          "blocker": "Needs Brand Account creation"
+          "blocker": "Waiting for Sean"
         },
         {
           "name": "Budget Nomad",
           "done": false,
           "progress": 0,
-          "blocker": "Needs Brand Account creation"
-        },
-        {
-          "name": "Channel branding",
-          "done": false,
-          "progress": 0
+          "blocker": "Waiting for Sean"
         }
       ],
       "blockers": [],
-      "timeline": "Target: All channels live by tonight"
+      "timeline": "Complete tonight"
     },
     {
       "id": "proj-3",
       "name": "Tool Setup",
       "status": "green",
       "completion": 70,
-      "nextStep": "Get 2 free API keys (5 min)",
-      "details": "Video tools installed, need API keys for web search and image generation.",
+      "nextStep": "Sean: Get 2 API keys (5 min total)",
+      "details": "Video tools ready. Need Brave Search + Together.ai API keys.",
       "milestones": [
         {
-          "name": "Video tools (yt-dlp, FFmpeg, ImageMagick)",
+          "name": "Video tools installed",
           "done": true,
           "progress": 100
         },
@@ -151,23 +238,17 @@
           "name": "Brave Search API",
           "done": false,
           "progress": 0,
-          "blocker": "Need API key from Sean"
+          "blocker": "Waiting for API key"
         },
         {
-          "name": "Together.ai image generation",
+          "name": "Together.ai images",
           "done": false,
           "progress": 0,
-          "blocker": "Need API key from Sean"
-        },
-        {
-          "name": "CLI tools analysis",
-          "done": false,
-          "progress": 50,
-          "blocker": "Sub-agent researching build vs buy"
+          "blocker": "Waiting for API key"
         }
       ],
       "blockers": [],
-      "timeline": "Target: All tools ready tonight"
+      "timeline": "Complete tonight"
     }
   ]
 }
