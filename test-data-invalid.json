@@ -1,0 +1,30 @@
+{
+  "lastUpdate": "not-a-valid-date",
+  "stats": {
+    "activeProjects": -1,
+    "monthlyTarget": 5000
+  },
+  "todos": {
+    "sean": [
+      {
+        "id": "wrong-format",
+        "title": "",
+        "priority": "URGENT",
+        "steps": []
+      }
+    ],
+    "jon": []
+  },
+  "projects": [
+    {
+      "id": "proj-1",
+      "status": "ok",
+      "completion": 150,
+      "nextStep": "Next",
+      "details": "Details",
+      "milestones": [],
+      "blockers": [],
+      "timeline": "Soon"
+    }
+  ]
+}

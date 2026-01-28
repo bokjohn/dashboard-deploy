@@ -1,304 +1,233 @@
 {
-  "lastUpdate": "2026-01-27T15:13:00-08:00",
-  "stats": {
-    "activeProjects": 0,
-    "monthlyTarget": "$5,000",
-    "systemStatus": "OPERATIONAL"
-  },
-  "progress": {
-    "date": "2026-01-27",
-    "completed": [
-      {
-        "time": "13:28",
-        "item": "Direction pivot: New business ideas needed",
-        "details": "Sean rejected construction-related ideas. Requested 5-7 NEW business ideas (95%+ automation) with full marketing plans, CAC data, and customer acquisition strategies. Research in progress."
-      },
-      {
-        "time": "08:08",
-        "item": "Automated SaaS Opportunities Research Complete",
-        "details": "35KB deep-dive: 5 automated SaaS ideas (95%+ automation). Top pick: Construction Project Documentation AI ($10K-30K MRR). Full tech stacks, costs, revenue projections, 12-month timelines."
-      },
-      {
-        "time": "07:12",
-        "item": "Cinematic Video Quality Research Complete",
-        "details": "Researched what makes videos look professional. Recommended Pictory+VA hybrid ($6-19/video) for 5-10x quality improvement. Alternative: Runway Gen-4 AI video ($1.50/video)."
-      },
-      {
-        "time": "06:57",
-        "item": "YouTube Monetization Deep-Dive Complete",
-        "details": "Brutal truth: Shorts RPM too low ($0.05-0.30). Long-form 33-100x better. Scott Smith case study: $200k/mo with faceless channels. Recommended pivot to long-form."
-      },
-      {
-        "time": "06:24",
-        "item": "Production tools created",
-        "details": "Built batch_create_shorts.py, topics-batch-1.json (10 ideas), NEXT-ACTIONS.md. Improved script prompts for better hooks."
-      },
-      {
-        "time": "01:02",
-        "item": "Sora/AI Video Monetization Research Complete",
-        "details": "Found proven business models: Agency services ($2k-10k+/mo), Viral content ($100-10k/mo), YouTube automation. Construction+Agency identified as best opportunity."
-      },
-      {
-        "time": "01:01",
-        "item": "YouTube Automation Workflow Research Complete",
-        "details": "Hybrid approach (70% AI, 30% human) beats full automation. Documented proven tool stacks and realistic revenue timelines."
-      },
-      {
-        "time": "00:39",
-        "item": "First YouTube Short published successfully!",
-        "details": "https://youtube.com/watch?v=X1lW7cQfChw - Complete end-to-end automation working"
-      },
-      {
-        "time": "00:32",
-        "item": "AWS S3 bucket configured",
-        "details": "youtube-shorts-audio-2026 with public read access for audio hosting"
-      },
-      {
-        "time": "00:10",
-        "item": "All 4 sub-agent tasks completed",
-        "details": "Business models, website plan, SEO articles, marketing strategy"
-      },
-      {
-        "time": "00:08",
-        "item": "Claude API key found and configured",
-        "details": "Located in auth-profiles.json, script generation now working"
-      }
-    ],
-    "failed": [],
-    "created": [
-      {
-        "file": "research/automated-saas-opportunities-2026.md",
-        "size": "35.3 KB",
-        "purpose": "5 SaaS ideas with 95%+ automation: Construction Docs AI, Quote Automation, Social Media AI, Review Manager, Workflow Connector. Full business plans."
-      },
-      {
-        "file": "research/cinematic-video-quality-research.md",
-        "size": "15.2 KB",
-        "purpose": "Deep dive on what makes videos cinematic + tool recommendations (Pictory, Runway)"
-      },
-      {
-        "file": "research/youtube-monetization-reality-check.md",
-        "size": "18.1 KB",
-        "purpose": "Shorts vs long-form ROI analysis, Scott Smith $200k/mo case study"
-      },
-      {
-        "file": "youtube-automation/NEXT-ACTIONS.md",
-        "size": "7.4 KB",
-        "purpose": "Actionable plan: Submagic test, batch processing, quality improvements"
-      },
-      {
-        "file": "youtube-automation/batch_create_shorts.py",
-        "size": "5.4 KB",
-        "purpose": "Batch video creation from topics JSON"
-      },
-      {
-        "file": "youtube-automation/topics-batch-1.json",
-        "size": "1.9 KB",
-        "purpose": "10 finance video ideas with strong hooks"
-      },
-      {
-        "file": "research/sora-monetization-findings.md",
-        "size": "5.7 KB",
-        "purpose": "Comprehensive Sora/AI video monetization research with revenue data"
-      },
-      {
-        "file": "youtube-automation/production-workflow-recommendation.md",
-        "size": "~12 KB",
-        "purpose": "Hybrid workflow research with case studies and tool comparisons"
-      },
-      {
-        "file": "youtube-automation/create_full_short.py",
-        "size": "4.3 KB",
-        "purpose": "Complete end-to-end YouTube Shorts automation"
-      },
-      {
-        "file": "youtube-automation/s3_upload.py",
-        "size": "2.0 KB",
-        "purpose": "AWS S3 audio file hosting integration"
-      },
-      {
-        "file": "business-ideas/alternative-models.md",
-        "size": "~15 KB",
-        "purpose": "5 business models using current tools"
-      },
-      {
-        "file": "affiliate-empire/website-plan.md",
-        "size": "~50 KB",
-        "purpose": "Complete strategy for 3 affiliate sites"
-      },
-      {
-        "file": "affiliate-empire/articles/",
-        "size": "~20 KB",
-        "purpose": "3 SEO-optimized articles (6,300+ words)"
-      },
-      {
-        "file": "affiliate-empire/marketing-plan-90-days.md",
-        "size": "~25 KB",
-        "purpose": "Week-by-week marketing strategy"
-      }
-    ],
-    "subagents": [
-      {
-        "name": "alternative-workflows",
-        "status": "Complete",
-        "runtime": "3m21s",
-        "output": "YouTube automation hybrid workflow research with case studies"
-      },
-      {
-        "name": "alt-business-models",
-        "status": "Complete",
-        "runtime": "3m16s",
-        "output": "5 business models researched with revenue projections"
-      },
-      {
-        "name": "affiliate-website-plan",
-        "status": "Complete",
-        "runtime": "5m43s",
-        "output": "17,000+ word empire plan for 3 sites"
-      },
-      {
-        "name": "content-writer",
-        "status": "Complete",
-        "runtime": "5m56s",
-        "output": "3 SEO articles totaling 6,300+ words"
-      },
-      {
-        "name": "marketing-strategy",
-        "status": "Complete",
-        "runtime": "5m52s",
-        "output": "90-day marketing plan with templates"
-      }
-    ],
-    "metrics": {
-      "videoAutomationStatus": "100% Operational",
-      "firstShortPublished": true,
-      "timePerVideo": "2min 13sec",
-      "costPerVideo": "$0.31",
-      "monthlyCapacity": "200 Shorts",
-      "totalSubAgentOutput": "~130 KB documentation (5 sub-agents)"
-    }
-  },
-  "todos": {
-    "sean": [
-      {
-        "id": "sean-1",
-        "title": "Watch First Automated Short",
-        "summary": "Review quality of the first published video",
-        "priority": "high",
-        "steps": [
-          "1. Go to: https://youtube.com/watch?v=X1lW7cQfChw",
-          "2. Watch the video quality, captions, pacing",
-          "3. Note any improvements needed",
-          "4. Decide if ready for batch production"
-        ],
-        "why": "Validate automation quality before scaling",
-        "impact": "Quality check before creating 100+ videos"
-      },
-      {
-        "id": "sean-2",
-        "title": "Test Creating More Shorts (Optional)",
-        "summary": "Try the system yourself with different topics",
-        "priority": "normal",
-        "steps": [
-          "1. cd youtube-automation",
-          "2. source venv/bin/activate",
-          "3. python create_full_short.py 'Your Topic' finance 30",
-          "4. Wait 2-3 minutes for completion",
-          "5. Check YouTube channel for new video"
-        ],
-        "why": "Learn the system firsthand",
-        "impact": "Build confidence in automation"
-      },
-      {
-        "id": "sean-3",
-        "title": "Review Overnight Deliverables",
-        "summary": "Read the 4 reports from sub-agents",
-        "priority": "normal",
-        "steps": [
-          "1. business-ideas/alternative-models.md - 5 business models",
-          "2. affiliate-empire/website-plan.md - Complete website strategy",
-          "3. affiliate-empire/articles/ - 3 ready-to-publish articles",
-          "4. affiliate-empire/marketing-plan-90-days.md - Marketing roadmap"
-        ],
-        "why": "Massive value created overnight - review and plan next steps",
-        "impact": "Multiple revenue streams mapped out"
-      }
-    ],
-    "jon": []
-  },
-  "projects": [
+  "businessModels": [
     {
-      "id": "proj-1",
-      "name": "YouTube Shorts Automation",
-      "status": "green",
-      "completion": 100,
-      "nextStep": "Generate batch of 10 Shorts for production testing",
-      "details": "🎉 COMPLETE! First Short published successfully. System fully operational at $0.31/video.",
-      "milestones": [
-        {
-          "name": "Script generation",
-          "done": true,
-          "progress": 100
-        },
-        {
-          "name": "Voiceover (ElevenLabs)",
-          "done": true,
-          "progress": 100
-        },
-        {
-          "name": "Audio hosting (S3)",
-          "done": true,
-          "progress": 100
-        },
-        {
-          "name": "Video rendering (Shotstack)",
-          "done": true,
-          "progress": 100
-        },
-        {
-          "name": "YouTube upload",
-          "done": true,
-          "progress": 100
-        },
-        {
-          "name": "End-to-end test",
-          "done": true,
-          "progress": 100
-        }
-      ],
-      "blockers": [],
-      "timeline": "✅ LAUNCHED",
-      "firstVideo": "https://youtube.com/watch?v=X1lW7cQfChw"
-    }
-  ],
-  "futureProjects": [
-    {
-      "id": "future-1",
-      "name": "Affiliate Website Empire",
-      "priority": "high",
-      "timeline": "Week 1-2",
-      "description": "Launch 3 WordPress sites with SEO content",
-      "prereqs": ["Articles ready (DONE)", "Website plans ready (DONE)", "Marketing plan ready (DONE)"],
-      "nextSteps": [
-        "Choose domain names for Finance Fast Track, Tech Stack Daily, Budget Nomad",
-        "Set up WordPress hosting (Bluehost or SiteGround)",
-        "Publish first 3 articles",
-        "Execute Week 1 of marketing plan"
-      ]
+      "id": 1,
+      "title": "AI Automation Agency",
+      "summary": "Build custom AI workflows for local businesses. High margins, low overhead, growing demand.",
+      "revenueScore": 8,
+      "profitMargin": 75,
+      "automationPercent": 40,
+      "timeToProfit": 2,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Agency scaled to $15k/mo in 6 months serving 8 clients. Average client pays $1,800/mo for AI chatbots, email automation, and lead qualification systems.",
+        "cac": "$200-400 per client via LinkedIn outreach and local networking",
+        "marketingPlan": "LinkedIn content → Free AI audit → Paid pilot → Retainer. Focus on dental offices, law firms, real estate agents who need lead nurturing but lack tech skills."
+      }
     },
     {
-      "id": "future-2",
-      "name": "Alternative Business Models",
-      "priority": "medium",
-      "timeline": "Month 2-3",
-      "description": "Explore podcast editing, video ads, or agency SaaS",
-      "prereqs": ["YouTube automation proven", "Business model research done"],
-      "nextSteps": [
-        "Review the 5 business models researched",
-        "Choose one to test alongside affiliate business",
-        "Validate market demand",
-        "Build MVP"
-      ]
+      "id": 2,
+      "title": "Micro-SaaS (Niche Tools)",
+      "summary": "Build small software tools solving specific problems. Recurring revenue, scalable, can be mostly automated.",
+      "revenueScore": 9,
+      "profitMargin": 90,
+      "automationPercent": 85,
+      "timeToProfit": 4,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Developer built a $4k/mo tool for podcast editors in 3 months. Simple transcription + show notes generator. 120 users at $39/mo.",
+        "cac": "$15-30 via Reddit/Twitter in niche communities",
+        "marketingPlan": "Build in public on Twitter → ProductHunt launch → SEO content → Niche community engagement. Target micro-niches with painful manual work."
+      }
+    },
+    {
+      "id": 3,
+      "title": "Content Arbitrage",
+      "summary": "Repurpose viral content across platforms. Low skill barrier, fast setup, moderate income potential.",
+      "revenueScore": 6,
+      "profitMargin": 60,
+      "automationPercent": 70,
+      "timeToProfit": 1,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Creator earning $3k/mo reposting Reddit stories to TikTok with AI voiceovers. 200k followers, 5M monthly views, monetized via TikTok Creator Fund + brand deals.",
+        "cac": "$0 - organic growth only",
+        "marketingPlan": "Post 3x daily → Use trending sounds → Hook in first 3 seconds → Cross-post to YouTube Shorts/Instagram Reels. Scale with AI tools for voice + editing."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Local Lead Generation",
+      "summary": "Rank local service websites, sell leads to contractors. Passive income once ranked, proven model.",
+      "revenueScore": 7,
+      "profitMargin": 80,
+      "automationPercent": 60,
+      "timeToProfit": 6,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Operator runs 12 lead gen sites earning $8k/mo. Each site ranks for 'roofing [city name]' and sells leads at $50-150 each to local roofers.",
+        "cac": "$500-1000 per site (domain, hosting, initial SEO)",
+        "marketingPlan": "Build simple site → Local SEO (GMB, citations, backlinks) → Rank in 4-8 months → Sell leads on pay-per-lead or monthly retainer basis."
+      }
+    },
+    {
+      "id": 5,
+      "title": "Digital Product Empire",
+      "summary": "Sell courses, templates, guides in a niche you know. High margins, no inventory, infinite scale.",
+      "revenueScore": 8,
+      "profitMargin": 95,
+      "automationPercent": 80,
+      "timeToProfit": 3,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Designer selling Notion templates makes $12k/mo. Portfolio of 15 templates at $19-79 each. Built audience of 40k on Twitter sharing free tips.",
+        "cac": "$0-20 via organic content and email list",
+        "marketingPlan": "Build audience with free value → Launch with waitlist → Upsell template bundle → Automate with Gumroad/Lemon Squeezy. Focus on specific outcome (e.g., 'Notion for freelancers')."
+      }
+    },
+    {
+      "id": 6,
+      "title": "Affiliate SEO Sites",
+      "summary": "Review products, earn commissions. Passive once ranked, requires upfront content investment.",
+      "revenueScore": 7,
+      "profitMargin": 85,
+      "automationPercent": 75,
+      "timeToProfit": 8,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Site reviewing camping gear generates $5k/mo from Amazon Associates + brand partnerships. 150 articles, 50k monthly visitors, 8 months to profitability.",
+        "cac": "$300-600 per article (writer + editor)",
+        "marketingPlan": "Target long-tail buyer keywords → Publish comprehensive reviews → Build backlinks → Update seasonally. Focus on high-commission niches (software, tools, electronics)."
+      }
+    },
+    {
+      "id": 7,
+      "title": "Done-For-You Service (Virtual)",
+      "summary": "Offer specialized service remotely. Quick to start, trades time for money initially, can scale with team.",
+      "revenueScore": 6,
+      "profitMargin": 60,
+      "automationPercent": 30,
+      "timeToProfit": 1,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "Virtual bookkeeper serving e-commerce brands at $800/mo per client. Started solo, hired 2 VAs after 6 months, now manages 15 clients.",
+        "cac": "$100-300 via referrals and cold outreach",
+        "marketingPlan": "Niche down hard (e.g., Shopify stores only) → Join relevant communities → Offer free audit → Close on value. Scale by systematizing and hiring."
+      }
+    },
+    {
+      "id": 8,
+      "title": "Newsletter Empire",
+      "summary": "Curate valuable content, monetize via sponsors and products. Slow build but high upside.",
+      "revenueScore": 7,
+      "profitMargin": 90,
+      "automationPercent": 50,
+      "timeToProfit": 6,
+      "capitalNeeded": "low",
+      "details": {
+        "caseStudy": "AI newsletter with 25k subscribers earning $6k/mo. 2 sponsor slots at $2k each, plus $2k from affiliate links and paid recommendations.",
+        "cac": "$0.50-2 per subscriber via Twitter growth + referral program",
+        "marketingPlan": "Weekly valuable curation → Guest posts on larger newsletters → Referral incentives → Monetize at 5k+ subs. Use Beehiiv or ConvertKit for growth tools."
+      }
+    },
+    {
+      "id": 9,
+      "title": "E-commerce (Dropshipping/POD)",
+      "summary": "Sell physical products without inventory. Competitive but accessible, moderate margins.",
+      "revenueScore": 6,
+      "profitMargin": 35,
+      "automationPercent": 65,
+      "timeToProfit": 3,
+      "capitalNeeded": "medium",
+      "details": {
+        "caseStudy": "Print-on-demand store selling niche meme apparel: $8k/mo profit on $25k revenue. Uses Printful + Shopify, runs Meta ads to warm audiences.",
+        "cac": "$15-40 per customer via Facebook/Instagram ads",
+        "marketingPlan": "Find trending niche → Test designs with ads → Scale winners → Build retargeting funnels. Focus on passionate micro-communities (hobbies, professions, memes)."
+      }
+    },
+    {
+      "id": 10,
+      "title": "YouTube Automation",
+      "summary": "Faceless YouTube channels with outsourced production. High upside, requires content quality focus.",
+      "revenueScore": 8,
+      "profitMargin": 70,
+      "automationPercent": 80,
+      "timeToProfit": 6,
+      "capitalNeeded": "medium",
+      "details": {
+        "caseStudy": "Faceless finance channel earning $10k/mo from AdSense + sponsorships. 100k subs, outsources scripts ($50), voiceover ($30), editing ($100) per video. Posts 3x/week.",
+        "cac": "$0 organic + $200/video production cost",
+        "marketingPlan": "Pick evergreen niche (finance, history, tech) → Hire VA team → Optimize thumbnails/titles → Publish consistently. Monetize via ads, sponsors, affiliate links in description."
+      }
     }
-  ]
+  ],
+  "commandCenter": {
+    "activeProjects": [
+      {
+        "id": 1,
+        "name": "AI Chatbot MVP",
+        "progress": 65,
+        "dueDate": "2025-02-15",
+        "status": "on-track"
+      },
+      {
+        "id": 2,
+        "name": "Content SEO Site",
+        "progress": 30,
+        "dueDate": "2025-03-01",
+        "status": "on-track"
+      },
+      {
+        "id": 3,
+        "name": "Newsletter Launch",
+        "progress": 85,
+        "dueDate": "2025-01-20",
+        "status": "ahead"
+      }
+    ],
+    "todos": [
+      {
+        "id": 1,
+        "task": "Finish chatbot demo for first client pitch",
+        "priority": "high",
+        "dueDate": "2025-01-18"
+      },
+      {
+        "id": 2,
+        "task": "Write 3 SEO articles for affiliate site",
+        "priority": "medium",
+        "dueDate": "2025-01-22"
+      },
+      {
+        "id": 3,
+        "task": "Record YouTube automation video #1",
+        "priority": "low",
+        "dueDate": "2025-01-25"
+      },
+      {
+        "id": 4,
+        "task": "Set up email sequence for newsletter",
+        "priority": "high",
+        "dueDate": "2025-01-19"
+      },
+      {
+        "id": 5,
+        "task": "Research Micro-SaaS ideas in productivity niche",
+        "priority": "medium",
+        "dueDate": "2025-01-28"
+      }
+    ],
+    "recentCompletions": [
+      {
+        "id": 1,
+        "task": "Domain + hosting setup for lead gen site",
+        "completedDate": "2025-01-14"
+      },
+      {
+        "id": 2,
+        "task": "First newsletter issue sent (250 subs)",
+        "completedDate": "2025-01-13"
+      },
+      {
+        "id": 3,
+        "task": "Cold outreach campaign to 50 local businesses",
+        "completedDate": "2025-01-12"
+      }
+    ],
+    "nextActions": [
+      "Schedule client demo call for Friday",
+      "Batch-write newsletter content for next 4 weeks",
+      "Test Facebook ads for POD store ($50 budget)"
+    ]
+  }
 }
