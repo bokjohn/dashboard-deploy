@@ -18,8 +18,9 @@
       "maxStartupCapital": 15000,
       "minAutomation": 70
     },
-    "lastUpdated": "2026-01-28T09:59:22.213Z",
-    "researchCount": 2
+    "lastUpdated": "2026-01-28T10:03:09.706Z",
+    "researchCount": 2,
+    "businessModelsCount": 12
   },
   "summaryMetrics": {
     "totalModelsResearched": {
@@ -2616,6 +2617,62 @@
         "caseStudy": "No case study available yet. This is a validated business model based on market research.",
         "cac": "Startup: $10,000-25,000, Monthly: $5,000-10,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
         "marketingPlan": "Multi-channel approach combining SEO, content marketing, partnerships, and targeted outreach. Focus on automation-first strategies."
+      }
+    },
+    {
+      "id": "2026-01-28-1",
+      "title": "Municipal Lien Search Automation for Title Insurance",
+      "summary": "Municipal lien search is a required due diligence service for real estate transactions in many states (FL, OH, MI, MD, IL, IN, CT, PA, NY). Title insurance companies, attorneys, and real estate professionals must verify that properties are free from hidden municipal liens before closing transactions",
+      "category": "Business Model",
+      "status": "research",
+      "researchStatus": "active",
+      "quickMetrics": {
+        "automation": 95,
+        "capital": "medium",
+        "marketSize": "$16.8 billion"
+      },
+      "decisionData": {
+        "confidence": "MEDIUM",
+        "tags": []
+      },
+      "revenueScore": 7,
+      "profitMargin": 50,
+      "automationPercent": 95,
+      "timeToProfit": 6,
+      "capitalNeeded": "medium",
+      "qualityScore": 8,
+      "details": {
+        "description": "Municipal lien search is a required due diligence service for real estate transactions in many states (FL, OH, MI, MD, IL, IN, CT, PA, NY). Title insurance companies, attorneys, and real estate professionals must verify that properties are free from hidden municipal liens before closing transactions",
+        "file": "business-ideas/2026-01-28.md",
+        "date": "2026-01-28"
+      }
+    },
+    {
+      "id": "2026-01-28-2",
+      "title": "Unclaimed Property / Escheatment Compliance Automation",
+      "summary": "Every US state requires businesses to report and remit \"unclaimed property\" (abandoned funds) to the state after a dormancy period. This includes: uncashed payroll checks, unused gift cards, abandoned bank accounts, insurance proceeds, vendor credits, customer overpayments, and more. **80% of busine",
+      "category": "Business Model",
+      "status": "research",
+      "researchStatus": "active",
+      "quickMetrics": {
+        "automation": 90,
+        "capital": "medium",
+        "marketSize": "$500M"
+      },
+      "decisionData": {
+        "confidence": "MEDIUM",
+        "tags": []
+      },
+      "revenueScore": 7,
+      "profitMargin": 50,
+      "automationPercent": 90,
+      "timeToProfit": 6,
+      "capitalNeeded": "medium",
+      "qualityScore": 8,
+      "details": {
+        "description": "Every US state requires businesses to report and remit \"unclaimed property\" (abandoned funds) to the state after a dormancy period. This includes: uncashed payroll checks, unused gift cards, abandoned bank accounts, insurance proceeds, vendor credits, customer overpayments, and more. **80% of busine",
+        "file": "business-ideas/2026-01-28.md",
+        "date": "2026-01-28"
       }
     }
   ],
