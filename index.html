@@ -447,6 +447,9 @@
             padding-top: 20px;
             border-top: 1px solid var(--border);
             animation: slideDown 0.3s ease;
+            max-height: 80vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
         }
 
         .details.show {
@@ -454,25 +457,56 @@
         }
 
         @keyframes slideDown {
-            from { opacity: 0; max-height: 0; }
-            to { opacity: 1; max-height: 500px; }
+            from { 
+                opacity: 0; 
+                transform: translateY(-10px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
         }
 
         .detail-section {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .detail-title {
             font-weight: 600;
             color: var(--accent);
-            margin-bottom: 6px;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .detail-text {
             color: var(--text-secondary);
             font-size: 0.9rem;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+
+        .detail-text strong {
+            color: var(--text-primary);
+        }
+
+        .detail-text table {
+            font-size: 0.85rem;
+        }
+
+        .detail-text ul, .detail-text ol {
+            color: var(--text-secondary);
+        }
+
+        .detail-text li {
+            margin-bottom: 4px;
         }
 
         .expand-indicator {
@@ -486,6 +520,20 @@
 
         .business-card.expanded .expand-indicator {
             transform: rotate(180deg);
+        }
+
+        .card-hint {
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-light);
+            opacity: 0.8;
+        }
+
+        .business-card.expanded .card-hint {
+            display: none;
         }
 
         /* Command Center */
@@ -741,6 +789,27 @@
             .tab {
                 padding: 10px 16px;
                 font-size: 0.9rem;
+            }
+
+            /* Better mobile display for details */
+            .details {
+                max-height: 70vh;
+            }
+
+            .detail-section table {
+                font-size: 0.75rem;
+                display: block;
+                overflow-x: auto;
+            }
+
+            .detail-section table th,
+            .detail-section table td {
+                padding: 6px 2px;
+                font-size: 0.75rem;
+            }
+
+            .expand-indicator {
+                font-size: 1rem;
             }
         }
 
@@ -1616,6 +1685,246 @@
             renderBusinessCards();
         });
 
+        // Render Full Detail Sections for Business Model
+        function renderFullDetails(model) {
+            const d = model.decisionData || {};
+            
+            let html = '';
+            
+            // 1. 💰 Revenue & Timeline
+            if (d.revenuePotential || d.timeToFirstDollar || d.timeToTenK) {
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">💰 Revenue & Timeline</div>
+                        <div class="detail-text">
+                            ${d.revenuePotential ? `<strong>Revenue Potential:</strong> ${d.revenuePotential}<br>` : ''}
+                            ${d.timeToFirstDollar ? `<strong>First Dollar:</strong> ${d.timeToFirstDollar}<br>` : ''}
+                            ${d.timeToTenK ? `<strong>$10K/Month:</strong> ${d.timeToTenK}<br>` : ''}
+                            ${d.caseStudies && d.caseStudies.length > 0 ? `
+                                <br><strong>Real Examples:</strong><br>
+                                ${d.caseStudies.map(cs => `• <strong>${cs.name}</strong> - ${cs.revenue} (${cs.key})`).join('<br>')}
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 2. 💵 Costs
+            if (d.costs) {
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">💵 Costs</div>
+                        <div class="detail-text">
+                            ${d.costs.startup ? `<strong>Startup:</strong> ${d.costs.startup}<br>` : ''}
+                            ${d.costs.monthly ? `<strong>Monthly:</strong> ${d.costs.monthly}<br>` : ''}
+                            ${d.costs.breakdown && d.costs.breakdown.length > 0 ? `
+                                <br><strong>Breakdown:</strong><br>
+                                ${d.costs.breakdown.map(item => `• ${item.item}: <em>${item.cost}</em>`).join('<br>')}
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 3. 🤖 Automation Breakdown
+            if (d.automation) {
+                const auto = d.automation;
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">🤖 Automation Breakdown (${auto.overall}%)</div>
+                        <div class="detail-text">
+                            ${auto.setup ? `<strong>Setup Time:</strong> ${auto.setup}<br>` : ''}
+                            ${auto.personalTime ? `<strong>Your Time:</strong> ${auto.personalTime}<br>` : ''}
+                            ${auto.vaTime ? `<strong>VA Time:</strong> ${auto.vaTime}<br><br>` : ''}
+                            
+                            ${auto.aiHandles && auto.aiHandles.length > 0 ? `
+                                <strong>✅ AI Handles:</strong><br>
+                                ${auto.aiHandles.map(task => `• ${task}`).join('<br>')}<br><br>
+                            ` : ''}
+                            
+                            ${auto.yourRole && auto.yourRole.length > 0 ? `
+                                <strong>👤 You Do:</strong><br>
+                                ${auto.yourRole.map(task => `• ${task}`).join('<br>')}<br><br>
+                            ` : ''}
+                            
+                            ${auto.canDelegate && auto.canDelegate.length > 0 ? `
+                                <strong>🔄 Can Delegate:</strong><br>
+                                ${auto.canDelegate.map(task => `• ${task}`).join('<br>')}
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 4. 🛠️ Tool Stack
+            if (d.toolStack && d.toolStack.length > 0) {
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">🛠️ Tool Stack</div>
+                        <div class="detail-text">
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 8px;">
+                                <thead>
+                                    <tr style="border-bottom: 1px solid var(--border); text-align: left;">
+                                        <th style="padding: 8px 4px; font-size: 0.85rem;">Tool</th>
+                                        <th style="padding: 8px 4px; font-size: 0.85rem;">Purpose</th>
+                                        <th style="padding: 8px 4px; font-size: 0.85rem;">Cost</th>
+                                        <th style="padding: 8px 4px; font-size: 0.85rem;">Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${d.toolStack.map(tool => `
+                                        <tr style="border-bottom: 1px solid var(--border-light);">
+                                            <td style="padding: 8px 4px; font-size: 0.85rem;"><strong>${tool.name}</strong></td>
+                                            <td style="padding: 8px 4px; font-size: 0.85rem;">${tool.purpose}</td>
+                                            <td style="padding: 8px 4px; font-size: 0.85rem;">${tool.cost}</td>
+                                            <td style="padding: 8px 4px; font-size: 0.85rem;">
+                                                <span style="
+                                                    padding: 2px 8px; 
+                                                    border-radius: 12px; 
+                                                    font-size: 0.7rem; 
+                                                    font-weight: 600;
+                                                    ${tool.priority === 'essential' ? 'background: rgba(239, 68, 68, 0.1); color: var(--danger);' : 'background: var(--bg-tertiary); color: var(--text-secondary);'}
+                                                ">${tool.priority}</span>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 5. 🗺️ Launch Roadmap
+            if (d.launchRoadmap && d.launchRoadmap.steps) {
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">🗺️ Launch Roadmap (${d.launchRoadmap.timeline || 'Timeline'})</div>
+                        <div class="detail-text">
+                            ${d.launchRoadmap.steps.map((step, idx) => `
+                                <div style="
+                                    background: var(--bg-tertiary); 
+                                    padding: 12px; 
+                                    border-radius: 8px; 
+                                    margin-bottom: 12px;
+                                    border-left: 4px solid var(--accent);
+                                ">
+                                    <strong style="color: var(--accent);">${step.phase}: ${step.title}</strong>
+                                    ${step.time ? `<span style="color: var(--text-tertiary); font-size: 0.85rem;"> (${step.time})</span>` : ''}<br>
+                                    ${step.tasks && step.tasks.length > 0 ? `
+                                        <ul style="margin: 8px 0 8px 20px; line-height: 1.6; font-size: 0.9rem;">
+                                            ${step.tasks.map(task => `<li>${task}</li>`).join('')}
+                                        </ul>
+                                    ` : ''}
+                                    ${step.output ? `<em style="color: var(--text-secondary); font-size: 0.85rem;">Output: ${step.output}</em>` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 6. 📈 Success Probability
+            if (d.successProbability) {
+                const sp = d.successProbability;
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">📈 Success Probability (${sp.estimate || 'N/A'})</div>
+                        <div class="detail-text">
+                            ${sp.methodology ? `<strong>Why This Estimate:</strong> ${sp.methodology}<br><br>` : ''}
+                            
+                            ${sp.factors && sp.factors.positive && sp.factors.positive.length > 0 ? `
+                                <strong style="color: var(--success);">✅ What Works:</strong><br>
+                                ${sp.factors.positive.map(f => `• ${f}`).join('<br>')}<br><br>
+                            ` : ''}
+                            
+                            ${sp.factors && sp.factors.negative && sp.factors.negative.length > 0 ? `
+                                <strong style="color: var(--warning);">⚠️ Challenges:</strong><br>
+                                ${sp.factors.negative.map(f => `• ${f}`).join('<br>')}
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 7. 📉 Risks & Mitigation
+            if (d.risks && d.risks.length > 0) {
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">⚠️ Risks & Mitigation</div>
+                        <div class="detail-text">
+                            ${d.risks.map(risk => `
+                                <div style="
+                                    background: var(--bg-tertiary); 
+                                    padding: 10px; 
+                                    border-radius: 6px; 
+                                    margin-bottom: 10px;
+                                    border-left: 3px solid ${risk.probability === 'High' ? 'var(--danger)' : risk.probability === 'Medium' ? 'var(--warning)' : 'var(--success)'};
+                                ">
+                                    <strong>${risk.risk}</strong>
+                                    <span style="
+                                        padding: 2px 6px; 
+                                        border-radius: 10px; 
+                                        font-size: 0.7rem; 
+                                        margin-left: 8px;
+                                        background: ${risk.probability === 'High' ? 'rgba(239, 68, 68, 0.1)' : risk.probability === 'Medium' ? 'rgba(245, 158, 11, 0.1)' : 'rgba(16, 185, 129, 0.1)'};
+                                        color: ${risk.probability === 'High' ? 'var(--danger)' : risk.probability === 'Medium' ? 'var(--warning)' : 'var(--success)'};
+                                    ">${risk.probability} Risk</span><br>
+                                    <em style="color: var(--text-secondary); font-size: 0.9rem;">Mitigation: ${risk.mitigation}</em>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // 8. 🧪 Validation Test
+            if (d.validationTest) {
+                const vt = d.validationTest;
+                html += `
+                    <div class="detail-section">
+                        <div class="detail-title">🧪 Validation Test</div>
+                        <div class="detail-text" style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px;">
+                            ${vt.budget ? `<strong>Budget:</strong> ${vt.budget}<br>` : ''}
+                            ${vt.time ? `<strong>Time:</strong> ${vt.time}<br><br>` : ''}
+                            
+                            ${vt.steps && vt.steps.length > 0 ? `
+                                <strong>Steps:</strong><br>
+                                <ol style="margin: 8px 0 8px 20px; line-height: 1.6;">
+                                    ${vt.steps.map(step => `<li>${step}</li>`).join('')}
+                                </ol>
+                            ` : ''}
+                            
+                            ${vt.successCriteria ? `<br><strong style="color: var(--success);">Success = </strong>${vt.successCriteria}` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Final Verdict
+            if (d.verdict) {
+                const v = d.verdict;
+                html += `
+                    <div class="detail-section" style="
+                        background: linear-gradient(135deg, var(--accent), var(--chart-2)); 
+                        padding: 16px; 
+                        border-radius: 8px;
+                        color: white;
+                    ">
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">
+                            ${v.recommendation || 'Recommendation'} 
+                            ${v.confidence ? `<span style="opacity: 0.9; font-size: 0.9rem;">(Confidence: ${v.confidence})</span>` : ''}
+                        </div>
+                        <div style="font-size: 0.95rem; line-height: 1.6; opacity: 0.95;">
+                            ${v.reasoning || ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            return html;
+        }
+
         // Render Hero Metrics
         function renderHeroMetrics() {
             if (!data || !data.summaryMetrics) return;
@@ -1707,7 +2016,9 @@
             grid.style.display = 'grid';
             emptyState.style.display = 'none';
 
-            grid.innerHTML = filtered.map(model => `
+            grid.innerHTML = filtered.map(model => {
+                const decisionData = model.decisionData || {};
+                return `
                 <div class="business-card" data-id="${model.id}">
                     <span class="expand-indicator">▼</span>
                     <div class="card-header">
@@ -1746,26 +2057,22 @@
                         </div>
                     </div>
 
+                    <div class="card-hint">👆 Tap to see full business analysis</div>
+
                     <div class="details">
-                        <div class="detail-section">
-                            <div class="detail-title">📊 Case Study</div>
-                            <div class="detail-text">${model.details.caseStudy}</div>
-                        </div>
-                        <div class="detail-section">
-                            <div class="detail-title">💰 Customer Acquisition Cost</div>
-                            <div class="detail-text">${model.details.cac}</div>
-                        </div>
-                        <div class="detail-section">
-                            <div class="detail-title">📈 Marketing Plan</div>
-                            <div class="detail-text">${model.details.marketingPlan}</div>
-                        </div>
+                        ${renderFullDetails(model)}
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
 
             // Add click handlers
             document.querySelectorAll('.business-card').forEach(card => {
-                card.addEventListener('click', () => {
+                card.addEventListener('click', (e) => {
+                    // Don't collapse if clicking inside details (allow text selection)
+                    if (e.target.closest('.details') && card.classList.contains('expanded')) {
+                        return;
+                    }
+
                     const details = card.querySelector('.details');
                     const isExpanded = card.classList.contains('expanded');
                     
@@ -1779,6 +2086,11 @@
                     if (!isExpanded) {
                         card.classList.add('expanded');
                         details.classList.add('show');
+                        
+                        // Smooth scroll to card on mobile
+                        setTimeout(() => {
+                            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }, 100);
                     }
                 });
             });
