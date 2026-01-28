@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "lastUpdate": "2026-01-27T19:15:00-08:00",
+    "focus": "Decision-making data with automation scoring"
+  },
+  "businessModels": [
+    {
+      "id": 1,
+      "title": "Lead Gen/Agency Automation",
+      "summary": "Voice AI agents + lead gen systems for local businesses. $0→$38K MRR in 90 days case study.",
+      "quickMetrics": {
+        "revenueScore": 10,
+        "profitMargin": 73,
+        "automationPercent": 95,
+        "timeToProfit": 3,
+        "capitalNeeded": "low"
+      },
+      "automationBreakdown": {
+        "setupPhase": {
+          "personalTime": "15-20 hours (Week 1-2)",
+          "tasks": [
+            "API setup (ElevenLabs, Make.com, Bland AI) - 3 hours",
+            "First client acquisition - 5-8 hours",
+            "Workflow configuration - 4-6 hours",
+            "Testing and refinement - 3-4 hours"
+          ],
+          "canDelegate": false,
+          "notes": "Must do yourself initially to understand the system"
+        },
+        "ongoingOperations": {
+          "totalAutomation": 95,
+          "breakdown": [
+            {"task": "Lead generation", "automation": 100, "tool": "AI prospecting tools"},
+            {"task": "Service delivery (calls)", "automation": 100, "tool": "ElevenLabs/Bland AI"},
+            {"task": "Customer onboarding", "automation": 90, "tool": "Make.com workflows"},
+            {"task": "Reporting", "automation": 95, "tool": "Automated dashboards"},
+            {"task": "Client communication", "automation": 85, "tool": "AI + manual check-ins"},
+            {"task": "Invoicing/payments", "automation": 100, "tool": "Stripe auto-billing"}
+          ],
+          "personalTime": "2-4 hours/week",
+          "vaTime": "Optional: 5-10 hours/week for scaling",
+          "qualityImpact": "High automation maintains quality - AI handles every call consistently"
+        }
+      },
+      "costBreakdown": {
+        "startup": {
+          "total": "~$2,500",
+          "items": [
+            {"item": "ElevenLabs Pro", "cost": 99, "frequency": "one-time setup"},
+            {"item": "Make.com Team", "cost": 29, "frequency": "monthly (first month)"},
+            {"item": "Bland AI credits", "cost": 500, "frequency": "one-time testing budget"},
+            {"item": "Website/landing page", "cost": 200, "frequency": "one-time"},
+            {"item": "CRM setup (HubSpot/Pipedrive)", "cost": 0, "frequency": "free tier initially"},
+            {"item": "First ads/outreach budget", "cost": 1500, "frequency": "optional"}
+          ]
+        },
+        "monthly": {
+          "total": "$700-$1,200/month",
+          "items": [
+            {"item": "ElevenLabs", "cost": "99-299", "notes": "Depends on call volume"},
+            {"item": "Make.com", "cost": "29-99", "notes": "Operations tier"},
+            {"item": "Bland AI usage", "cost": "300-500", "notes": "Per-minute billing"},
+            {"item": "CRM/tools", "cost": "50-150", "notes": "As you scale"},
+            {"item": "Hosting/domain", "cost": "20", "notes": "Basic needs"}
+          ],
+          "breakevenClients": "1-2 clients covers all costs"
+        }
+      },
+      "launchRoadmap": {
+        "timeline": "90 days to $10K+ MRR",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Week 1-2: Setup & Testing",
+            "time": "15-20 hours",
+            "tasks": [
+              "Sign up for ElevenLabs, Make.com, Bland AI",
+              "Build first voice agent workflow (use templates)",
+              "Test with your own phone number (refine responses)",
+              "Create simple landing page"
+            ],
+            "output": "Working voice agent you can demo"
+          },
+          {
+            "step": 2,
+            "title": "Week 3-4: First Client",
+            "time": "10-15 hours",
+            "tasks": [
+              "Reach out to 20-30 local businesses (solar, HVAC, salons)",
+              "Offer free 2-week trial (prove value fast)",
+              "Set up their custom workflow",
+              "Monitor and optimize"
+            ],
+            "output": "First paying client at $2K-5K/month"
+          },
+          {
+            "step": 3,
+            "title": "Month 2: Refine & Scale",
+            "time": "8-12 hours/week",
+            "tasks": [
+              "Get testimonial from first client",
+              "Use referrals to get clients 2-4",
+              "Build case study (calls answered, revenue impact)",
+              "Automate onboarding further"
+            ],
+            "output": "3-4 clients, $8K-15K MRR"
+          },
+          {
+            "step": 4,
+            "title": "Month 3: Growth",
+            "time": "5-10 hours/week",
+            "tasks": [
+              "Hire VA for client check-ins (optional)",
+              "Scale to 8-12 clients via referrals + outreach",
+              "Document processes",
+              "Consider raising prices"
+            ],
+            "output": "$20K-38K MRR (90-day goal achieved)"
+          }
+        ]
+      },
+      "toolStack": {
+        "core": [
+          {"name": "ElevenLabs", "purpose": "Text-to-speech for AI voice", "cost": "$99-299/mo", "url": "elevenlabs.io"},
+          {"name": "Bland AI", "purpose": "Phone call automation", "cost": "$0.10-0.15/min", "url": "bland.ai"},
+          {"name": "Make.com", "purpose": "Workflow automation", "cost": "$29-99/mo", "url": "make.com"}
+        ],
+        "optional": [
+          {"name": "HubSpot CRM", "purpose": "Client management", "cost": "Free-$50/mo", "url": "hubspot.com"},
+          {"name": "Stripe", "purpose": "Payment processing", "cost": "2.9% + 30¢", "url": "stripe.com"},
+          {"name": "Zapier", "purpose": "Additional integrations", "cost": "$0-30/mo", "url": "zapier.com"}
+        ]
+      },
+      "successProbability": {
+        "estimate": "65-75%",
+        "methodology": "Based on 8+ case studies, market demand, competition level",
+        "factors": {
+          "positive": [
+            "Proven model ($0→$38K in 90 days real case)",
+            "High demand (local businesses drowning in calls)",
+            "Low competition (still early for voice AI)",
+            "High margins (73% profit)",
+            "Fast time-to-revenue (first client in 2-4 weeks possible)"
+          ],
+          "risks": [
+            "Voice AI quality issues (need good prompts)",
+            "Client acquisition (cold outreach needed initially)",
+            "Tech complexity (learning curve for Make.com/Bland)",
+            "Client retention (need to prove ROI fast)"
+          ]
+        }
+      },
+      "revenueTimeline": {
+        "firstDollar": "Week 3-4 (first client)",
+        "breakeven": "Month 1-2 (1-2 clients)",
+        "profitability": "Month 2-3 ($5K+ net profit)",
+        "scaleTarget": "Month 6-12 ($50K+ MRR possible)",
+        "projections": [
+          {"month": 1, "clients": "1-2", "revenue": "$2K-8K", "profit": "$1K-6K"},
+          {"month": 2, "clients": "3-5", "revenue": "$8K-15K", "profit": "$6K-11K"},
+          {"month": 3, "clients": "6-10", "revenue": "$15K-30K", "profit": "$11K-22K"},
+          {"month": 6, "clients": "12-20", "revenue": "$30K-60K", "profit": "$22K-44K"}
+        ]
+      },
+      "yourResponsibilities": {
+        "cantDelegate": [
+          "Initial strategy and niche selection",
+          "High-value sales calls (can VA after month 2)",
+          "Quality control and workflow optimization"
+        ],
+        "canDelegate": [
+          "Client check-ins and reporting (VA $5/hr)",
+          "Social media posting",
+          "Basic customer support",
+          "Lead list building"
+        ],
+        "aiHandles": [
+          "100% of voice call interactions",
+          "Lead qualification",
+          "Appointment scheduling",
+          "Follow-up sequences",
+          "Reporting and analytics"
+        ]
+      },
+      "validationTest": {
+        "budget": "$50-200",
+        "time": "1 week",
+        "steps": [
+          "Sign up for Make.com free trial + Bland AI ($50 credits)",
+          "Build simple voice agent (use template)",
+          "Call 5-10 local businesses, offer free 1-week test",
+          "Get 1 business to try it",
+          "Track: calls answered, leads captured, client feedback"
+        ],
+        "successCriteria": [
+          "Voice agent answers calls acceptably well",
+          "Client sees value (would pay for it)",
+          "You can build and deploy in <10 hours"
+        ],
+        "pivot": "If voice quality sucks, pivot to chatbot version (easier)"
+      },
+      "risks": {
+        "technical": {
+          "risk": "Voice AI sounds robotic or fails to understand",
+          "mitigation": "Use ElevenLabs best voices, test extensively, have human fallback"
+        },
+        "market": {
+          "risk": "Businesses don't see value or won't pay premium",
+          "mitigation": "Offer free trial, prove ROI with data (calls answered = revenue saved)"
+        },
+        "competition": {
+          "risk": "Big players (Google, Microsoft) enter market",
+          "mitigation": "Focus on local/niche (you're faster and more personal)"
+        },
+        "scaling": {
+          "risk": "Can't handle 20+ clients without hiring team",
+          "mitigation": "Charge premium, limit to 15-20 clients, or hire 1-2 VAs"
+        }
+      },
+      "verdict": {
+        "recommendation": "STRONG YES",
+        "confidence": "High (8/10)",
+        "reasoning": "Proven model, high automation, excellent margins, fast time-to-revenue. Risk is manageable with validation test first."
+      }
+    }
+  ]
+}
