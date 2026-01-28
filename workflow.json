@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdate": "2026-01-27T21:40:00-08:00",
+    "purpose": "Track Sean + Jon collaboration workflow",
+    "team": {
+      "sean": {
+        "role": "Product Owner & Decision Maker",
+        "responsibilities": ["Strategic decisions", "Final review", "Launch approval"]
+      },
+      "jon": {
+        "role": "AI Development Partner",
+        "responsibilities": ["Research", "Implementation", "Automation", "Documentation"]
+      }
+    }
+  },
+  "stages": {
+    "research": {
+      "name": "Research",
+      "description": "What we're investigating",
+      "icon": "🔍",
+      "color": "#3b82f6"
+    },
+    "build": {
+      "name": "Build",
+      "description": "What's being created",
+      "icon": "🛠️",
+      "color": "#8b5cf6"
+    },
+    "review": {
+      "name": "Review",
+      "description": "What needs Sean's input",
+      "icon": "👀",
+      "color": "#f59e0b"
+    },
+    "deploy": {
+      "name": "Deploy",
+      "description": "What's live and running",
+      "icon": "🚀",
+      "color": "#10b981"
+    }
+  },
+  "projects": [
+    {
+      "id": "business-dashboard",
+      "name": "Business Model Dashboard",
+      "stage": "deploy",
+      "owner": "jon",
+      "status": "live",
+      "automated": true,
+      "blockedBy": null,
+      "nextAction": {
+        "who": "jon",
+        "what": "Add workflow tab (this!)",
+        "priority": "high"
+      },
+      "description": "Interactive dashboard for business research analysis",
+      "url": "https://bokjohn.github.io/dashboard-deploy/",
+      "lastUpdated": "2026-01-27"
+    },
+    {
+      "id": "workflow-tracking",
+      "name": "Workflow Tab",
+      "stage": "build",
+      "owner": "jon",
+      "status": "in-progress",
+      "automated": false,
+      "blockedBy": null,
+      "nextAction": {
+        "who": "jon",
+        "what": "Complete Kanban view implementation",
+        "priority": "high"
+      },
+      "description": "Kanban board showing collaboration process",
+      "lastUpdated": "2026-01-27"
+    },
+    {
+      "id": "business-research",
+      "name": "Business Model Research",
+      "stage": "review",
+      "owner": "jon",
+      "status": "complete",
+      "automated": false,
+      "blockedBy": "sean",
+      "nextAction": {
+        "who": "sean",
+        "what": "Review 10 qualifying business models and pick favorites",
+        "priority": "medium"
+      },
+      "description": "Researched 20 business models, found 10 that meet criteria",
+      "deliverables": [
+        "10 qualifying models with full analysis",
+        "Executive summary with recommendations",
+        "Action checklist for each model"
+      ],
+      "lastUpdated": "2026-01-28"
+    },
+    {
+      "id": "automation-framework",
+      "name": "Clawdbot Automation",
+      "stage": "deploy",
+      "owner": "jon",
+      "status": "live",
+      "automated": true,
+      "blockedBy": null,
+      "nextAction": {
+        "who": "jon",
+        "what": "Monitor and improve autonomy",
+        "priority": "ongoing"
+      },
+      "description": "AI assistant running autonomously with heartbeats and workflows",
+      "features": [
+        "Proactive task execution",
+        "Memory management",
+        "Multi-channel communication"
+      ],
+      "lastUpdated": "2026-01-27"
+    },
+    {
+      "id": "next-business-mvp",
+      "name": "First Business MVP",
+      "stage": "research",
+      "owner": "both",
+      "status": "pending",
+      "automated": false,
+      "blockedBy": "sean",
+      "nextAction": {
+        "who": "sean",
+        "what": "Choose which business model to build first",
+        "priority": "high"
+      },
+      "description": "Build MVP for chosen business model",
+      "dependencies": ["business-research"],
+      "lastUpdated": "2026-01-28"
+    }
+  ],
+  "automationStatus": {
+    "totalProjects": 5,
+    "automated": 2,
+    "automationPercentage": 40,
+    "runningAutonomously": [
+      "Business Dashboard (auto-updates via git)",
+      "Clawdbot (heartbeats, monitoring, proactive actions)"
+    ],
+    "manualTasks": [
+      "Strategic decisions",
+      "Business model selection",
+      "Final reviews and approvals"
+    ]
+  }
+}

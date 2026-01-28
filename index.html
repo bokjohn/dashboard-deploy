@@ -939,6 +939,311 @@
                 gap: 16px;
             }
         }
+
+        /* Workflow Tab Styles */
+        .workflow-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .workflow-header h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .workflow-subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .automation-summary {
+            background: linear-gradient(135deg, var(--chart-1), var(--chart-2));
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .automation-stat {
+            text-align: center;
+        }
+
+        .automation-stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .automation-stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        .kanban-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .kanban-column {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 0;
+            border: 1px solid var(--border);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kanban-header {
+            padding: 20px;
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--bg-secondary);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .kanban-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .kanban-icon {
+            font-size: 24px;
+        }
+
+        .kanban-description {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .kanban-count {
+            display: inline-block;
+            background: var(--bg-tertiary);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .kanban-cards {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow-y: auto;
+        }
+
+        .workflow-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 16px;
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .workflow-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .workflow-card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .workflow-card-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .workflow-card-status {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .status-badge {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .status-live {
+            background: var(--success);
+            color: white;
+        }
+
+        .status-progress {
+            background: var(--info);
+            color: white;
+        }
+
+        .status-pending {
+            background: var(--text-tertiary);
+            color: white;
+        }
+
+        .status-complete {
+            background: var(--chart-2);
+            color: white;
+        }
+
+        .status-automated {
+            background: var(--chart-5);
+            color: white;
+        }
+
+        .status-manual {
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .workflow-card-description {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .workflow-card-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .next-action {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .next-action-icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .next-action-content {
+            flex: 1;
+        }
+
+        .next-action-who {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .next-action-what {
+            color: var(--text-secondary);
+        }
+
+        .blocked-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--warning);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .workflow-deliverables {
+            margin-top: 8px;
+        }
+
+        .deliverable-item {
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            position: relative;
+            margin-top: 4px;
+        }
+
+        .deliverable-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .workflow-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--accent);
+            font-size: 12px;
+            text-decoration: none;
+            margin-top: 8px;
+            transition: color var(--transition);
+        }
+
+        .workflow-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .empty-column {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .kanban-board {
+                grid-template-columns: 1fr;
+            }
+
+            .automation-summary {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                padding: 16px;
+            }
+
+            .automation-stat-value {
+                font-size: 24px;
+            }
+
+            .automation-stat-label {
+                font-size: 12px;
+            }
+
+            .workflow-header h2 {
+                font-size: 24px;
+            }
+
+            .kanban-column {
+                min-height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -964,6 +1269,7 @@
         <div class="tabs">
             <button class="tab active" data-tab="research">📚 Research Hub</button>
             <button class="tab" data-tab="command">⚡ Command Center</button>
+            <button class="tab" data-tab="workflow">🔄 Workflow</button>
         </div>
 
         <!-- Research Hub Tab -->
@@ -1008,12 +1314,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- Workflow Tab -->
+        <div class="tab-content" id="workflow">
+            <div class="workflow-header">
+                <h2>Sean + Jon Collaboration</h2>
+                <p class="workflow-subtitle">What are we working on? What's my part? What's automated?</p>
+            </div>
+
+            <div class="automation-summary" id="automationSummary">
+                <!-- Automation stats will be injected here -->
+            </div>
+
+            <div class="kanban-board" id="kanbanBoard">
+                <!-- Kanban columns will be injected here -->
+            </div>
+        </div>
     </div>
 
     <script>
         // State
         let data = null;
         let commandCenterData = null;
+        let workflowData = null;
         let currentFilter = 'all';
         let currentSort = 'default';
         let searchQuery = '';
@@ -1071,6 +1394,169 @@
             }
         }
 
+        // Load workflow data
+        async function loadWorkflowData() {
+            try {
+                const response = await fetch('./workflow.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                const text = await response.text();
+                workflowData = JSON.parse(text);
+                renderWorkflow();
+            } catch (error) {
+                console.error('Error loading workflow data:', error);
+                const errorDetails = error.message || 'Unknown error';
+                document.getElementById('kanbanBoard').innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">⚠️</div>
+                        <h3>Error loading workflow</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 8px;">${errorDetails}</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: 12px;">
+                            Try refreshing the page. If the issue persists, check browser console for details.
+                        </p>
+                    </div>
+                `;
+            }
+        }
+
+        // Render workflow tab
+        function renderWorkflow() {
+            if (!workflowData) return;
+
+            // Render automation summary
+            const automationSummary = document.getElementById('automationSummary');
+            const autoStats = workflowData.automationStatus;
+            
+            automationSummary.innerHTML = `
+                <div class="automation-stat">
+                    <div class="automation-stat-value">${autoStats.totalProjects}</div>
+                    <div class="automation-stat-label">Total Projects</div>
+                </div>
+                <div class="automation-stat">
+                    <div class="automation-stat-value">${autoStats.automated}</div>
+                    <div class="automation-stat-label">Automated</div>
+                </div>
+                <div class="automation-stat">
+                    <div class="automation-stat-value">${autoStats.automationPercentage}%</div>
+                    <div class="automation-stat-label">Automation Rate</div>
+                </div>
+            `;
+
+            // Group projects by stage
+            const projectsByStage = {
+                research: [],
+                build: [],
+                review: [],
+                deploy: []
+            };
+
+            workflowData.projects.forEach(project => {
+                if (projectsByStage[project.stage]) {
+                    projectsByStage[project.stage].push(project);
+                }
+            });
+
+            // Render Kanban board
+            const kanbanBoard = document.getElementById('kanbanBoard');
+            const stages = workflowData.stages;
+            
+            let boardHTML = '';
+            
+            Object.entries(stages).forEach(([stageKey, stage]) => {
+                const projects = projectsByStage[stageKey];
+                const count = projects.length;
+                
+                boardHTML += `
+                    <div class="kanban-column">
+                        <div class="kanban-header">
+                            <div class="kanban-title">
+                                <span class="kanban-icon">${stage.icon}</span>
+                                <span>${stage.name}</span>
+                                <span class="kanban-count">${count}</span>
+                            </div>
+                            <div class="kanban-description">${stage.description}</div>
+                        </div>
+                        <div class="kanban-cards">
+                            ${projects.length === 0 ? `
+                                <div class="empty-column">No projects in this stage</div>
+                            ` : projects.map(project => renderWorkflowCard(project)).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            kanbanBoard.innerHTML = boardHTML;
+        }
+
+        // Render individual workflow card
+        function renderWorkflowCard(project) {
+            const statusClass = {
+                'live': 'status-live',
+                'in-progress': 'status-progress',
+                'pending': 'status-pending',
+                'complete': 'status-complete'
+            }[project.status] || 'status-pending';
+
+            const automatedBadge = project.automated 
+                ? '<span class="status-badge status-automated">🤖 Automated</span>'
+                : '<span class="status-badge status-manual">Manual</span>';
+
+            const blockedBadge = project.blockedBy 
+                ? `<div class="blocked-badge">⏸️ Waiting for ${project.blockedBy}</div>`
+                : '';
+
+            const deliverables = project.deliverables 
+                ? `<div class="workflow-deliverables">
+                    ${project.deliverables.map(d => `<div class="deliverable-item">${d}</div>`).join('')}
+                   </div>`
+                : '';
+
+            const features = project.features
+                ? `<div class="workflow-deliverables">
+                    ${project.features.map(f => `<div class="deliverable-item">${f}</div>`).join('')}
+                   </div>`
+                : '';
+
+            const link = project.url 
+                ? `<a href="${project.url}" target="_blank" class="workflow-link">🔗 View live →</a>`
+                : '';
+
+            const nextActionIcon = project.nextAction.who === 'sean' ? '👤' : '🤖';
+            const nextActionWho = project.nextAction.who === 'sean' ? 'Sean' : 'Jon';
+
+            return `
+                <div class="workflow-card">
+                    <div class="workflow-card-header">
+                        <div>
+                            <div class="workflow-card-title">${project.name}</div>
+                            <div class="workflow-card-status">
+                                <span class="status-badge ${statusClass}">${project.status}</span>
+                                ${automatedBadge}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-card-description">${project.description}</div>
+                    
+                    ${deliverables}
+                    ${features}
+                    ${link}
+                    
+                    <div class="workflow-card-footer">
+                        ${blockedBadge}
+                        <div class="next-action">
+                            <span class="next-action-icon">${nextActionIcon}</span>
+                            <div class="next-action-content">
+                                <span class="next-action-who">${nextActionWho}:</span>
+                                <span class="next-action-what">${project.nextAction.what}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -1100,6 +1586,11 @@
                 // Load command center data if switching to that tab
                 if (targetTab === 'command' && !commandCenterData) {
                     loadCommandCenterData();
+                }
+                
+                // Load workflow data if switching to that tab
+                if (targetTab === 'workflow' && !workflowData) {
+                    loadWorkflowData();
                 }
             });
         });
