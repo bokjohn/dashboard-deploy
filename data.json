@@ -22,7 +22,31 @@
   "summaryMetrics": {
     "totalModelsResearched": {
       "value": 20,
-      "description": "All business models discovered across research"
+      "description": "All business models discovered across research",
+      "delta": 5,
+      "deltaPercent": 33,
+      "period": "vs last month"
+    },
+    "averageROI": {
+      "value": 8.2,
+      "description": "Average ROI score across all qualifying models",
+      "delta": 0.7,
+      "deltaPercent": 9,
+      "period": "vs last month"
+    },
+    "projectsCompleted": {
+      "value": 3,
+      "description": "Research projects completed and documented",
+      "delta": 1,
+      "deltaPercent": 50,
+      "period": "this month"
+    },
+    "automationScore": {
+      "value": 87,
+      "description": "Average automation percentage across qualifying models",
+      "delta": 5,
+      "deltaPercent": 6,
+      "period": "improvement"
     },
     "qualifyingModels": {
       "value": 10,
