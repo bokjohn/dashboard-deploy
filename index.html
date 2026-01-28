@@ -68,6 +68,86 @@
             margin: 0 auto;
             padding: 20px;
         }
+        
+        /* Hero Metrics Section - F-Pattern Layout */
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--chart-1), var(--chart-2));
+            opacity: 1;
+        }
+        
+        .hero-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px var(--shadow);
+        }
+        
+        .hero-card .metric-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        
+        .hero-card .metric-value {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Delta Indicators */
+        .metric-delta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 4px 0;
+        }
+        
+        .metric-delta.positive { color: var(--success); }
+        .metric-delta.negative { color: var(--danger); }
+        .metric-delta.neutral { color: var(--text-secondary); }
+        
+        .delta-arrow {
+            font-size: 1rem;
+            line-height: 1;
+        }
+        
+        .delta-period {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-left: 4px;
+        }
 
         /* Header */
         header {
@@ -665,6 +745,10 @@
         }
 
         @media (max-width: 480px) {
+            .hero-metrics {
+                grid-template-columns: 1fr;
+            }
+            
             .metrics {
                 grid-template-columns: 1fr;
             }
@@ -709,6 +793,11 @@
     </header>
 
     <div class="container">
+        <!-- Hero Metrics Section (F-Pattern Layout - Top Priority) -->
+        <div class="hero-metrics" id="heroMetrics">
+            <!-- Metrics will be injected here -->
+        </div>
+
         <div class="tabs">
             <button class="tab active" data-tab="research">📚 Research Hub</button>
             <button class="tab" data-tab="command">⚡ Command Center</button>
@@ -804,6 +893,7 @@
             try {
                 const response = await fetch('data.json');
                 data = await response.json();
+                renderHeroMetrics();
                 renderBusinessCards();
                 renderCommandCenter();
             } catch (error) {
@@ -866,6 +956,61 @@
             searchQuery = e.target.value.toLowerCase();
             renderBusinessCards();
         });
+
+        // Render Hero Metrics
+        function renderHeroMetrics() {
+            if (!data || !data.summaryMetrics) return;
+
+            const metrics = [
+                {
+                    label: 'Models Researched',
+                    value: data.summaryMetrics.totalModelsResearched.value,
+                    delta: data.summaryMetrics.totalModelsResearched.delta,
+                    deltaPercent: data.summaryMetrics.totalModelsResearched.deltaPercent,
+                    period: data.summaryMetrics.totalModelsResearched.period
+                },
+                {
+                    label: 'Avg ROI Score',
+                    value: data.summaryMetrics.averageROI.value + '/10',
+                    delta: data.summaryMetrics.averageROI.delta,
+                    deltaPercent: data.summaryMetrics.averageROI.deltaPercent,
+                    period: data.summaryMetrics.averageROI.period
+                },
+                {
+                    label: 'Projects Complete',
+                    value: data.summaryMetrics.projectsCompleted.value,
+                    delta: data.summaryMetrics.projectsCompleted.delta,
+                    deltaPercent: data.summaryMetrics.projectsCompleted.deltaPercent,
+                    period: data.summaryMetrics.projectsCompleted.period
+                },
+                {
+                    label: 'Automation Score',
+                    value: data.summaryMetrics.automationScore.value + '%',
+                    delta: data.summaryMetrics.automationScore.delta,
+                    deltaPercent: data.summaryMetrics.automationScore.deltaPercent,
+                    period: data.summaryMetrics.automationScore.period
+                }
+            ];
+
+            const heroContainer = document.getElementById('heroMetrics');
+            heroContainer.innerHTML = metrics.map(metric => {
+                const deltaClass = metric.delta > 0 ? 'positive' : metric.delta < 0 ? 'negative' : 'neutral';
+                const deltaArrow = metric.delta > 0 ? '↑' : metric.delta < 0 ? '↓' : '→';
+                const deltaSign = metric.delta > 0 ? '+' : '';
+
+                return `
+                    <div class="hero-card">
+                        <span class="metric-label">${metric.label}</span>
+                        <span class="metric-value">${metric.value}</span>
+                        <div class="metric-delta ${deltaClass}">
+                            <span class="delta-arrow">${deltaArrow}</span>
+                            <span>${deltaSign}${metric.deltaPercent}%</span>
+                            <span class="delta-period">${metric.period}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
 
         // Render Business Cards
         function renderBusinessCards() {

@@ -1,14 +1,44 @@
 {
   "lastUpdate": "2026-01-27T18:35:00-08:00",
+  "summaryMetrics": {
+    "totalModelsResearched": {
+      "value": 10,
+      "delta": 3,
+      "deltaPercent": 42.9,
+      "period": "vs last week"
+    },
+    "averageROI": {
+      "value": 8.1,
+      "delta": 0.5,
+      "deltaPercent": 6.6,
+      "period": "vs last month"
+    },
+    "projectsCompleted": {
+      "value": 3,
+      "delta": 2,
+      "deltaPercent": 200,
+      "period": "this week"
+    },
+    "automationScore": {
+      "value": 92,
+      "delta": 8,
+      "deltaPercent": 9.5,
+      "period": "vs last month"
+    }
+  },
   "businessModels": [
     {
       "id": 1,
       "title": "Lead Gen/Agency Automation",
       "summary": "Voice AI agents + lead gen systems for local businesses. $0→$38K MRR in 90 days case study. One person manages 50 clients.",
       "revenueScore": 10,
+      "revenueScoreDelta": 8,
       "profitMargin": 73,
+      "profitMarginDelta": 5,
       "automationPercent": 95,
+      "automationPercentDelta": 10,
       "timeToProfit": 3,
+      "timeToProfitDelta": -1,
       "capitalNeeded": "low",
       "details": {
         "caseStudy": "Voice AI agency: $0 → $38K MRR in 90 days (73% profit margin). At 50 clients: $298K annual revenue, $179K net profit.",
