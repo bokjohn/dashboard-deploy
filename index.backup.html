@@ -12,45 +12,29 @@
         }
 
         :root {
-            /* Enhanced Color System - Research Recommendations */
             --bg-primary: #0f1419;
             --bg-secondary: #1a1f2e;
             --bg-tertiary: #252d3d;
             --text-primary: #e8eaed;
             --text-secondary: #9aa0a6;
-            --text-tertiary: #6b7280;
-            
-            /* Semantic Colors (Consistent Meaning) */
             --accent: #4a9eff;
             --accent-hover: #6bb0ff;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --info: #3b82f6;
-            
-            /* Chart Colors (Multi-hue Palette) */
-            --chart-1: #3b82f6;
-            --chart-2: #8b5cf6;
-            --chart-3: #ec4899;
-            --chart-4: #f59e0b;
-            --chart-5: #10b981;
-            
+            --success: #34a853;
+            --warning: #fbbc04;
+            --danger: #ea4335;
             --border: #2d3748;
-            --border-light: #3a3f4b;
             --shadow: rgba(0, 0, 0, 0.3);
-            --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: 0.2s ease;
         }
 
         [data-theme="light"] {
             --bg-primary: #ffffff;
-            --bg-secondary: #f9fafb;
-            --bg-tertiary: #f3f4f6;
-            --text-primary: #111827;
-            --text-secondary: #6b7280;
-            --text-tertiary: #9ca3af;
-            --border: #e5e7eb;
-            --border-light: #d1d5db;
-            --shadow: rgba(0, 0, 0, 0.08);
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #1a1a1a;
+            --text-secondary: #5f6368;
+            --border: #dadce0;
+            --shadow: rgba(0, 0, 0, 0.1);
         }
 
         body {
@@ -59,8 +43,6 @@
             color: var(--text-primary);
             line-height: 1.6;
             transition: background var(--transition), color var(--transition);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
@@ -271,28 +253,11 @@
             position: relative;
             overflow: hidden;
         }
-        
-        /* Gradient top bar (shows on hover) */
-        .business-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--chart-1), var(--chart-2), var(--chart-3));
-            opacity: 0;
-            transition: opacity var(--transition);
-        }
 
         .business-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 24px var(--shadow);
+            box-shadow: 0 8px 20px var(--shadow);
             border-color: var(--accent);
-        }
-        
-        .business-card:hover::before {
-            opacity: 1;
         }
 
         .business-card.expanded {
@@ -331,19 +296,16 @@
 
         .metric-label {
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
-            font-weight: 500;
+            margin-bottom: 4px;
         }
 
         .metric-value {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.1rem;
+            font-weight: 600;
             color: var(--text-primary);
-            font-variant-numeric: tabular-nums;
-            line-height: 1;
         }
 
         .metric-bar {
@@ -356,9 +318,9 @@
 
         .metric-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--chart-1), var(--chart-2));
+            background: linear-gradient(90deg, var(--accent), var(--success));
             border-radius: 3px;
-            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: width 0.5s ease;
         }
 
         .details {
@@ -464,17 +426,17 @@
         }
 
         .status-on-track {
-            background: rgba(16, 185, 129, 0.15);
+            background: rgba(52, 168, 83, 0.2);
             color: var(--success);
         }
 
         .status-ahead {
-            background: rgba(59, 130, 246, 0.15);
-            color: var(--info);
+            background: rgba(74, 158, 255, 0.2);
+            color: var(--accent);
         }
 
         .status-behind {
-            background: rgba(239, 68, 68, 0.15);
+            background: rgba(234, 67, 53, 0.2);
             color: var(--danger);
         }
 
@@ -488,9 +450,9 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--chart-1), var(--chart-5));
+            background: linear-gradient(90deg, var(--accent), var(--success));
             border-radius: 4px;
-            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: width 0.5s ease;
         }
 
         .project-meta {
@@ -586,23 +548,17 @@
         }
 
         .next-action {
-            background: linear-gradient(135deg, var(--chart-1), var(--chart-5));
+            background: linear-gradient(135deg, var(--accent), var(--success));
             color: white;
             padding: 12px 15px;
             border-radius: 8px;
             margin-bottom: 10px;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 0.95rem;
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
-            transition: all var(--transition);
-        }
-        
-        .next-action:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+            box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
         }
 
         .action-icon {
