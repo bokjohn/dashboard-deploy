@@ -776,6 +776,172 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
+
+        /* === QUICK WIN ENHANCEMENTS === */
+        
+        /* Quick Win #1: DO NOW Section */
+        .do-now-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .do-now-section h2 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .do-now-task {
+            background: white;
+            color: #333;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .do-now-task:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .do-now-task:last-child {
+            margin-bottom: 0;
+        }
+
+        .do-now-task-content {
+            flex: 1;
+        }
+
+        .do-now-meta {
+            font-size: 13px;
+            font-weight: normal;
+            margin-top: 4px;
+            opacity: 0.7;
+        }
+
+        .do-now-complete-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .do-now-complete-btn:hover {
+            background: #059669;
+        }
+
+        /* Quick Win #2: One-Click Complete */
+        .todo-complete-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: auto;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .todo-complete-btn:hover {
+            background: #059669;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Quick Win #3: Blocker Alert */
+        .blocker-alert {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+        }
+
+        .blocker-alert h2 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blocker-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            backdrop-filter: blur(10px);
+            font-size: 14px;
+        }
+
+        .blocker-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Quick Win #4: Mobile Optimization */
+        @media (max-width: 768px) {
+            .do-now-section {
+                padding: 16px;
+            }
+            
+            .do-now-task {
+                font-size: 15px;
+                padding: 14px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .do-now-complete-btn {
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .todo-item {
+                flex-wrap: wrap;
+            }
+            
+            .todo-complete-btn {
+                width: 100%;
+                padding: 10px;
+                margin-left: 0;
+                margin-top: 8px;
+            }
+            
+            .command-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -837,6 +1003,18 @@
 
         <!-- Command Center Tab -->
         <div class="tab-content" id="command">
+            <!-- Quick Win #3: Blocker Alert -->
+            <div class="blocker-alert" id="blockerAlert" style="display: none;">
+                <h2>🚫 Blockers</h2>
+                <div id="blockersList"></div>
+            </div>
+            
+            <!-- Quick Win #1: DO NOW Section -->
+            <div class="do-now-section">
+                <h2>🔥 DO NOW (Top 3)</h2>
+                <div id="doNowList"></div>
+            </div>
+            
             <div class="command-grid">
                 <div class="command-section">
                     <h2 class="section-title">
@@ -1147,7 +1325,64 @@
                 </div>
             `).join('');
 
-            // Todos
+            // === QUICK WIN ENHANCEMENTS ===
+            
+            // Quick Win #3: Detect and display blockers
+            const blockers = data.commandCenter.todos.filter(todo => 
+                todo.task.toLowerCase().includes('blocked') || 
+                todo.task.toLowerCase().includes('blocker') ||
+                todo.task.toLowerCase().includes('waiting')
+            );
+            
+            const blockerAlert = document.getElementById('blockerAlert');
+            const blockersList = document.getElementById('blockersList');
+            
+            if (blockers.length > 0) {
+                blockerAlert.style.display = 'block';
+                blockersList.innerHTML = blockers.map(blocker => `
+                    <div class="blocker-item">⚠️ ${blocker.task}</div>
+                `).join('');
+            } else {
+                blockerAlert.style.display = 'none';
+            }
+            
+            // Quick Win #1: DO NOW - Auto-prioritize top 3 tasks
+            const priorityScore = (todo) => {
+                const now = new Date();
+                const due = new Date(todo.dueDate);
+                const daysUntilDue = (due - now) / (1000 * 60 * 60 * 24);
+                
+                let score = 0;
+                if (todo.priority === 'high') score += 100;
+                else if (todo.priority === 'medium') score += 50;
+                else score += 10;
+                
+                if (daysUntilDue < 1) score += 200;
+                else if (daysUntilDue < 3) score += 100;
+                else if (daysUntilDue < 7) score += 50;
+                
+                return score;
+            };
+            
+            const topTasks = [...data.commandCenter.todos]
+                .filter(todo => !blockers.includes(todo))
+                .sort((a, b) => priorityScore(b) - priorityScore(a))
+                .slice(0, 3);
+            
+            const doNowList = document.getElementById('doNowList');
+            doNowList.innerHTML = topTasks.map((task, i) => `
+                <div class="do-now-task">
+                    <div class="do-now-task-content">
+                        <div>${i + 1}. ${task.task}</div>
+                        <div class="do-now-meta">
+                            📦 ${task.project || 'General'} • ⏱ Due: ${new Date(task.dueDate).toLocaleDateString()}
+                        </div>
+                    </div>
+                    <button class="do-now-complete-btn" onclick="completeTask('${task.task}')">✓ Done</button>
+                </div>
+            `).join('');
+
+            // Quick Win #2: Todos with complete buttons
             const todosList = document.getElementById('todosList');
             todosList.innerHTML = data.commandCenter.todos.map(todo => `
                 <div class="todo-item priority-${todo.priority}">
@@ -1156,6 +1391,7 @@
                         <div class="todo-task">${todo.task}</div>
                         <div class="todo-due">Due: ${new Date(todo.dueDate).toLocaleDateString()}</div>
                     </div>
+                    <button class="todo-complete-btn" onclick="completeTask('${todo.task}')">✓ Complete</button>
                 </div>
             `).join('');
 
@@ -1177,6 +1413,13 @@
                     <span class="completion-date">${new Date(completion.completedDate).toLocaleDateString()}</span>
                 </div>
             `).join('');
+        }
+
+        // Quick Win #2: Complete task handler
+        function completeTask(taskName) {
+            alert(`✅ Task completed: "${taskName}"\n\nThis will be integrated with your task management system.`);
+            // TODO: Integrate with actual task management (Things, Notion, etc.)
+            console.log('Completed:', taskName);
         }
 
         // Initialize
