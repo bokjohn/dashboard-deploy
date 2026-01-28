@@ -79,33 +79,39 @@
   "topRecommendations": [
     {
       "rank": 1,
-      "title": "Niche Directory Sites (Programmatic SEO)",
-      "why": "Perfect fit: Low cost ($2-5K), 90% automated, no sales calls, proven $150K-400K/year revenue",
-      "timeline": "6-12 months to $10K/month",
-      "confidence": "85%",
-      "startupCost": "$2,000-5,000",
-      "automation": "90%",
-      "exitMultiple": "3-5x"
-    },
-    {
-      "rank": 2,
-      "title": "AI-Powered Podcast Editing Service",
-      "why": "Fastest revenue (2-4 weeks), leverages existing tools, 75% automated, email-only marketing",
-      "timeline": "3-6 months to $10K/month",
-      "confidence": "80%",
-      "startupCost": "$3,500-6,000",
-      "automation": "75%",
-      "exitMultiple": "4-6x"
-    },
-    {
-      "rank": 3,
       "title": "AI-Powered SEO Content Service",
-      "why": "HIGHEST success rate (40-60%), productized service model, verified $150K-600K/year, AI cuts costs 80%",
+      "why": "AUDIT GRADE A | Success rate 40-60% (HIGHEST). Productized service, verified $150K-600K/year, 4-8 months to $10K/month",
       "timeline": "4-8 months to $10K/month",
       "confidence": "90%",
       "startupCost": "$8,000-20,000",
       "automation": "70%",
-      "exitMultiple": "4-6x"
+      "exitMultiple": "4-6x",
+      "auditGrade": "A",
+      "successRate": "40-60%"
+    },
+    {
+      "rank": 2,
+      "title": "AI-Powered Podcast Editing Service",
+      "why": "AUDIT GRADE A | Success rate 40-60%. Productized service, fastest revenue (2-4 weeks to first client)",
+      "timeline": "4-8 months to $10K/month",
+      "confidence": "90%",
+      "startupCost": "$8,000-20,000",
+      "automation": "75%",
+      "exitMultiple": "4-6x",
+      "auditGrade": "A",
+      "successRate": "40-60%"
+    },
+    {
+      "rank": 3,
+      "title": "White-Label SaaS Reseller",
+      "why": "AUDIT GRADE B | Success rate 30-45%. No product development, proven products, 5-10 months to $10K/month",
+      "timeline": "5-10 months to $10K/month",
+      "confidence": "75%",
+      "startupCost": "$8,000-20,000",
+      "automation": "70%",
+      "exitMultiple": "2-3x",
+      "auditGrade": "B",
+      "successRate": "30-45%"
     }
   ],
   "businessModels": [
