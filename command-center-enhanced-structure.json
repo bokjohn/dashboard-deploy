@@ -1,0 +1,540 @@
+{
+  "_schema_version": "2.0",
+  "_last_updated": "2026-01-28T04:30:00Z",
+  
+  "projects": [
+    {
+      "id": "proj_001",
+      "name": "SaaS Product Launch",
+      "status": "active",
+      "progress": 75,
+      "health": "on-track",
+      "dueDate": "2026-02-15",
+      "createdDate": "2026-01-01",
+      "priority": 1,
+      "businessImpact": "high",
+      "description": "Launch MVP of automated business tool",
+      "milestones": [
+        {
+          "id": "ms_001",
+          "name": "Design Complete",
+          "status": "completed",
+          "completedDate": "2026-01-10"
+        },
+        {
+          "id": "ms_002",
+          "name": "Frontend Built",
+          "status": "completed",
+          "completedDate": "2026-01-20"
+        },
+        {
+          "id": "ms_003",
+          "name": "Backend Integration",
+          "status": "in-progress",
+          "progress": 80,
+          "dueDate": "2026-01-30"
+        },
+        {
+          "id": "ms_004",
+          "name": "Beta Testing",
+          "status": "not-started",
+          "dueDate": "2026-02-10"
+        }
+      ],
+      "tags": ["saas", "automation", "mvp"],
+      "metrics": {
+        "totalTasks": 24,
+        "completedTasks": 18,
+        "blockedTasks": 1,
+        "estimatedHoursRemaining": 12
+      }
+    },
+    {
+      "id": "proj_002",
+      "name": "Marketing Campaign",
+      "status": "active",
+      "progress": 45,
+      "health": "at-risk",
+      "dueDate": "2026-02-01",
+      "createdDate": "2026-01-15",
+      "priority": 2,
+      "businessImpact": "medium",
+      "description": "Launch marketing for product",
+      "milestones": [
+        {
+          "id": "ms_005",
+          "name": "Content Strategy",
+          "status": "completed",
+          "completedDate": "2026-01-18"
+        },
+        {
+          "id": "ms_006",
+          "name": "Create Assets",
+          "status": "in-progress",
+          "progress": 60
+        },
+        {
+          "id": "ms_007",
+          "name": "Launch Ads",
+          "status": "not-started",
+          "dueDate": "2026-02-01"
+        }
+      ],
+      "tags": ["marketing", "content"],
+      "metrics": {
+        "totalTasks": 15,
+        "completedTasks": 6,
+        "blockedTasks": 2,
+        "estimatedHoursRemaining": 20
+      }
+    },
+    {
+      "id": "proj_003",
+      "name": "Hiring: Lead Developer",
+      "status": "active",
+      "progress": 30,
+      "health": "on-track",
+      "dueDate": "2026-03-01",
+      "createdDate": "2026-01-20",
+      "priority": 3,
+      "businessImpact": "high",
+      "description": "Find and onboard technical lead",
+      "milestones": [
+        {
+          "id": "ms_008",
+          "name": "Job Description",
+          "status": "completed",
+          "completedDate": "2026-01-22"
+        },
+        {
+          "id": "ms_009",
+          "name": "Source Candidates",
+          "status": "in-progress",
+          "progress": 40
+        },
+        {
+          "id": "ms_010",
+          "name": "Conduct Interviews",
+          "status": "not-started"
+        }
+      ],
+      "tags": ["hiring", "team"],
+      "metrics": {
+        "totalTasks": 10,
+        "completedTasks": 3,
+        "blockedTasks": 0,
+        "estimatedHoursRemaining": 15
+      }
+    }
+  ],
+
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Get API key from vendor",
+      "description": "Need production API key for payment integration",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "status": "blocked",
+      "priority": 100,
+      "dueDate": "2026-01-28",
+      "createdDate": "2026-01-25",
+      "effortEstimate": "small",
+      "estimatedMinutes": 30,
+      "tags": ["blocker", "external-dependency"],
+      "context": "work",
+      "blockedBy": [],
+      "blocks": ["task_002", "task_003"],
+      "dependencies": {
+        "blockedBy": [],
+        "blocks": [
+          {
+            "taskId": "task_002",
+            "taskTitle": "Integrate payment flow"
+          },
+          {
+            "taskId": "task_003",
+            "taskTitle": "Test checkout process"
+          }
+        ]
+      },
+      "urgencyScore": 100,
+      "importanceScore": 90,
+      "autoCalculatedPriority": 190,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_002",
+      "title": "Integrate payment flow",
+      "description": "Connect Stripe API to checkout page",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "status": "blocked",
+      "priority": 90,
+      "dueDate": "2026-01-30",
+      "createdDate": "2026-01-20",
+      "effortEstimate": "medium",
+      "estimatedMinutes": 120,
+      "tags": ["development", "payment"],
+      "context": "deep-work",
+      "blockedBy": ["task_001"],
+      "blocks": ["task_003"],
+      "dependencies": {
+        "blockedBy": [
+          {
+            "taskId": "task_001",
+            "taskTitle": "Get API key from vendor"
+          }
+        ],
+        "blocks": [
+          {
+            "taskId": "task_003",
+            "taskTitle": "Test checkout process"
+          }
+        ]
+      },
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Set up Stripe SDK",
+          "completed": true
+        },
+        {
+          "id": "sub_002",
+          "title": "Create payment endpoint",
+          "completed": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Handle webhooks",
+          "completed": false
+        }
+      ],
+      "urgencyScore": 70,
+      "importanceScore": 80,
+      "autoCalculatedPriority": 150,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_003",
+      "title": "Test checkout process",
+      "description": "End-to-end testing of payment flow",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "status": "not-started",
+      "priority": 80,
+      "dueDate": "2026-01-31",
+      "createdDate": "2026-01-20",
+      "effortEstimate": "medium",
+      "estimatedMinutes": 90,
+      "tags": ["testing", "payment"],
+      "context": "work",
+      "blockedBy": ["task_002"],
+      "blocks": [],
+      "dependencies": {
+        "blockedBy": [
+          {
+            "taskId": "task_002",
+            "taskTitle": "Integrate payment flow"
+          }
+        ],
+        "blocks": []
+      },
+      "urgencyScore": 60,
+      "importanceScore": 70,
+      "autoCalculatedPriority": 130,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_004",
+      "title": "Review marketing copy",
+      "description": "Final review of landing page and email copy",
+      "projectId": "proj_002",
+      "projectName": "Marketing Campaign",
+      "status": "in-progress",
+      "priority": 85,
+      "dueDate": "2026-01-28",
+      "createdDate": "2026-01-27",
+      "effortEstimate": "small",
+      "estimatedMinutes": 45,
+      "tags": ["marketing", "content", "quick-win"],
+      "context": "shallow-work",
+      "blockedBy": [],
+      "blocks": ["task_005"],
+      "dependencies": {
+        "blockedBy": [],
+        "blocks": [
+          {
+            "taskId": "task_005",
+            "taskTitle": "Schedule launch email"
+          }
+        ]
+      },
+      "urgencyScore": 80,
+      "importanceScore": 60,
+      "autoCalculatedPriority": 140,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_005",
+      "title": "Schedule launch email",
+      "description": "Set up email automation for launch day",
+      "projectId": "proj_002",
+      "projectName": "Marketing Campaign",
+      "status": "not-started",
+      "priority": 70,
+      "dueDate": "2026-01-29",
+      "createdDate": "2026-01-27",
+      "effortEstimate": "small",
+      "estimatedMinutes": 30,
+      "tags": ["marketing", "automation"],
+      "context": "work",
+      "blockedBy": ["task_004"],
+      "blocks": [],
+      "dependencies": {
+        "blockedBy": [
+          {
+            "taskId": "task_004",
+            "taskTitle": "Review marketing copy"
+          }
+        ],
+        "blocks": []
+      },
+      "urgencyScore": 70,
+      "importanceScore": 50,
+      "autoCalculatedPriority": 120,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_006",
+      "title": "Post job on LinkedIn",
+      "description": "Publish developer job posting",
+      "projectId": "proj_003",
+      "projectName": "Hiring: Lead Developer",
+      "status": "not-started",
+      "priority": 60,
+      "dueDate": "2026-01-29",
+      "createdDate": "2026-01-27",
+      "effortEstimate": "small",
+      "estimatedMinutes": 20,
+      "tags": ["hiring", "quick-win"],
+      "context": "shallow-work",
+      "blockedBy": [],
+      "blocks": [],
+      "dependencies": {
+        "blockedBy": [],
+        "blocks": []
+      },
+      "urgencyScore": 50,
+      "importanceScore": 60,
+      "autoCalculatedPriority": 110,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_007",
+      "title": "Write launch blog post",
+      "description": "Announce product launch on blog",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "status": "not-started",
+      "priority": 50,
+      "dueDate": "2026-02-05",
+      "createdDate": "2026-01-25",
+      "effortEstimate": "large",
+      "estimatedMinutes": 180,
+      "tags": ["content", "marketing"],
+      "context": "deep-work",
+      "blockedBy": [],
+      "blocks": [],
+      "dependencies": {
+        "blockedBy": [],
+        "blocks": []
+      },
+      "urgencyScore": 30,
+      "importanceScore": 50,
+      "autoCalculatedPriority": 80,
+      "manualPriorityOverride": null
+    },
+    {
+      "id": "task_008",
+      "title": "Set up analytics dashboard",
+      "description": "Configure product analytics tracking",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "status": "not-started",
+      "priority": 40,
+      "dueDate": "2026-02-10",
+      "createdDate": "2026-01-24",
+      "effortEstimate": "medium",
+      "estimatedMinutes": 90,
+      "tags": ["analytics", "setup"],
+      "context": "work",
+      "blockedBy": [],
+      "blocks": [],
+      "dependencies": {
+        "blockedBy": [],
+        "blocks": []
+      },
+      "urgencyScore": 20,
+      "importanceScore": 60,
+      "autoCalculatedPriority": 80,
+      "manualPriorityOverride": null
+    }
+  ],
+
+  "completions": [
+    {
+      "id": "comp_001",
+      "taskId": "task_101",
+      "title": "Design landing page mockup",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "completedDate": "2026-01-28T02:30:00Z",
+      "completedDateRelative": "2 hours ago",
+      "effortEstimate": "large",
+      "actualMinutesSpent": 240,
+      "tags": ["design", "landing-page"]
+    },
+    {
+      "id": "comp_002",
+      "taskId": "task_102",
+      "title": "Set up hosting infrastructure",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "completedDate": "2026-01-27T18:15:00Z",
+      "completedDateRelative": "Yesterday",
+      "effortEstimate": "medium",
+      "actualMinutesSpent": 90,
+      "tags": ["infrastructure", "devops"]
+    },
+    {
+      "id": "comp_003",
+      "taskId": "task_103",
+      "title": "Write product description",
+      "projectId": "proj_002",
+      "projectName": "Marketing Campaign",
+      "completedDate": "2026-01-27T14:00:00Z",
+      "completedDateRelative": "Yesterday",
+      "effortEstimate": "medium",
+      "actualMinutesSpent": 120,
+      "tags": ["content", "copywriting"]
+    },
+    {
+      "id": "comp_004",
+      "taskId": "task_104",
+      "title": "Research competitors",
+      "projectId": "proj_002",
+      "projectName": "Marketing Campaign",
+      "completedDate": "2026-01-26T10:00:00Z",
+      "completedDateRelative": "2 days ago",
+      "effortEstimate": "medium",
+      "actualMinutesSpent": 150,
+      "tags": ["research", "competitive-analysis"]
+    },
+    {
+      "id": "comp_005",
+      "taskId": "task_105",
+      "title": "Update privacy policy",
+      "projectId": "proj_001",
+      "projectName": "SaaS Product Launch",
+      "completedDate": "2026-01-25T16:30:00Z",
+      "completedDateRelative": "3 days ago",
+      "effortEstimate": "small",
+      "actualMinutesSpent": 45,
+      "tags": ["legal", "compliance"]
+    }
+  ],
+
+  "metadata": {
+    "viewSettings": {
+      "currentView": "command-center",
+      "focusMode": false,
+      "collapsedSections": ["later", "archive"],
+      "timeFilter": "this-week"
+    },
+    "userPreferences": {
+      "autoArchiveCompletedAfterDays": 7,
+      "defaultEffortEstimate": "medium",
+      "showProgressRings": true,
+      "enableKeyboardShortcuts": true,
+      "theme": "auto"
+    },
+    "statistics": {
+      "totalProjects": 3,
+      "activeProjects": 3,
+      "totalTasks": 8,
+      "completedThisWeek": 5,
+      "completedThisMonth": 23,
+      "averageCompletionTime": {
+        "small": 35,
+        "medium": 105,
+        "large": 220
+      },
+      "productivityScore": 87
+    }
+  },
+
+  "_dataTypes": {
+    "task": {
+      "id": "string (unique)",
+      "title": "string (required)",
+      "description": "string",
+      "projectId": "string (foreign key to projects)",
+      "projectName": "string (denormalized for display)",
+      "status": "enum: not-started | in-progress | blocked | completed",
+      "priority": "number (0-100, higher = more urgent)",
+      "dueDate": "ISO 8601 date string",
+      "createdDate": "ISO 8601 date string",
+      "effortEstimate": "enum: small | medium | large",
+      "estimatedMinutes": "number",
+      "tags": "array of strings",
+      "context": "enum: work | deep-work | shallow-work | personal",
+      "blockedBy": "array of task IDs",
+      "blocks": "array of task IDs",
+      "dependencies": "object with blockedBy/blocks details",
+      "subtasks": "array of subtask objects",
+      "urgencyScore": "number (auto-calculated based on due date)",
+      "importanceScore": "number (based on business impact, blockers)",
+      "autoCalculatedPriority": "number (urgency + importance)",
+      "manualPriorityOverride": "number or null"
+    },
+    "project": {
+      "id": "string (unique)",
+      "name": "string (required)",
+      "status": "enum: active | on-hold | completed | archived",
+      "progress": "number (0-100)",
+      "health": "enum: on-track | at-risk | blocked",
+      "dueDate": "ISO 8601 date string",
+      "createdDate": "ISO 8601 date string",
+      "priority": "number (1-10)",
+      "businessImpact": "enum: low | medium | high",
+      "description": "string",
+      "milestones": "array of milestone objects",
+      "tags": "array of strings",
+      "metrics": "object with task/hour statistics"
+    }
+  },
+
+  "_notes": {
+    "designDecisions": [
+      "Tasks are denormalized with projectName for display efficiency",
+      "Priority is calculated automatically but can be manually overridden",
+      "Dependencies are stored bidirectionally (blockedBy AND blocks)",
+      "Completions are stored separately to keep task list lean",
+      "Relative timestamps (2 hours ago) are calculated at render time",
+      "Effort estimates map to standard time blocks (small=<1h, medium=1-4h, large=4h+)",
+      "Context tags enable filtering for different work modes",
+      "Health status is auto-calculated based on progress vs due date"
+    ],
+    "futureEnhancements": [
+      "Add recurring tasks support",
+      "Add time tracking (actual vs estimated)",
+      "Add user assignment (for team collaboration)",
+      "Add file attachments",
+      "Add comments/notes per task",
+      "Add task templates",
+      "Add custom fields",
+      "Add API sync (when moving beyond single HTML file)"
+    ]
+  }
+}
