@@ -631,7 +631,7 @@
         /* === TOAST === */
         .toast {
             position: fixed;
-            bottom: 100px;
+            bottom: 180px; /* Moved higher to avoid blocking bottom nav */
             left: 50%;
             transform: translateX(-50%) translateY(100px);
             background: var(--bg-elevated);
@@ -654,6 +654,25 @@
 
         .toast-icon {
             font-size: 24px;
+        }
+
+        /* Undo button in toast */
+        .toast-undo {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .toast-undo:active {
+            transform: scale(0.95);
+            background: var(--primary-hover);
         }
 
         /* === RESPONSIVE === */
@@ -756,6 +775,8 @@
         let currentView = 'focus';
         let todayRevenue = 0;
         let completedToday = 0;
+        let lastCompletedTask = null; // For undo functionality
+        let undoTimeout = null;
 
         // === INITIALIZATION ===
         function init() {
@@ -1027,17 +1048,50 @@
             const task = tasks.find(t => t.id === taskId);
             if (!task) return;
             
+            // Store state for undo
+            const revenueAdded = task.money ? Math.floor(Math.random() * 500) + 100 : 0;
+            lastCompletedTask = {
+                task: {...task}, // Clone task state
+                revenueAdded: revenueAdded,
+                completedCountBefore: completedToday
+            };
+            
             task.completed = true;
             task.completedAt = new Date().toISOString();
             completedToday++;
             
-            // Add revenue if money task (dummy calculation)
+            // Add revenue if money task
             if (task.money) {
-                todayRevenue += Math.floor(Math.random() * 500) + 100;
+                todayRevenue += revenueAdded;
             }
             
             saveToStorage();
-            showToast(`✓ ${task.title}`);
+            showToastWithUndo(`✓ ${task.title}`);
+            render();
+        }
+
+        function undoComplete() {
+            if (!lastCompletedTask) return;
+            
+            const task = tasks.find(t => t.id === lastCompletedTask.task.id);
+            if (!task) return;
+            
+            // Restore task state
+            task.completed = false;
+            delete task.completedAt;
+            completedToday = lastCompletedTask.completedCountBefore;
+            todayRevenue -= lastCompletedTask.revenueAdded;
+            
+            // Clear undo state
+            lastCompletedTask = null;
+            if (undoTimeout) {
+                clearTimeout(undoTimeout);
+                undoTimeout = null;
+            }
+            
+            saveToStorage();
+            hideToast();
+            showToast('↩️ Task restored');
             render();
         }
 
@@ -1125,12 +1179,59 @@
         // === TOAST ===
         function showToast(message) {
             const toast = document.getElementById('toast');
-            document.getElementById('toastMessage').textContent = message;
+            const toastMessage = document.getElementById('toastMessage');
+            
+            // Clear any existing undo button
+            const existingUndo = toast.querySelector('.toast-undo');
+            if (existingUndo) {
+                existingUndo.remove();
+            }
+            
+            toastMessage.textContent = message;
             toast.classList.add('show');
             
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 2000);
+        }
+
+        function showToastWithUndo(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            
+            // Clear any existing undo button
+            const existingUndo = toast.querySelector('.toast-undo');
+            if (existingUndo) {
+                existingUndo.remove();
+            }
+            
+            toastMessage.textContent = message;
+            
+            // Add undo button
+            const undoBtn = document.createElement('button');
+            undoBtn.className = 'toast-undo';
+            undoBtn.textContent = 'Undo';
+            undoBtn.onclick = undoComplete;
+            toast.appendChild(undoBtn);
+            
+            toast.classList.add('show');
+            
+            // Clear previous timeout
+            if (undoTimeout) {
+                clearTimeout(undoTimeout);
+            }
+            
+            // Auto-dismiss after 5 seconds
+            undoTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+                lastCompletedTask = null; // Clear undo state
+                undoTimeout = null;
+            }, 5000);
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('show');
         }
 
         // === SWIPE GESTURES ===
