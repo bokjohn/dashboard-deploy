@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Validation Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f1419;
+            --bg-secondary: #1a1f2e;
+            --bg-tertiary: #252d3d;
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --text-tertiary: #6b7280;
+            --accent: #4a9eff;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --border: #2d3748;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Active Validation Section */
+        .active-validation {
+            background: var(--bg-secondary);
+            border: 2px solid var(--success);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .active-validation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .validation-title {
+            font-size: 1.5rem;
+            color: var(--success);
+        }
+
+        .validation-status {
+            background: var(--success);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .metric-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .metric-subvalue {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            margin-top: 4px;
+        }
+
+        /* Progress Bars */
+        .progress-section {
+            margin: 20px 0;
+        }
+
+        .progress-item {
+            margin-bottom: 16px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.875rem;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+            transition: width 0.3s ease;
+        }
+
+        /* Go/No-Go Signals */
+        .signals-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .signal-card {
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .signal-count {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .signal-go { color: var(--success); }
+        .signal-medium { color: var(--warning); }
+        .signal-nogo { color: var(--danger); }
+
+        .signal-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Recommendation Banner */
+        .recommendation-banner {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.25rem;
+        }
+
+        .recommendation-go {
+            background: rgba(16, 185, 129, 0.2);
+            border: 2px solid var(--success);
+            color: var(--success);
+        }
+
+        .recommendation-iterate {
+            background: rgba(245, 158, 11, 0.2);
+            border: 2px solid var(--warning);
+            color: var(--warning);
+        }
+
+        .recommendation-nogo {
+            background: rgba(239, 68, 68, 0.2);
+            border: 2px solid var(--danger);
+            color: var(--danger);
+        }
+
+        .recommendation-action {
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        /* Validation Queue */
+        .queue-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .queue-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .queue-item-info {
+            flex: 1;
+        }
+
+        .queue-item-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .queue-item-score {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .queue-item-rank {
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #6bb0ff;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        /* Next Steps */
+        .next-steps {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            padding: 12px;
+            margin-bottom: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+        }
+
+        .step-checkbox {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+        }
+
+        .step-text {
+            flex: 1;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .empty-state-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .empty-state-action {
+            margin-top: 20px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid var(--bg-secondary);
+        }
+
+        .timeline-time {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content {
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .signals-section {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Business Validation Tracker</h1>
+            <p class="subtitle">Systematic validation → Data-driven decisions → Confident launches</p>
+        </header>
+
+        <div id="validation-content"></div>
+    </div>
+
+    <script>
+        // Load validation data
+        async function loadValidationData() {
+            try {
+                const response = await fetch('../automation/data/validations.json');
+                if (!response.ok) {
+                    showEmptyState();
+                    return;
+                }
+                
+                const data = await response.json();
+                
+                if (!data.validations || data.validations.length === 0) {
+                    showEmptyState();
+                    return;
+                }
+                
+                renderValidationTracker(data);
+            } catch (error) {
+                console.error('Error loading validation data:', error);
+                showEmptyState();
+            }
+        }
+
+        function showEmptyState() {
+            const content = document.getElementById('validation-content');
+            content.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-state-icon">🚀</div>
+                    <h2 class="empty-state-title">No Active Validations</h2>
+                    <p>Start validating your first business model!</p>
+                    <div class="empty-state-action">
+                        <button class="btn btn-primary" onclick="showStartInstructions()">Start Validation</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showStartInstructions() {
+            alert('To start validation:\n\n1. cd automation/scripts\n2. python validation-tracker.py start --model "Your Business Model"\n\nSee automation/business-validation.md for full guide.');
+        }
+
+        function renderValidationTracker(data) {
+            const content = document.getElementById('validation-content');
+            
+            // Find active validations
+            const activeValidations = data.validations.filter(v => v.status === 'active');
+            
+            let html = '';
+            
+            // Render active validations
+            if (activeValidations.length > 0) {
+                activeValidations.forEach(validation => {
+                    html += renderActiveValidation(validation);
+                });
+            }
+            
+            // Render validation queue
+            if (data.validationQueue && data.validationQueue.length > 0) {
+                html += renderValidationQueue(data.validationQueue);
+            }
+            
+            content.innerHTML = html;
+        }
+
+        function renderActiveValidation(validation) {
+            const daysSinceStart = Math.floor(
+                (new Date() - new Date(validation.startDate)) / (1000 * 60 * 60 * 24)
+            );
+            
+            const budgetPercent = (validation.budget.spent / validation.budget.allocated) * 100;
+            const responseRate = (validation.metrics.responseRate * 100).toFixed(1);
+            const conversionRate = (validation.metrics.conversionRate * 100).toFixed(1);
+            
+            // Calculate recommendation
+            const signals = validation.signals;
+            let recommendation = '';
+            let recommendationClass = '';
+            let action = '';
+            
+            if (signals.strongGo >= 4 && signals.strongNoGo === 0) {
+                recommendation = '🟢 STRONG GO';
+                recommendationClass = 'recommendation-go';
+                action = 'Launch full business immediately';
+            } else if (signals.strongNoGo >= 3) {
+                recommendation = '🔴 NO-GO';
+                recommendationClass = 'recommendation-nogo';
+                action = 'Pivot to next model';
+            } else if (signals.medium >= 3 && signals.strongNoGo <= 1) {
+                recommendation = '🟡 ITERATE';
+                recommendationClass = 'recommendation-iterate';
+                action = 'Test for 1 more week with adjustments';
+            } else if (signals.strongGo >= 2 && signals.strongNoGo <= 1) {
+                recommendation = '🟢 GO';
+                recommendationClass = 'recommendation-go';
+                action = 'Proceed with caution, monitor closely';
+            } else {
+                recommendation = '⏳ INSUFFICIENT DATA';
+                recommendationClass = 'recommendation-iterate';
+                action = 'Continue validation, gather more signals';
+            }
+            
+            return `
+                <div class="active-validation">
+                    <div class="active-validation-header">
+                        <h2 class="validation-title">${validation.model}</h2>
+                        <span class="validation-status">ACTIVE - Day ${daysSinceStart}</span>
+                    </div>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Budget</div>
+                            <div class="metric-value">$${validation.budget.spent}</div>
+                            <div class="metric-subvalue">of $${validation.budget.allocated}</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-label">Outreach</div>
+                            <div class="metric-value">${validation.metrics.outreachSent}</div>
+                            <div class="metric-subvalue">${responseRate}% response rate</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-label">Conversions</div>
+                            <div class="metric-value">${validation.metrics.conversions}</div>
+                            <div class="metric-subvalue">${conversionRate}% conversion rate</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-label">Beta Customers</div>
+                            <div class="metric-value">${validation.metrics.betaCustomers}</div>
+                            <div class="metric-subvalue">$${validation.metrics.mrr} MRR</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Budget Used</span>
+                                <span>${budgetPercent.toFixed(0)}%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${budgetPercent}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="signals-section">
+                        <div class="signal-card">
+                            <div class="signal-label">✅ Strong GO</div>
+                            <div class="signal-count signal-go">${signals.strongGo}</div>
+                        </div>
+                        
+                        <div class="signal-card">
+                            <div class="signal-label">🤔 Medium</div>
+                            <div class="signal-count signal-medium">${signals.medium}</div>
+                        </div>
+                        
+                        <div class="signal-card">
+                            <div class="signal-label">❌ Strong NO-GO</div>
+                            <div class="signal-count signal-nogo">${signals.strongNoGo}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-banner ${recommendationClass}">
+                        <div>${recommendation}</div>
+                        <div class="recommendation-action">${action}</div>
+                    </div>
+                    
+                    ${renderNextSteps(validation)}
+                    ${renderTimeline(validation)}
+                </div>
+            `;
+        }
+
+        function renderNextSteps(validation) {
+            if (!validation.nextSteps || validation.nextSteps.length === 0) {
+                return '';
+            }
+            
+            const stepsHtml = validation.nextSteps.map(step => `
+                <div class="step-item">
+                    <input type="checkbox" class="step-checkbox">
+                    <div class="step-text">${step}</div>
+                </div>
+            `).join('');
+            
+            return `
+                <div class="next-steps">
+                    <h3 class="section-title">📋 Next Steps</h3>
+                    ${stepsHtml}
+                </div>
+            `;
+        }
+
+        function renderTimeline(validation) {
+            if (!validation.events || validation.events.length === 0) {
+                return '';
+            }
+            
+            const recentEvents = validation.events.slice(-5).reverse();
+            
+            const eventsHtml = recentEvents.map(event => {
+                const date = new Date(event.timestamp);
+                const timeAgo = getTimeAgo(date);
+                
+                let content = '';
+                if (event.type === 'metric_update') {
+                    content = `Updated ${event.metric} = ${event.value}`;
+                } else if (event.type === 'signal') {
+                    const emoji = {strongGo: '✅', medium: '🤔', strongNoGo: '❌'}[event.signalType] || '•';
+                    content = `${emoji} ${event.description}`;
+                }
+                
+                return `
+                    <div class="timeline-item">
+                        <div class="timeline-time">${timeAgo}</div>
+                        <div class="timeline-content">${content}</div>
+                    </div>
+                `;
+            }).join('');
+            
+            return `
+                <div class="next-steps">
+                    <h3 class="section-title">📅 Recent Activity</h3>
+                    <div class="timeline">
+                        ${eventsHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderValidationQueue(queue) {
+            const queueHtml = queue.map((item, index) => `
+                <div class="queue-item">
+                    <div class="queue-item-info">
+                        <div class="queue-item-name">${item.model}</div>
+                        <div class="queue-item-score">Score: ${item.score} | Rank: #${item.rank}</div>
+                    </div>
+                    <span class="queue-item-rank">QUEUED</span>
+                </div>
+            `).join('');
+            
+            return `
+                <div class="queue-section">
+                    <h3 class="section-title">📊 Validation Queue</h3>
+                    ${queueHtml}
+                </div>
+            `;
+        }
+
+        function getTimeAgo(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            
+            if (seconds < 60) return 'Just now';
+            if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`;
+            if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`;
+            return `${Math.floor(seconds / 86400)}d ago`;
+        }
+
+        // Load data on page load
+        loadValidationData();
+        
+        // Refresh every 30 seconds
+        setInterval(loadValidationData, 30000);
+    </script>
+</body>
+</html>
