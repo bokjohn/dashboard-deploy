@@ -777,166 +777,163 @@
             background: var(--accent);
         }
 
-        /* === QUICK WIN ENHANCEMENTS === */
+        /* === COMMAND CENTER STYLES === */
         
-        /* Quick Win #1: DO NOW Section */
-        .do-now-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 24px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        .section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
         }
 
-        .do-now-section h2 {
-            color: white;
-            font-size: 20px;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .do-now-task {
-            background: white;
-            color: #333;
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            font-size: 16px;
+        .section h2 {
+            font-size: 1.2rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-            gap: 12px;
         }
 
-        .do-now-task:hover {
-            transform: translateX(4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .do-now-task:last-child {
-            margin-bottom: 0;
-        }
-
-        .do-now-task-content {
-            flex: 1;
-        }
-
-        .do-now-meta {
-            font-size: 13px;
-            font-weight: normal;
-            margin-top: 4px;
-            opacity: 0.7;
-        }
-
-        .do-now-complete-btn {
-            background: #10b981;
-            color: white;
+        .section-blockers {
+            background: linear-gradient(135deg, var(--critical) 0%, #dc2626 100%);
             border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 13px;
-            transition: background 0.2s;
-            white-space: nowrap;
-        }
-
-        .do-now-complete-btn:hover {
-            background: #059669;
-        }
-
-        /* Quick Win #2: One-Click Complete */
-        .todo-complete-btn {
-            background: #10b981;
-            color: white;
-            border: none;
-            padding: 6px 14px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            margin-left: auto;
-            transition: background 0.2s;
-            white-space: nowrap;
-        }
-
-        .todo-complete-btn:hover {
-            background: #059669;
-        }
-
-        .todo-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        /* Quick Win #3: Blocker Alert */
-        .blocker-alert {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 24px;
             box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
         }
 
-        .blocker-alert h2 {
-            color: white;
-            font-size: 18px;
-            margin-bottom: 12px;
-            font-weight: 700;
+        .section-priority {
+            background: linear-gradient(135deg, var(--accent) 0%, #764ba2 100%);
+            border: none;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .priority-task {
+            background: white;
+            color: #333;
+            border-radius: var(--radius-sm);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
             display: flex;
-            align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--space-md);
+            transition: var(--transition);
+            cursor: pointer;
         }
 
-        .blocker-item {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            backdrop-filter: blur(10px);
-            font-size: 14px;
+        .priority-task:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .blocker-item:last-child {
+        .priority-task:last-child {
             margin-bottom: 0;
         }
 
-        /* Quick Win #4: Mobile Optimization */
+        .task-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: var(--space-md);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .task-item:hover {
+            border-color: var(--accent);
+            transform: translateX(2px);
+        }
+
+        .project-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-high {
+            background: var(--critical-bg);
+            color: var(--critical);
+        }
+
+        .badge-effort {
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+        }
+
+        .btn {
+            background: var(--success);
+            color: white;
+            border: none;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            background: #059669;
+            transform: scale(1.05);
+        }
+
+        .btn-sm {
+            padding: 4px 10px;
+            font-size: 12px;
+        }
+
+        /* Mobile Responsive for Command Center */
         @media (max-width: 768px) {
-            .do-now-section {
-                padding: 16px;
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
             }
-            
-            .do-now-task {
-                font-size: 15px;
-                padding: 14px;
+
+            .section {
+                padding: var(--space-md);
+            }
+
+            .priority-task {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+                align-items: stretch;
             }
-            
-            .do-now-complete-btn {
+
+            .priority-task .btn {
                 width: 100%;
-                padding: 10px;
             }
-            
-            .todo-item {
-                flex-wrap: wrap;
-            }
-            
-            .todo-complete-btn {
-                width: 100%;
-                padding: 10px;
-                margin-left: 0;
-                margin-top: 8px;
-            }
-            
+
             .command-grid {
                 grid-template-columns: 1fr !important;
                 gap: 16px;
@@ -1003,57 +1000,11 @@
 
         <!-- Command Center Tab -->
         <div class="tab-content" id="command">
-            <!-- Quick Win #3: Blocker Alert -->
-            <div class="blocker-alert" id="blockerAlert" style="display: none;">
-                <h2>🚫 Blockers</h2>
-                <div id="blockersList"></div>
-            </div>
-            
-            <!-- Quick Win #1: DO NOW Section -->
-            <div class="do-now-section">
-                <h2>🔥 DO NOW (Top 3)</h2>
-                <div id="doNowList"></div>
-            </div>
-            
-            <div class="command-grid">
-                <div class="command-section">
-                    <h2 class="section-title">
-                        <span class="section-icon">🚀</span>
-                        Active Projects
-                    </h2>
-                    <div id="projectsList">
-                        <!-- Projects will be injected here -->
-                    </div>
-                </div>
-
-                <div class="command-section">
-                    <h2 class="section-title">
-                        <span class="section-icon">✅</span>
-                        To-Do List
-                    </h2>
-                    <div id="todosList">
-                        <!-- Todos will be injected here -->
-                    </div>
-                </div>
-
-                <div class="command-section">
-                    <h2 class="section-title">
-                        <span class="section-icon">🎯</span>
-                        Next Actions
-                    </h2>
-                    <div id="nextActionsList">
-                        <!-- Next actions will be injected here -->
-                    </div>
-                </div>
-
-                <div class="command-section">
-                    <h2 class="section-title">
-                        <span class="section-icon">✨</span>
-                        Recent Wins
-                    </h2>
-                    <div id="completionsList">
-                        <!-- Completions will be injected here -->
-                    </div>
+            <!-- Command center content will be loaded here -->
+            <div id="commandCenterContent">
+                <div class="loading" style="text-align: center; padding: 60px 20px; color: var(--text-secondary);">
+                    <div style="font-size: 32px; margin-bottom: 16px;">⚡</div>
+                    <div>Loading Command Center...</div>
                 </div>
             </div>
         </div>
@@ -1062,6 +1013,7 @@
     <script>
         // State
         let data = null;
+        let commandCenterData = null;
         let currentFilter = 'all';
         let currentSort = 'default';
         let searchQuery = '';
@@ -1073,7 +1025,6 @@
                 data = await response.json();
                 renderHeroMetrics();
                 renderBusinessCards();
-                renderCommandCenter();
             } catch (error) {
                 console.error('Error loading data:', error);
                 document.getElementById('businessGrid').innerHTML = `
@@ -1081,6 +1032,24 @@
                         <div class="empty-icon">⚠️</div>
                         <h3>Error loading data</h3>
                         <p>Make sure data.json is in the same folder</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Load command center data
+        async function loadCommandCenterData() {
+            try {
+                const response = await fetch('command-center-enhanced-structure.json');
+                commandCenterData = await response.json();
+                renderCommandCenter();
+            } catch (error) {
+                console.error('Error loading command center data:', error);
+                document.getElementById('commandCenterContent').innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">⚠️</div>
+                        <h3>Error loading command center</h3>
+                        <p>Make sure command-center-enhanced-structure.json is in the same folder</p>
                     </div>
                 `;
             }
@@ -1111,6 +1080,11 @@
                 
                 tab.classList.add('active');
                 document.getElementById(targetTab).classList.add('active');
+                
+                // Load command center data if switching to that tab
+                if (targetTab === 'command' && !commandCenterData) {
+                    loadCommandCenterData();
+                }
             });
         });
 
@@ -1303,123 +1277,221 @@
             });
         }
 
-        // Render Command Center
+        // Render Command Center with enhanced structure
         function renderCommandCenter() {
-            if (!data) return;
+            if (!commandCenterData) return;
 
-            // Active Projects
-            const projectsList = document.getElementById('projectsList');
-            projectsList.innerHTML = data.commandCenter.activeProjects.map(project => `
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">${project.name}</span>
-                        <span class="project-status status-${project.status}">${project.status}</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: ${project.progress}%"></div>
-                    </div>
-                    <div class="project-meta">
-                        <span>${project.progress}% complete</span>
-                        <span>Due: ${new Date(project.dueDate).toLocaleDateString()}</span>
-                    </div>
-                </div>
-            `).join('');
+            const container = document.getElementById('commandCenterContent');
+            
+            // Get blocked tasks
+            const blockers = commandCenterData.tasks.filter(t => t.status === 'blocked');
+            const activeTasks = commandCenterData.tasks.filter(t => t.status !== 'blocked' && t.status !== 'completed');
+            
+            // Auto-prioritize top 3 tasks
+            const topTasks = prioritizeTasks(activeTasks).slice(0, 3);
+            const upNextTasks = prioritizeTasks(activeTasks).slice(3);
+            
+            // Recent wins (last 48 hours)
+            const recentWins = commandCenterData.completions.filter(c => {
+                const completedDate = new Date(c.completedDate);
+                const now = new Date();
+                const hoursSince = (now - completedDate) / (1000 * 60 * 60);
+                return hoursSince <= 48;
+            }).sort((a, b) => new Date(b.completedDate) - new Date(a.completedDate));
 
-            // === QUICK WIN ENHANCEMENTS ===
+            // Build HTML
+            let html = '';
             
-            // Quick Win #3: Detect and display blockers
-            const blockers = data.commandCenter.todos.filter(todo => 
-                todo.task.toLowerCase().includes('blocked') || 
-                todo.task.toLowerCase().includes('blocker') ||
-                todo.task.toLowerCase().includes('waiting')
-            );
-            
-            const blockerAlert = document.getElementById('blockerAlert');
-            const blockersList = document.getElementById('blockersList');
-            
+            // Blockers section
             if (blockers.length > 0) {
-                blockerAlert.style.display = 'block';
-                blockersList.innerHTML = blockers.map(blocker => `
-                    <div class="blocker-item">⚠️ ${blocker.task}</div>
-                `).join('');
-            } else {
-                blockerAlert.style.display = 'none';
+                html += `
+                    <section class="section section-blockers" style="background: linear-gradient(135deg, var(--critical) 0%, #dc2626 100%); border: none; box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);">
+                        <h2 style="color: white;">🚨 BLOCKERS (${blockers.length})</h2>
+                        ${blockers.map(blocker => `
+                            <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: var(--radius-sm); padding: var(--space-md); margin-bottom: var(--space-md);">
+                                <div style="color: white; font-weight: 600; margin-bottom: 4px;">⚠️ ${blocker.title}</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); font-size: 13px; margin-bottom: 8px;">
+                                    📦 ${blocker.projectName} • ⏱ ${blocker.estimatedMinutes || '?'}m
+                                    ${blocker.dependencies && blocker.dependencies.blocks.length > 0 ? ` • Blocks ${blocker.dependencies.blocks.length} tasks` : ''}
+                                </div>
+                                <div style="display: flex; gap: 8px;">
+                                    <button class="btn btn-sm" onclick="completeTask('${blocker.id}', '${blocker.title}')">Resolve</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </section>
+                `;
             }
             
-            // Quick Win #1: DO NOW - Auto-prioritize top 3 tasks
-            const priorityScore = (todo) => {
+            // DO NOW section
+            html += `
+                <section class="section section-priority" style="background: linear-gradient(135deg, var(--accent) 0%, #764ba2 100%); border: none; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+                    <h2 style="color: white;">🔥 DO NOW (Top 3)</h2>
+                    ${topTasks.length > 0 ? topTasks.map((task, i) => `
+                        <div class="priority-task" style="background: white; color: #333; border-radius: var(--radius-sm); padding: var(--space-md); margin-bottom: var(--space-md); display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); transition: var(--transition); cursor: pointer;">
+                            <div style="flex: 1;">
+                                <div style="font-size: 16px; font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                                    <span>${i + 1}. ${task.title}</span>
+                                    ${task.priority === 'high' || task.tags.includes('critical') ? '<span class="badge badge-high" style="display: inline-flex; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; background: rgba(239, 68, 68, 0.1); color: var(--critical);">HIGH</span>' : ''}
+                                </div>
+                                <div style="font-size: 13px; color: #666; display: flex; gap: 16px; flex-wrap: wrap;">
+                                    <span>📦 ${task.projectName || 'General'}</span>
+                                    <span>⚡ ${task.estimatedMinutes || '?'}m</span>
+                                    <span>Due: ${formatDueDate(task.dueDate)}</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-shrink: 0;">
+                                <button class="btn" onclick="completeTask('${task.id}', '${task.title}')">✓ Done</button>
+                            </div>
+                        </div>
+                    `).join('') : '<div style="text-align: center; padding: 40px 20px; color: rgba(255,255,255,0.8);"><div style="font-size: 48px; margin-bottom: 16px;">🎉</div><div>All caught up! No urgent tasks.</div></div>'}
+                </section>
+            `;
+            
+            // Two column layout
+            html += '<div class="two-column" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-bottom: var(--space-lg);">';
+            
+            // Up Next section
+            html += `
+                <section class="section">
+                    <h2>
+                        📋 UP NEXT (${upNextTasks.length})
+                        <span style="font-size: 12px; font-weight: normal; color: var(--text-tertiary);">
+                            ${upNextTasks.reduce((sum, t) => sum + (t.estimatedMinutes || 0), 0)}m total
+                        </span>
+                    </h2>
+                    ${upNextTasks.slice(0, 10).map(task => `
+                        <div class="task-item" style="background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-md); margin-bottom: var(--space-sm); display: flex; align-items: flex-start; gap: var(--space-md); transition: var(--transition); cursor: pointer;">
+                            <div style="width: 20px; height: 20px; border: 2px solid var(--text-tertiary); border-radius: 4px; cursor: pointer; flex-shrink: 0; margin-top: 2px;" onclick="completeTask('${task.id}', '${task.title}')"></div>
+                            <div style="flex: 1;">
+                                <div style="color: var(--text-primary); font-size: 14px; margin-bottom: 4px;">${task.title}</div>
+                                <div style="font-size: 12px; color: var(--text-tertiary); display: flex; gap: 16px; flex-wrap: wrap;">
+                                    <span>📦 ${task.projectName || 'General'}</span>
+                                    ${task.estimatedMinutes ? `<span class="badge badge-effort" style="background: var(--bg-primary); color: var(--text-secondary); padding: 2px 8px; border-radius: 12px; font-size: 11px;">⚡ ${task.estimatedMinutes}m</span>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </section>
+            `;
+            
+            // Projects section
+            const activeProjects = commandCenterData.projects.filter(p => p.status === 'active');
+            html += `
+                <section class="section">
+                    <h2>📊 PROJECTS (${activeProjects.length})</h2>
+                    ${activeProjects.map(project => {
+                        const healthClass = project.health === 'on-track' ? 'health-on-track' : 
+                                          project.health === 'at-risk' ? 'health-at-risk' : 'health-delayed';
+                        const progressClass = project.progress >= 75 ? '' : 
+                                            project.progress >= 50 ? 'warning' : 'danger';
+                        
+                        return `
+                            <div class="project-card" style="background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-md); margin-bottom: var(--space-md); transition: var(--transition); cursor: pointer;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                    <div style="font-size: 15px; font-weight: 600; color: var(--text-primary);">○ ${project.name}</div>
+                                    <div style="font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 600; ${project.health === 'on-track' ? 'background: rgba(16, 185, 129, 0.15); color: var(--success);' : project.health === 'at-risk' ? 'background: rgba(245, 158, 11, 0.15); color: var(--warning);' : 'background: rgba(239, 68, 68, 0.15); color: var(--critical);'}">
+                                        ${project.health === 'on-track' ? '🟢' : project.health === 'at-risk' ? '🟡' : '🔴'} 
+                                        ${project.health.replace('-', ' ')}
+                                    </div>
+                                </div>
+                                <div style="height: 8px; background: var(--bg-primary); border-radius: 4px; overflow: hidden; margin: 8px 0;">
+                                    <div style="height: 100%; ${progressClass === 'warning' ? 'background: linear-gradient(90deg, var(--warning) 0%, #d97706 100%);' : progressClass === 'danger' ? 'background: linear-gradient(90deg, var(--critical) 0%, #dc2626 100%);' : 'background: linear-gradient(90deg, var(--success) 0%, #059669 100%);'} border-radius: 4px; transition: width 0.5s ease; width: ${project.progress}%"></div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-tertiary);">
+                                    <span>${project.progress}% complete</span>
+                                    <span>Due: ${formatDueDate(project.dueDate)}</span>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </section>
+            `;
+            
+            html += '</div>'; // Close two-column
+            
+            // Recent Wins
+            if (recentWins.length > 0) {
+                html += `
+                    <section class="section">
+                        <h2>🎉 RECENT WINS (Last 48h)</h2>
+                        ${recentWins.map(win => `
+                            <div style="display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--border);">
+                                <div style="color: var(--success); font-size: 16px;">✓</div>
+                                <div style="flex: 1; font-size: 14px; color: var(--text-secondary);">${win.title}</div>
+                                <div style="font-size: 12px; color: var(--text-tertiary);">${formatTimeAgo(win.completedDate)}</div>
+                            </div>
+                        `).join('')}
+                    </section>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+
+        // Prioritization algorithm
+        function prioritizeTasks(tasks) {
+            return tasks.sort((a, b) => {
+                const scoreA = calculatePriorityScore(a);
+                const scoreB = calculatePriorityScore(b);
+                return scoreB - scoreA;
+            });
+        }
+
+        function calculatePriorityScore(task) {
+            let score = task.priority || 50;
+            
+            // Add urgency from due date
+            if (task.dueDate) {
                 const now = new Date();
-                const due = new Date(todo.dueDate);
+                const due = new Date(task.dueDate);
                 const daysUntilDue = (due - now) / (1000 * 60 * 60 * 24);
-                
-                let score = 0;
-                if (todo.priority === 'high') score += 100;
-                else if (todo.priority === 'medium') score += 50;
-                else score += 10;
                 
                 if (daysUntilDue < 1) score += 200;
                 else if (daysUntilDue < 3) score += 100;
                 else if (daysUntilDue < 7) score += 50;
-                
-                return score;
-            };
+            }
             
-            const topTasks = [...data.commandCenter.todos]
-                .filter(todo => !blockers.includes(todo))
-                .sort((a, b) => priorityScore(b) - priorityScore(a))
-                .slice(0, 3);
+            // Quick wins (low effort)
+            if (task.estimatedMinutes && task.estimatedMinutes <= 30) score += 25;
             
-            const doNowList = document.getElementById('doNowList');
-            doNowList.innerHTML = topTasks.map((task, i) => `
-                <div class="do-now-task">
-                    <div class="do-now-task-content">
-                        <div>${i + 1}. ${task.task}</div>
-                        <div class="do-now-meta">
-                            📦 ${task.project || 'General'} • ⏱ Due: ${new Date(task.dueDate).toLocaleDateString()}
-                        </div>
-                    </div>
-                    <button class="do-now-complete-btn" onclick="completeTask('${task.task}')">✓ Done</button>
-                </div>
-            `).join('');
-
-            // Quick Win #2: Todos with complete buttons
-            const todosList = document.getElementById('todosList');
-            todosList.innerHTML = data.commandCenter.todos.map(todo => `
-                <div class="todo-item priority-${todo.priority}">
-                    <div class="todo-checkbox"></div>
-                    <div class="todo-content">
-                        <div class="todo-task">${todo.task}</div>
-                        <div class="todo-due">Due: ${new Date(todo.dueDate).toLocaleDateString()}</div>
-                    </div>
-                    <button class="todo-complete-btn" onclick="completeTask('${todo.task}')">✓ Complete</button>
-                </div>
-            `).join('');
-
-            // Next Actions
-            const nextActionsList = document.getElementById('nextActionsList');
-            nextActionsList.innerHTML = data.commandCenter.nextActions.map(action => `
-                <div class="next-action">
-                    <span class="action-icon">⚡</span>
-                    <span>${action}</span>
-                </div>
-            `).join('');
-
-            // Recent Completions
-            const completionsList = document.getElementById('completionsList');
-            completionsList.innerHTML = data.commandCenter.recentCompletions.map(completion => `
-                <div class="completion-item">
-                    <span class="check-icon">✓</span>
-                    <span class="completion-text">${completion.task}</span>
-                    <span class="completion-date">${new Date(completion.completedDate).toLocaleDateString()}</span>
-                </div>
-            `).join('');
+            // Blockers are critical
+            if (task.status === 'blocked' || (task.dependencies && task.dependencies.blocks.length > 0)) {
+                score += 150;
+            }
+            
+            return score;
         }
 
-        // Quick Win #2: Complete task handler
-        function completeTask(taskName) {
+        function formatDueDate(dateStr) {
+            const due = new Date(dateStr);
+            const now = new Date();
+            const days = Math.ceil((due - now) / (1000 * 60 * 60 * 24));
+            
+            if (days < 0) return `${Math.abs(days)}d overdue`;
+            if (days === 0) return 'Today';
+            if (days === 1) return 'Tomorrow';
+            if (days < 7) return `in ${days} days`;
+            return `in ${Math.ceil(days / 7)} weeks`;
+        }
+
+        function formatTimeAgo(dateStr) {
+            const then = new Date(dateStr);
+            const now = new Date();
+            const hours = Math.floor((now - then) / (1000 * 60 * 60));
+            
+            if (hours < 1) return 'Just now';
+            if (hours === 1) return '1 hour ago';
+            if (hours < 24) return `${hours} hours ago`;
+            if (hours < 48) return 'Yesterday';
+            return `${Math.floor(hours / 24)} days ago`;
+        }
+
+        // Complete task handler
+        function completeTask(taskId, taskName) {
             alert(`✅ Task completed: "${taskName}"\n\nThis will be integrated with your task management system.`);
-            // TODO: Integrate with actual task management (Things, Notion, etc.)
-            console.log('Completed:', taskName);
+            console.log('Completed task:', taskId);
+            // TODO: Integrate with actual task management
         }
 
         // Initialize
