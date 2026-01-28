@@ -131,37 +131,123 @@
           "startup": "$2,000-5,000",
           "monthly": "$500-1,000",
           "breakdown": [
-            { "item": "Domain & hosting", "cost": "$100-200 one-time + $20/month" },
-            { "item": "Scraping tools (Outscraper)", "cost": "$50-200/month" },
-            { "item": "AI content generation (Claude/GPT)", "cost": "$50-100/month" },
-            { "item": "SEO tools (Ahrefs/Semrush)", "cost": "$100-200/month" },
-            { "item": "Backlinks & initial SEO", "cost": "$1,000-2,000 one-time" }
+            {
+              "item": "Domain & hosting",
+              "cost": "$100-200 one-time + $20/month"
+            },
+            {
+              "item": "Scraping tools (Outscraper)",
+              "cost": "$50-200/month"
+            },
+            {
+              "item": "AI content generation (Claude/GPT)",
+              "cost": "$50-100/month"
+            },
+            {
+              "item": "SEO tools (Ahrefs/Semrush)",
+              "cost": "$100-200/month"
+            },
+            {
+              "item": "Backlinks & initial SEO",
+              "cost": "$1,000-2,000 one-time"
+            }
           ]
         },
         "automation": {
           "overall": 90,
           "setup": "100-200 hours over 4-6 weeks",
           "breakdown": [
-            { "task": "Data scraping & structuring", "percent": 100, "tool": "Outscraper, Apify" },
-            { "task": "Page generation", "percent": 100, "tool": "Python scripts + templates" },
-            { "task": "Content writing", "percent": 95, "tool": "GPT-4/Claude API" },
-            { "task": "SEO optimization", "percent": 90, "tool": "Automated meta tags, sitemaps" },
-            { "task": "Data updates", "percent": 95, "tool": "Scheduled scraping scripts" },
-            { "task": "Monetization (listings)", "percent": 50, "tool": "Automated billing + manual outreach" }
+            {
+              "task": "Data scraping & structuring",
+              "percent": 100,
+              "tool": "Outscraper, Apify"
+            },
+            {
+              "task": "Page generation",
+              "percent": 100,
+              "tool": "Python scripts + templates"
+            },
+            {
+              "task": "Content writing",
+              "percent": 95,
+              "tool": "GPT-4/Claude API"
+            },
+            {
+              "task": "SEO optimization",
+              "percent": 90,
+              "tool": "Automated meta tags, sitemaps"
+            },
+            {
+              "task": "Data updates",
+              "percent": 95,
+              "tool": "Scheduled scraping scripts"
+            },
+            {
+              "task": "Monetization (listings)",
+              "percent": 50,
+              "tool": "Automated billing + manual outreach"
+            }
           ],
           "personalTime": "5-10 hours/week (after setup)",
           "vaTime": "0-5 hours/week (partnership outreach, optional)",
-          "aiHandles": ["Content generation for all listings", "Meta descriptions & titles", "Internal linking", "Data categorization", "Search indexing"],
-          "yourRole": ["Niche selection & validation", "Initial site architecture", "Partnership outreach for premium listings", "Quality monitoring", "SEO strategy"],
-          "canDelegate": ["Data refresh scripts", "Basic customer support", "Invoice processing", "Social media posting"]
+          "aiHandles": [
+            "Content generation for all listings",
+            "Meta descriptions & titles",
+            "Internal linking",
+            "Data categorization",
+            "Search indexing"
+          ],
+          "yourRole": [
+            "Niche selection & validation",
+            "Initial site architecture",
+            "Partnership outreach for premium listings",
+            "Quality monitoring",
+            "SEO strategy"
+          ],
+          "canDelegate": [
+            "Data refresh scripts",
+            "Basic customer support",
+            "Invoice processing",
+            "Social media posting"
+          ]
         },
         "toolStack": [
-          { "name": "Outscraper or Apify", "purpose": "Data scraping", "cost": "$50-200/month", "priority": "essential" },
-          { "name": "Claude API or GPT-4", "purpose": "Content generation", "cost": "$50-100/month", "priority": "essential" },
-          { "name": "Python + Beautiful Soup", "purpose": "Web scraping scripts", "cost": "$0 (free)", "priority": "essential" },
-          { "name": "Next.js or Webflow", "purpose": "Website platform", "cost": "$0-30/month", "priority": "essential" },
-          { "name": "Ahrefs or Semrush", "purpose": "Keyword research & SEO", "cost": "$100-200/month", "priority": "recommended" },
-          { "name": "Stripe", "purpose": "Premium listing payments", "cost": "2.9% + 30¢", "priority": "recommended" }
+          {
+            "name": "Outscraper or Apify",
+            "purpose": "Data scraping",
+            "cost": "$50-200/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Claude API or GPT-4",
+            "purpose": "Content generation",
+            "cost": "$50-100/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Python + Beautiful Soup",
+            "purpose": "Web scraping scripts",
+            "cost": "$0 (free)",
+            "priority": "essential"
+          },
+          {
+            "name": "Next.js or Webflow",
+            "purpose": "Website platform",
+            "cost": "$0-30/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Ahrefs or Semrush",
+            "purpose": "Keyword research & SEO",
+            "cost": "$100-200/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Stripe",
+            "purpose": "Premium listing payments",
+            "cost": "2.9% + 30¢",
+            "priority": "recommended"
+          }
         ],
         "launchRoadmap": {
           "timeline": "4-6 months to first revenue",
@@ -312,6 +398,17 @@
           "confidence": "High (8.5/10)",
           "reasoning": "Perfect fit for Sean's criteria: Low startup cost ($2-5K), 90% automated, no phone calls required, proven revenue model ($150K-400K/year). SEO moat makes it defensible long-term. Can run multiple directories simultaneously. Main downside: Requires patience for SEO (6-12 months to meaningful revenue)."
         }
+      },
+      "revenueScore": 8,
+      "profitMargin": 90,
+      "automationPercent": 90,
+      "timeToProfit": 6,
+      "capitalNeeded": "low",
+      "qualityScore": 8,
+      "details": {
+        "caseStudy": "Frey Chu's Directory Portfolio - $2,500-3,000/month passive. Programmatic SEO + premium listings. Team: Solo founder.",
+        "cac": "Startup: $2,000-5,000, Monthly: $500-1,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Automated approach: Content generation for all listings, Meta descriptions & titles, Internal linking. Manual: Niche selection & validation, Initial site architecture."
       }
     },
     {
@@ -340,43 +437,152 @@
           "startup": "$3,500-6,000",
           "monthly": "$2,000-3,200",
           "breakdown": [
-            { "item": "Audio editing software (Adobe Audition/Reaper + iZotope)", "cost": "$500 one-time" },
-            { "item": "Website & branding", "cost": "$1,500 one-time" },
-            { "item": "ElevenLabs API", "cost": "$100-300/month" },
-            { "item": "Transcription APIs (Whisper/AssemblyAI)", "cost": "$50-200/month" },
-            { "item": "Project management (Airtable + Zapier)", "cost": "$50/month" },
-            { "item": "Marketing budget", "cost": "$500-2,000/month" },
-            { "item": "Legal & business setup", "cost": "$500 one-time" }
+            {
+              "item": "Audio editing software (Adobe Audition/Reaper + iZotope)",
+              "cost": "$500 one-time"
+            },
+            {
+              "item": "Website & branding",
+              "cost": "$1,500 one-time"
+            },
+            {
+              "item": "ElevenLabs API",
+              "cost": "$100-300/month"
+            },
+            {
+              "item": "Transcription APIs (Whisper/AssemblyAI)",
+              "cost": "$50-200/month"
+            },
+            {
+              "item": "Project management (Airtable + Zapier)",
+              "cost": "$50/month"
+            },
+            {
+              "item": "Marketing budget",
+              "cost": "$500-2,000/month"
+            },
+            {
+              "item": "Legal & business setup",
+              "cost": "$500 one-time"
+            }
           ]
         },
         "automation": {
           "overall": 75,
           "setup": "40-60 hours over 2-4 weeks",
           "breakdown": [
-            { "task": "Audio cleanup & normalization", "percent": 95, "tool": "Auphonic or Cleanvoice API" },
-            { "task": "Intro/outro generation", "percent": 100, "tool": "ElevenLabs API + templates" },
-            { "task": "Music mixing & leveling", "percent": 90, "tool": "Automated audio scripts" },
-            { "task": "Transcription", "percent": 100, "tool": "Whisper API or AssemblyAI" },
-            { "task": "Show notes generation", "percent": 95, "tool": "GPT-4 from transcript" },
-            { "task": "Audiogram creation", "percent": 100, "tool": "Shotstack + waveform viz" },
-            { "task": "Content editing (narrative flow)", "percent": 0, "tool": "Manual human review" },
-            { "task": "Quality control", "percent": 0, "tool": "Human review" },
-            { "task": "Customer communication", "percent": 50, "tool": "Canned responses + AI drafts" }
+            {
+              "task": "Audio cleanup & normalization",
+              "percent": 95,
+              "tool": "Auphonic or Cleanvoice API"
+            },
+            {
+              "task": "Intro/outro generation",
+              "percent": 100,
+              "tool": "ElevenLabs API + templates"
+            },
+            {
+              "task": "Music mixing & leveling",
+              "percent": 90,
+              "tool": "Automated audio scripts"
+            },
+            {
+              "task": "Transcription",
+              "percent": 100,
+              "tool": "Whisper API or AssemblyAI"
+            },
+            {
+              "task": "Show notes generation",
+              "percent": 95,
+              "tool": "GPT-4 from transcript"
+            },
+            {
+              "task": "Audiogram creation",
+              "percent": 100,
+              "tool": "Shotstack + waveform viz"
+            },
+            {
+              "task": "Content editing (narrative flow)",
+              "percent": 0,
+              "tool": "Manual human review"
+            },
+            {
+              "task": "Quality control",
+              "percent": 0,
+              "tool": "Human review"
+            },
+            {
+              "task": "Customer communication",
+              "percent": 50,
+              "tool": "Canned responses + AI drafts"
+            }
           ],
           "personalTime": "15-20 hours/week (editing + QC)",
           "vaTime": "10-15 hours/week (customer support, optional)",
-          "aiHandles": ["Audio cleanup", "Transcription", "Show notes", "Intro/outro voice", "Audiogram clips", "Basic email responses"],
-          "yourRole": ["Content editing decisions", "Quality control", "Client onboarding", "Strategy & positioning"],
-          "canDelegate": ["Customer support (tier 1)", "File management", "Social media posting", "Invoice processing"]
+          "aiHandles": [
+            "Audio cleanup",
+            "Transcription",
+            "Show notes",
+            "Intro/outro voice",
+            "Audiogram clips",
+            "Basic email responses"
+          ],
+          "yourRole": [
+            "Content editing decisions",
+            "Quality control",
+            "Client onboarding",
+            "Strategy & positioning"
+          ],
+          "canDelegate": [
+            "Customer support (tier 1)",
+            "File management",
+            "Social media posting",
+            "Invoice processing"
+          ]
         },
         "toolStack": [
-          { "name": "Cleanvoice or Auphonic", "purpose": "AI audio cleanup", "cost": "$100-300/month", "priority": "essential" },
-          { "name": "ElevenLabs API", "purpose": "AI voiceover for intros/outros", "cost": "$100-300/month", "priority": "essential" },
-          { "name": "Whisper or AssemblyAI", "purpose": "Transcription", "cost": "$50-200/month", "priority": "essential" },
-          { "name": "Adobe Audition or Reaper", "purpose": "Audio editing software", "cost": "$500 one-time or $20/month", "priority": "essential" },
-          { "name": "Shotstack", "purpose": "Audiogram video creation", "cost": "$50-150/month", "priority": "recommended" },
-          { "name": "Airtable + Zapier", "purpose": "Project management automation", "cost": "$50/month", "priority": "recommended" },
-          { "name": "Stripe", "purpose": "Recurring billing", "cost": "2.9% + 30¢", "priority": "essential" }
+          {
+            "name": "Cleanvoice or Auphonic",
+            "purpose": "AI audio cleanup",
+            "cost": "$100-300/month",
+            "priority": "essential"
+          },
+          {
+            "name": "ElevenLabs API",
+            "purpose": "AI voiceover for intros/outros",
+            "cost": "$100-300/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Whisper or AssemblyAI",
+            "purpose": "Transcription",
+            "cost": "$50-200/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Adobe Audition or Reaper",
+            "purpose": "Audio editing software",
+            "cost": "$500 one-time or $20/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Shotstack",
+            "purpose": "Audiogram video creation",
+            "cost": "$50-150/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Airtable + Zapier",
+            "purpose": "Project management automation",
+            "cost": "$50/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Stripe",
+            "purpose": "Recurring billing",
+            "cost": "2.9% + 30¢",
+            "priority": "essential"
+          }
         ],
         "launchRoadmap": {
           "timeline": "4-8 weeks to first client",
@@ -515,6 +721,17 @@
           "confidence": "High (8/10)",
           "reasoning": "Fastest path to revenue (can get first client in 2-4 weeks). Proven market demand (27% of podcasters outsource). AI makes previously labor-intensive work profitable. Recurring revenue model. Only downside: Requires some manual QC work (not 100% passive). Best for someone wanting fast cash flow while building more automated business on side."
         }
+      },
+      "revenueScore": 9,
+      "profitMargin": 80,
+      "automationPercent": 75,
+      "timeToProfit": 4,
+      "capitalNeeded": "low",
+      "qualityScore": 9,
+      "details": {
+        "caseStudy": "VideoHusky - $1.2M/year. Unlimited edits, fast turnaround, productized service. Team: Small team.",
+        "cac": "Startup: $3,500-6,000, Monthly: $2,000-3,200. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Post in Reddit r/podcasting: 'Offering AI-powered podcast editing' (with samples); Join Facebook groups for podcasters, share free resources; Cold email 50 podcasters: 'Loved your episode on [topic]. Would you like a free edit?'"
       }
     },
     {
@@ -542,41 +759,141 @@
           "startup": "$5,000-10,000",
           "monthly": "$5,000-20,000 (scales with usage)",
           "breakdown": [
-            { "item": "Development (if hiring)", "cost": "$3,000-8,000 one-time" },
-            { "item": "Website & branding", "cost": "$1,000-2,000 one-time" },
-            { "item": "OpenAI API costs", "cost": "$100-10,000/month (scales with users)" },
-            { "item": "Hosting (Vercel, Railway)", "cost": "$20-200/month" },
-            { "item": "Domain & tools", "cost": "$50-100/month" },
-            { "item": "Marketing (SEO, ads)", "cost": "$500-5,000/month" }
+            {
+              "item": "Development (if hiring)",
+              "cost": "$3,000-8,000 one-time"
+            },
+            {
+              "item": "Website & branding",
+              "cost": "$1,000-2,000 one-time"
+            },
+            {
+              "item": "OpenAI API costs",
+              "cost": "$100-10,000/month (scales with users)"
+            },
+            {
+              "item": "Hosting (Vercel, Railway)",
+              "cost": "$20-200/month"
+            },
+            {
+              "item": "Domain & tools",
+              "cost": "$50-100/month"
+            },
+            {
+              "item": "Marketing (SEO, ads)",
+              "cost": "$500-5,000/month"
+            }
           ]
         },
         "automation": {
           "overall": 95,
           "setup": "100-200 hours development (2-3 months if solo, faster if hiring)",
           "breakdown": [
-            { "task": "Core AI functionality", "percent": 100, "tool": "OpenAI API" },
-            { "task": "User authentication & billing", "percent": 100, "tool": "Clerk + Stripe" },
-            { "task": "Document processing (if PDF tool)", "percent": 100, "tool": "Automated parsing" },
-            { "task": "Database management", "percent": 100, "tool": "Supabase or PostgreSQL" },
-            { "task": "Customer support (basic)", "percent": 80, "tool": "AI chatbot + help docs" },
-            { "task": "Marketing & SEO", "percent": 50, "tool": "AI content + manual strategy" },
-            { "task": "Feature development", "percent": 20, "tool": "Manual coding" },
-            { "task": "Customer feedback iteration", "percent": 0, "tool": "Manual strategy" }
+            {
+              "task": "Core AI functionality",
+              "percent": 100,
+              "tool": "OpenAI API"
+            },
+            {
+              "task": "User authentication & billing",
+              "percent": 100,
+              "tool": "Clerk + Stripe"
+            },
+            {
+              "task": "Document processing (if PDF tool)",
+              "percent": 100,
+              "tool": "Automated parsing"
+            },
+            {
+              "task": "Database management",
+              "percent": 100,
+              "tool": "Supabase or PostgreSQL"
+            },
+            {
+              "task": "Customer support (basic)",
+              "percent": 80,
+              "tool": "AI chatbot + help docs"
+            },
+            {
+              "task": "Marketing & SEO",
+              "percent": 50,
+              "tool": "AI content + manual strategy"
+            },
+            {
+              "task": "Feature development",
+              "percent": 20,
+              "tool": "Manual coding"
+            },
+            {
+              "task": "Customer feedback iteration",
+              "percent": 0,
+              "tool": "Manual strategy"
+            }
           ],
           "personalTime": "10-20 hours/week (monitoring, support, feature dev)",
           "vaTime": "0-5 hours/week (customer support, optional)",
-          "aiHandles": ["Core product functionality", "User onboarding flows", "Basic customer support", "Documentation", "Marketing content"],
-          "yourRole": ["Product decisions", "Marketing strategy", "Complex support cases", "Feature prioritization"],
-          "canDelegate": ["Level 1 customer support", "Content marketing writing", "Social media posting"]
+          "aiHandles": [
+            "Core product functionality",
+            "User onboarding flows",
+            "Basic customer support",
+            "Documentation",
+            "Marketing content"
+          ],
+          "yourRole": [
+            "Product decisions",
+            "Marketing strategy",
+            "Complex support cases",
+            "Feature prioritization"
+          ],
+          "canDelegate": [
+            "Level 1 customer support",
+            "Content marketing writing",
+            "Social media posting"
+          ]
         },
         "toolStack": [
-          { "name": "OpenAI API or Claude API", "purpose": "Core AI functionality", "cost": "$100-10K/month (usage-based)", "priority": "essential" },
-          { "name": "Next.js or React", "purpose": "Web framework", "cost": "$0 (free)", "priority": "essential" },
-          { "name": "Vercel or Railway", "purpose": "Hosting", "cost": "$20-200/month", "priority": "essential" },
-          { "name": "Supabase or PostgreSQL", "purpose": "Database", "cost": "$0-25/month", "priority": "essential" },
-          { "name": "Stripe", "purpose": "Payment processing", "cost": "2.9% + 30¢", "priority": "essential" },
-          { "name": "Clerk or Auth0", "purpose": "Authentication", "cost": "$0-25/month", "priority": "recommended" },
-          { "name": "Plausible or PostHog", "purpose": "Analytics", "cost": "$0-20/month", "priority": "recommended" }
+          {
+            "name": "OpenAI API or Claude API",
+            "purpose": "Core AI functionality",
+            "cost": "$100-10K/month (usage-based)",
+            "priority": "essential"
+          },
+          {
+            "name": "Next.js or React",
+            "purpose": "Web framework",
+            "cost": "$0 (free)",
+            "priority": "essential"
+          },
+          {
+            "name": "Vercel or Railway",
+            "purpose": "Hosting",
+            "cost": "$20-200/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Supabase or PostgreSQL",
+            "purpose": "Database",
+            "cost": "$0-25/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Stripe",
+            "purpose": "Payment processing",
+            "cost": "2.9% + 30¢",
+            "priority": "essential"
+          },
+          {
+            "name": "Clerk or Auth0",
+            "purpose": "Authentication",
+            "cost": "$0-25/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Plausible or PostHog",
+            "purpose": "Analytics",
+            "cost": "$0-20/month",
+            "priority": "recommended"
+          }
         ],
         "launchRoadmap": {
           "timeline": "2-4 months to launch + first users",
@@ -738,6 +1055,17 @@
           "confidence": "Medium-High (7.5/10)",
           "reasoning": "Strong opportunity with proven $100K-300K/year revenue examples. 95% automated and self-service (perfect for Sean's no-sales requirement). Main risks: Competition and OpenAI potentially adding your feature. Mitigate by choosing underserved niche and building proprietary features. Good for someone with technical skills or budget to hire developer. Can validate quickly (2-4 weeks)."
         }
+      },
+      "revenueScore": 7,
+      "profitMargin": 90,
+      "automationPercent": 95,
+      "timeToProfit": 4,
+      "capitalNeeded": "medium",
+      "qualityScore": 7,
+      "details": {
+        "caseStudy": "ChatPDF - $500K/month. First mover in category, 10M users. Team: Solo founder initially.",
+        "cac": "Startup: $5,000-10,000, Monthly: $5,000-20,000 (scales with usage). CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Post on Product Hunt (Beta version); Share in niche communities (Reddit, Discord, Facebook groups); Offer lifetime deal for first 50 users ($199 one-time)"
       }
     },
     {
@@ -765,41 +1093,143 @@
           "startup": "$2,000-5,000",
           "monthly": "$500-1,000",
           "breakdown": [
-            { "item": "Domain & hosting", "cost": "$100 one-time + $20/month" },
-            { "item": "AI content (Claude/GPT)", "cost": "$100-300/month" },
-            { "item": "SEO tools (Ahrefs)", "cost": "$200/month" },
-            { "item": "Link building", "cost": "$200-500/month" },
-            { "item": "WordPress theme/plugins", "cost": "$200 one-time" },
-            { "item": "Initial content investment", "cost": "$1,000-2,000 one-time" }
+            {
+              "item": "Domain & hosting",
+              "cost": "$100 one-time + $20/month"
+            },
+            {
+              "item": "AI content (Claude/GPT)",
+              "cost": "$100-300/month"
+            },
+            {
+              "item": "SEO tools (Ahrefs)",
+              "cost": "$200/month"
+            },
+            {
+              "item": "Link building",
+              "cost": "$200-500/month"
+            },
+            {
+              "item": "WordPress theme/plugins",
+              "cost": "$200 one-time"
+            },
+            {
+              "item": "Initial content investment",
+              "cost": "$1,000-2,000 one-time"
+            }
           ]
         },
         "automation": {
           "overall": 80,
           "setup": "60-100 hours over 2-3 months",
           "breakdown": [
-            { "task": "Keyword research", "percent": 80, "tool": "Ahrefs + GPT-4 analysis" },
-            { "task": "Article outlines", "percent": 95, "tool": "GPT-4/Claude" },
-            { "task": "First draft writing", "percent": 95, "tool": "Claude 3.5 Sonnet (best for long-form)" },
-            { "task": "Internal linking", "percent": 90, "tool": "Automated link insertion scripts" },
-            { "task": "Image sourcing", "percent": 100, "tool": "Pexels/Unsplash API" },
-            { "task": "SEO optimization", "percent": 85, "tool": "AI meta tags + schema markup" },
-            { "task": "Content updates/refresh", "percent": 90, "tool": "Scheduled AI rewrites" },
-            { "task": "Human editing & fact-checking", "percent": 0, "tool": "Manual (30-60 min per article)" },
-            { "task": "Link building outreach", "percent": 20, "tool": "AI draft emails, manual sending" }
+            {
+              "task": "Keyword research",
+              "percent": 80,
+              "tool": "Ahrefs + GPT-4 analysis"
+            },
+            {
+              "task": "Article outlines",
+              "percent": 95,
+              "tool": "GPT-4/Claude"
+            },
+            {
+              "task": "First draft writing",
+              "percent": 95,
+              "tool": "Claude 3.5 Sonnet (best for long-form)"
+            },
+            {
+              "task": "Internal linking",
+              "percent": 90,
+              "tool": "Automated link insertion scripts"
+            },
+            {
+              "task": "Image sourcing",
+              "percent": 100,
+              "tool": "Pexels/Unsplash API"
+            },
+            {
+              "task": "SEO optimization",
+              "percent": 85,
+              "tool": "AI meta tags + schema markup"
+            },
+            {
+              "task": "Content updates/refresh",
+              "percent": 90,
+              "tool": "Scheduled AI rewrites"
+            },
+            {
+              "task": "Human editing & fact-checking",
+              "percent": 0,
+              "tool": "Manual (30-60 min per article)"
+            },
+            {
+              "task": "Link building outreach",
+              "percent": 20,
+              "tool": "AI draft emails, manual sending"
+            }
           ],
           "personalTime": "15-25 hours/week initially, 5-10 hours/week after 6 months",
           "vaTime": "0-10 hours/week (link outreach, optional)",
-          "aiHandles": ["Article writing (2,000-3,000 words)", "Keyword research analysis", "Content optimization", "Meta descriptions", "Internal linking suggestions", "Content refresh"],
-          "yourRole": ["Niche selection & strategy", "Topic planning", "Final editing (add personal insights, verify facts)", "Link building strategy", "Monetization optimization"],
-          "canDelegate": ["Link outreach emails", "Image optimization", "WordPress publishing", "Social media sharing"]
+          "aiHandles": [
+            "Article writing (2,000-3,000 words)",
+            "Keyword research analysis",
+            "Content optimization",
+            "Meta descriptions",
+            "Internal linking suggestions",
+            "Content refresh"
+          ],
+          "yourRole": [
+            "Niche selection & strategy",
+            "Topic planning",
+            "Final editing (add personal insights, verify facts)",
+            "Link building strategy",
+            "Monetization optimization"
+          ],
+          "canDelegate": [
+            "Link outreach emails",
+            "Image optimization",
+            "WordPress publishing",
+            "Social media sharing"
+          ]
         },
         "toolStack": [
-          { "name": "Claude 3.5 Sonnet or GPT-4", "purpose": "Content writing", "cost": "$20-100/month", "priority": "essential" },
-          { "name": "Ahrefs or Semrush", "purpose": "Keyword research & SEO", "cost": "$200/month", "priority": "essential" },
-          { "name": "WordPress + Generatepress", "purpose": "Website platform", "cost": "$60/year", "priority": "essential" },
-          { "name": "Cloudways or SiteGround", "purpose": "Hosting", "cost": "$20-50/month", "priority": "essential" },
-          { "name": "Surfer SEO or Clearscope", "purpose": "Content optimization", "cost": "$60-150/month", "priority": "recommended" },
-          { "name": "Amazon Associates / Impact", "purpose": "Affiliate programs", "cost": "$0 (free)", "priority": "essential" }
+          {
+            "name": "Claude 3.5 Sonnet or GPT-4",
+            "purpose": "Content writing",
+            "cost": "$20-100/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Ahrefs or Semrush",
+            "purpose": "Keyword research & SEO",
+            "cost": "$200/month",
+            "priority": "essential"
+          },
+          {
+            "name": "WordPress + Generatepress",
+            "purpose": "Website platform",
+            "cost": "$60/year",
+            "priority": "essential"
+          },
+          {
+            "name": "Cloudways or SiteGround",
+            "purpose": "Hosting",
+            "cost": "$20-50/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Surfer SEO or Clearscope",
+            "purpose": "Content optimization",
+            "cost": "$60-150/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Amazon Associates / Impact",
+            "purpose": "Affiliate programs",
+            "cost": "$0 (free)",
+            "priority": "essential"
+          }
         ],
         "launchRoadmap": {
           "timeline": "8-16 months to meaningful revenue",
@@ -949,6 +1379,17 @@
           "confidence": "Medium (7/10)",
           "reasoning": "Strong long-term opportunity with 80% automation and passive income potential. AI makes content production economically viable. Main downside: Takes 6-12 months to see revenue (SEO lag), which is too slow for primary business. Best used as: (1) Side project while doing productized service, or (2) Multiple sites for diversification. Not recommended as sole business model due to slow ramp and Google algorithm risk."
         }
+      },
+      "revenueScore": 7,
+      "profitMargin": 85,
+      "automationPercent": 80,
+      "timeToProfit": 9,
+      "capitalNeeded": "low",
+      "qualityScore": 7,
+      "details": {
+        "caseStudy": "Digital Émigré - Not disclosed (6-figure estimated). 0 to 75K organic visitors in months using AI content. Team: Solo founder.",
+        "cac": "Startup: $2,000-5,000, Monthly: $500-1,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Automated approach: Article writing (2,000-3,000 words), Keyword research analysis, Content optimization. Manual: Niche selection & strategy, Topic planning."
       }
     },
     {
@@ -977,39 +1418,133 @@
           "startup": "$5,000-10,000",
           "monthly": "$2,000-5,000",
           "breakdown": [
-            { "item": "Website & branding", "cost": "$2,000-3,000 one-time" },
-            { "item": "Initial marketing", "cost": "$2,000-5,000 one-time" },
-            { "item": "Partnership fees (if any)", "cost": "$0-1,000 one-time" },
-            { "item": "CRM & tools", "cost": "$100-200/month" },
-            { "item": "Marketing & ads", "cost": "$1,000-3,000/month" },
-            { "item": "Support tools", "cost": "$50-100/month" }
+            {
+              "item": "Website & branding",
+              "cost": "$2,000-3,000 one-time"
+            },
+            {
+              "item": "Initial marketing",
+              "cost": "$2,000-5,000 one-time"
+            },
+            {
+              "item": "Partnership fees (if any)",
+              "cost": "$0-1,000 one-time"
+            },
+            {
+              "item": "CRM & tools",
+              "cost": "$100-200/month"
+            },
+            {
+              "item": "Marketing & ads",
+              "cost": "$1,000-3,000/month"
+            },
+            {
+              "item": "Support tools",
+              "cost": "$50-100/month"
+            }
           ]
         },
         "automation": {
           "overall": 70,
           "setup": "60-100 hours over 2-3 months",
           "breakdown": [
-            { "task": "Lead generation", "percent": 80, "tool": "LinkedIn Sales Navigator + AI scraping" },
-            { "task": "Email outreach", "percent": 90, "tool": "Automated sequences (Lemlist, Instantly)" },
-            { "task": "Product demos", "percent": 0, "tool": "Live calls or recorded demos" },
-            { "task": "Customer onboarding", "percent": 85, "tool": "Automated workflows" },
-            { "task": "Billing & invoicing", "percent": 100, "tool": "Stripe + partner integration" },
-            { "task": "Level 1 support", "percent": 80, "tool": "AI chatbot + knowledge base" },
-            { "task": "Account management", "percent": 30, "tool": "Quarterly calls, mostly automated reporting" }
+            {
+              "task": "Lead generation",
+              "percent": 80,
+              "tool": "LinkedIn Sales Navigator + AI scraping"
+            },
+            {
+              "task": "Email outreach",
+              "percent": 90,
+              "tool": "Automated sequences (Lemlist, Instantly)"
+            },
+            {
+              "task": "Product demos",
+              "percent": 0,
+              "tool": "Live calls or recorded demos"
+            },
+            {
+              "task": "Customer onboarding",
+              "percent": 85,
+              "tool": "Automated workflows"
+            },
+            {
+              "task": "Billing & invoicing",
+              "percent": 100,
+              "tool": "Stripe + partner integration"
+            },
+            {
+              "task": "Level 1 support",
+              "percent": 80,
+              "tool": "AI chatbot + knowledge base"
+            },
+            {
+              "task": "Account management",
+              "percent": 30,
+              "tool": "Quarterly calls, mostly automated reporting"
+            }
           ],
           "personalTime": "20-30 hours/week initially, 15-20 hours/week after scale",
           "vaTime": "10-20 hours/week (customer support, onboarding)",
-          "aiHandles": ["Lead research", "Email writing", "Customer support (tier 1)", "Onboarding sequences", "Usage reporting"],
-          "yourRole": ["Partnership selection", "Niche positioning", "Sales strategy", "Customer success (high-touch accounts)", "Renewals & upsells"],
-          "canDelegate": ["Lead research & list building", "Email outreach management", "Basic customer support", "Onboarding calls", "Admin tasks"]
+          "aiHandles": [
+            "Lead research",
+            "Email writing",
+            "Customer support (tier 1)",
+            "Onboarding sequences",
+            "Usage reporting"
+          ],
+          "yourRole": [
+            "Partnership selection",
+            "Niche positioning",
+            "Sales strategy",
+            "Customer success (high-touch accounts)",
+            "Renewals & upsells"
+          ],
+          "canDelegate": [
+            "Lead research & list building",
+            "Email outreach management",
+            "Basic customer support",
+            "Onboarding calls",
+            "Admin tasks"
+          ]
         },
         "toolStack": [
-          { "name": "HubSpot or Pipedrive", "purpose": "CRM", "cost": "$50-500/month", "priority": "essential" },
-          { "name": "Lemlist or Instantly", "purpose": "Email automation", "cost": "$60-150/month", "priority": "essential" },
-          { "name": "LinkedIn Sales Navigator", "purpose": "Lead generation", "cost": "$80/month", "priority": "recommended" },
-          { "name": "Calendly", "purpose": "Demo scheduling", "cost": "$10-15/month", "priority": "essential" },
-          { "name": "Loom", "purpose": "Product demos", "cost": "$15/month", "priority": "recommended" },
-          { "name": "Intercom or Drift", "purpose": "Customer support", "cost": "$75-150/month", "priority": "recommended" }
+          {
+            "name": "HubSpot or Pipedrive",
+            "purpose": "CRM",
+            "cost": "$50-500/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Lemlist or Instantly",
+            "purpose": "Email automation",
+            "cost": "$60-150/month",
+            "priority": "essential"
+          },
+          {
+            "name": "LinkedIn Sales Navigator",
+            "purpose": "Lead generation",
+            "cost": "$80/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Calendly",
+            "purpose": "Demo scheduling",
+            "cost": "$10-15/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Loom",
+            "purpose": "Product demos",
+            "cost": "$15/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Intercom or Drift",
+            "purpose": "Customer support",
+            "cost": "$75-150/month",
+            "priority": "recommended"
+          }
         ],
         "launchRoadmap": {
           "timeline": "3-6 months to first customers",
@@ -1162,6 +1697,17 @@
           "confidence": "High (7.5/10)",
           "reasoning": "Strong opportunity for recurring revenue without product development risk. 70% automated with right tools. Main caveat: Requires some sales/outreach (not 100% passive), but can be done via email/LinkedIn (no cold calling required). Best for someone who wants SaaS-like business model without technical skills. Lower risk than building product. Can be combined with other models (e.g., resell SaaS to productized service clients)."
         }
+      },
+      "revenueScore": 8,
+      "profitMargin": 70,
+      "automationPercent": 70,
+      "timeToProfit": 5,
+      "capitalNeeded": "medium",
+      "qualityScore": 8,
+      "details": {
+        "caseStudy": "HubSpot Partner Agencies - $50K-$200K+/year (many partners). 20-30% recurring revenue on all clients. Team: 2-10 people.",
+        "cac": "Startup: $5,000-10,000, Monthly: $2,000-5,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Build list of 500 target businesses (LinkedIn, industry directories); Set up email automation sequences (5-7 emails over 2 weeks); Launch LinkedIn outreach campaign"
       }
     },
     {
@@ -1189,42 +1735,147 @@
           "startup": "$500-2,000",
           "monthly": "$250-500",
           "breakdown": [
-            { "item": "Runway ML", "cost": "$12-90/month" },
-            { "item": "ElevenLabs Pro", "cost": "$22-99/month" },
-            { "item": "Pika Labs", "cost": "$10/month" },
-            { "item": "CapCut Pro", "cost": "$10/month" },
-            { "item": "Claude API (scripts)", "cost": "$20-50/month" },
-            { "item": "Stock footage subscriptions", "cost": "$30-50/month (optional)" },
-            { "item": "Initial learning curve", "cost": "$500-1,000 (testing tools)" }
+            {
+              "item": "Runway ML",
+              "cost": "$12-90/month"
+            },
+            {
+              "item": "ElevenLabs Pro",
+              "cost": "$22-99/month"
+            },
+            {
+              "item": "Pika Labs",
+              "cost": "$10/month"
+            },
+            {
+              "item": "CapCut Pro",
+              "cost": "$10/month"
+            },
+            {
+              "item": "Claude API (scripts)",
+              "cost": "$20-50/month"
+            },
+            {
+              "item": "Stock footage subscriptions",
+              "cost": "$30-50/month (optional)"
+            },
+            {
+              "item": "Initial learning curve",
+              "cost": "$500-1,000 (testing tools)"
+            }
           ]
         },
         "automation": {
           "overall": 80,
           "setup": "100-200 hours (learning + testing + finding what works)",
           "breakdown": [
-            { "task": "Topic research", "percent": 80, "tool": "GPT-4 analyzing trending topics" },
-            { "task": "Script writing", "percent": 95, "tool": "Claude 3.5 Sonnet" },
-            { "task": "Voiceover generation", "percent": 100, "tool": "ElevenLabs Pro voices" },
-            { "task": "Visual creation", "percent": 90, "tool": "Runway ML + Pika + stock footage" },
-            { "task": "Video editing", "percent": 85, "tool": "CapCut auto-captions + effects" },
-            { "task": "Thumbnail creation", "percent": 80, "tool": "Midjourney or DALL-E + Photopea" },
-            { "task": "Upload & scheduling", "percent": 100, "tool": "YouTube API + scheduling" },
-            { "task": "Quality control (human review)", "percent": 0, "tool": "Manual (10-30 min per video)" },
-            { "task": "A/B testing titles", "percent": 50, "tool": "Manual analysis + AI suggestions" }
+            {
+              "task": "Topic research",
+              "percent": 80,
+              "tool": "GPT-4 analyzing trending topics"
+            },
+            {
+              "task": "Script writing",
+              "percent": 95,
+              "tool": "Claude 3.5 Sonnet"
+            },
+            {
+              "task": "Voiceover generation",
+              "percent": 100,
+              "tool": "ElevenLabs Pro voices"
+            },
+            {
+              "task": "Visual creation",
+              "percent": 90,
+              "tool": "Runway ML + Pika + stock footage"
+            },
+            {
+              "task": "Video editing",
+              "percent": 85,
+              "tool": "CapCut auto-captions + effects"
+            },
+            {
+              "task": "Thumbnail creation",
+              "percent": 80,
+              "tool": "Midjourney or DALL-E + Photopea"
+            },
+            {
+              "task": "Upload & scheduling",
+              "percent": 100,
+              "tool": "YouTube API + scheduling"
+            },
+            {
+              "task": "Quality control (human review)",
+              "percent": 0,
+              "tool": "Manual (10-30 min per video)"
+            },
+            {
+              "task": "A/B testing titles",
+              "percent": 50,
+              "tool": "Manual analysis + AI suggestions"
+            }
           ],
           "personalTime": "20 hours/week initially (testing), 5-10 hours/week after automation",
           "vaTime": "0-5 hours/week (optional for thumbnail design)",
-          "aiHandles": ["Script writing", "Voiceover", "Visual generation", "Auto-captions", "Topic research", "SEO optimization"],
-          "yourRole": ["Strategy (what content to make)", "Quality control", "Trend monitoring", "Thumbnail approval", "Channel management"],
-          "canDelegate": ["Thumbnail design", "Video upload/scheduling", "Comment moderation", "Analytics tracking"]
+          "aiHandles": [
+            "Script writing",
+            "Voiceover",
+            "Visual generation",
+            "Auto-captions",
+            "Topic research",
+            "SEO optimization"
+          ],
+          "yourRole": [
+            "Strategy (what content to make)",
+            "Quality control",
+            "Trend monitoring",
+            "Thumbnail approval",
+            "Channel management"
+          ],
+          "canDelegate": [
+            "Thumbnail design",
+            "Video upload/scheduling",
+            "Comment moderation",
+            "Analytics tracking"
+          ]
         },
         "toolStack": [
-          { "name": "Runway ML Gen-2", "purpose": "Cinematic AI video", "cost": "$12-90/month", "priority": "essential" },
-          { "name": "ElevenLabs Pro", "purpose": "Premium AI voiceover", "cost": "$22-99/month", "priority": "essential" },
-          { "name": "Pika Labs", "purpose": "AI animations", "cost": "$10/month", "priority": "recommended" },
-          { "name": "CapCut Pro", "purpose": "Auto-captions, effects, editing", "cost": "$10/month", "priority": "essential" },
-          { "name": "Claude 3.5 Sonnet", "purpose": "Script writing", "cost": "$20/month", "priority": "essential" },
-          { "name": "Opus Clip (optional)", "purpose": "Auto-cut long videos into shorts", "cost": "$29/month", "priority": "optional" }
+          {
+            "name": "Runway ML Gen-2",
+            "purpose": "Cinematic AI video",
+            "cost": "$12-90/month",
+            "priority": "essential"
+          },
+          {
+            "name": "ElevenLabs Pro",
+            "purpose": "Premium AI voiceover",
+            "cost": "$22-99/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Pika Labs",
+            "purpose": "AI animations",
+            "cost": "$10/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "CapCut Pro",
+            "purpose": "Auto-captions, effects, editing",
+            "cost": "$10/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Claude 3.5 Sonnet",
+            "purpose": "Script writing",
+            "cost": "$20/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Opus Clip (optional)",
+            "purpose": "Auto-cut long videos into shorts",
+            "cost": "$29/month",
+            "priority": "optional"
+          }
         ],
         "launchRoadmap": {
           "timeline": "4-8 months to monetization",
@@ -1375,6 +2026,17 @@
           "confidence": "Medium (6/10)",
           "reasoning": "Can work but high risk/reward ratio. Takes 6-12 months to see meaningful revenue. Algorithm-dependent (one change can kill channel). Best used as: (1) Side project while building primary business, or (2) Multiple channels for diversification. NOT recommended as sole business due to unpredictability. However, if you find winning format early, can be very profitable ($10K-50K/month passive). Worth testing with $100-500 budget, but don't bet everything on it."
         }
+      },
+      "revenueScore": 6,
+      "profitMargin": 85,
+      "automationPercent": 80,
+      "timeToProfit": 6,
+      "capitalNeeded": "low",
+      "qualityScore": 8,
+      "details": {
+        "caseStudy": "MagnatesMedia - $50K-100K/month (estimated). Premium production, educational content, strong storytelling. Team: Small team.",
+        "cac": "Startup: $500-2,000, Monthly: $250-500. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Automated approach: Script writing, Voiceover, Visual generation. Manual: Strategy (what content to make), Quality control."
       }
     },
     {
@@ -1402,42 +2064,145 @@
           "startup": "$2,000-5,000",
           "monthly": "$150-500",
           "breakdown": [
-            { "item": "Development (if hiring)", "cost": "$1,000-3,000 one-time (or DIY with no-code)" },
-            { "item": "Website & branding", "cost": "$500-1,000 one-time" },
-            { "item": "Delivery platform APIs (Cuboh/Chowly)", "cost": "$50-150/month" },
-            { "item": "OpenWeather API", "cost": "$0-20/month" },
-            { "item": "OpenAI API (predictions)", "cost": "$20-100/month" },
-            { "item": "Hosting (Vercel/Railway)", "cost": "$10-50/month" },
-            { "item": "Domain & tools", "cost": "$20-50/month" }
+            {
+              "item": "Development (if hiring)",
+              "cost": "$1,000-3,000 one-time (or DIY with no-code)"
+            },
+            {
+              "item": "Website & branding",
+              "cost": "$500-1,000 one-time"
+            },
+            {
+              "item": "Delivery platform APIs (Cuboh/Chowly)",
+              "cost": "$50-150/month"
+            },
+            {
+              "item": "OpenWeather API",
+              "cost": "$0-20/month"
+            },
+            {
+              "item": "OpenAI API (predictions)",
+              "cost": "$20-100/month"
+            },
+            {
+              "item": "Hosting (Vercel/Railway)",
+              "cost": "$10-50/month"
+            },
+            {
+              "item": "Domain & tools",
+              "cost": "$20-50/month"
+            }
           ]
         },
         "automation": {
           "overall": 95,
           "setup": "60-100 hours (2-3 months with no-code, faster if hiring)",
           "breakdown": [
-            { "task": "Order data ingestion", "percent": 100, "tool": "Uber Eats/DoorDash APIs via Cuboh" },
-            { "task": "Weather data integration", "percent": 100, "tool": "OpenWeather API" },
-            { "task": "Event data scraping", "percent": 95, "tool": "Google Calendar API + web scraping" },
-            { "task": "Prediction algorithm", "percent": 100, "tool": "OpenAI API or simple moving average" },
-            { "task": "Daily inventory alerts", "percent": 100, "tool": "Twilio SMS or email automation" },
-            { "task": "Customer onboarding", "percent": 90, "tool": "Automated setup wizard" },
-            { "task": "Billing", "percent": 100, "tool": "Stripe subscriptions" },
-            { "task": "Customer support", "percent": 60, "tool": "AI chatbot + email" }
+            {
+              "task": "Order data ingestion",
+              "percent": 100,
+              "tool": "Uber Eats/DoorDash APIs via Cuboh"
+            },
+            {
+              "task": "Weather data integration",
+              "percent": 100,
+              "tool": "OpenWeather API"
+            },
+            {
+              "task": "Event data scraping",
+              "percent": 95,
+              "tool": "Google Calendar API + web scraping"
+            },
+            {
+              "task": "Prediction algorithm",
+              "percent": 100,
+              "tool": "OpenAI API or simple moving average"
+            },
+            {
+              "task": "Daily inventory alerts",
+              "percent": 100,
+              "tool": "Twilio SMS or email automation"
+            },
+            {
+              "task": "Customer onboarding",
+              "percent": 90,
+              "tool": "Automated setup wizard"
+            },
+            {
+              "task": "Billing",
+              "percent": 100,
+              "tool": "Stripe subscriptions"
+            },
+            {
+              "task": "Customer support",
+              "percent": 60,
+              "tool": "AI chatbot + email"
+            }
           ],
           "personalTime": "5-10 hours/week (monitoring, support, improvements)",
           "vaTime": "0-5 hours/week (customer support, optional)",
-          "aiHandles": ["Demand prediction", "Pattern analysis", "Inventory recommendations", "Customer onboarding", "Basic support"],
-          "yourRole": ["Product decisions", "Customer acquisition", "Complex support", "Algorithm improvements"],
-          "canDelegate": ["Customer support", "Onboarding calls", "Content marketing"]
+          "aiHandles": [
+            "Demand prediction",
+            "Pattern analysis",
+            "Inventory recommendations",
+            "Customer onboarding",
+            "Basic support"
+          ],
+          "yourRole": [
+            "Product decisions",
+            "Customer acquisition",
+            "Complex support",
+            "Algorithm improvements"
+          ],
+          "canDelegate": [
+            "Customer support",
+            "Onboarding calls",
+            "Content marketing"
+          ]
         },
         "toolStack": [
-          { "name": "Softr or Bubble", "purpose": "No-code dashboard", "cost": "$0-29/month", "priority": "essential" },
-          { "name": "Cuboh or Chowly", "purpose": "Delivery platform APIs", "cost": "$50-150/month", "priority": "essential" },
-          { "name": "OpenWeather API", "purpose": "Weather data", "cost": "$0-20/month", "priority": "essential" },
-          { "name": "OpenAI API", "purpose": "Prediction analysis", "cost": "$20-100/month", "priority": "recommended" },
-          { "name": "Airtable or Firebase", "purpose": "Database", "cost": "$0-20/month", "priority": "essential" },
-          { "name": "Twilio or Resend", "purpose": "SMS/email alerts", "cost": "$10-50/month", "priority": "essential" },
-          { "name": "Stripe", "purpose": "Payment processing", "cost": "2.9% + 30¢", "priority": "essential" }
+          {
+            "name": "Softr or Bubble",
+            "purpose": "No-code dashboard",
+            "cost": "$0-29/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Cuboh or Chowly",
+            "purpose": "Delivery platform APIs",
+            "cost": "$50-150/month",
+            "priority": "essential"
+          },
+          {
+            "name": "OpenWeather API",
+            "purpose": "Weather data",
+            "cost": "$0-20/month",
+            "priority": "essential"
+          },
+          {
+            "name": "OpenAI API",
+            "purpose": "Prediction analysis",
+            "cost": "$20-100/month",
+            "priority": "recommended"
+          },
+          {
+            "name": "Airtable or Firebase",
+            "purpose": "Database",
+            "cost": "$0-20/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Twilio or Resend",
+            "purpose": "SMS/email alerts",
+            "cost": "$10-50/month",
+            "priority": "essential"
+          },
+          {
+            "name": "Stripe",
+            "purpose": "Payment processing",
+            "cost": "2.9% + 30¢",
+            "priority": "essential"
+          }
         ],
         "launchRoadmap": {
           "timeline": "2-3 months to MVP + pilot customers",
@@ -1582,6 +2347,17 @@
           "confidence": "High (8/10)",
           "reasoning": "Rare, underserved niche with clear expensive problem. 95% automated, true SaaS model. Low startup cost ($2-5K). Growing market. Low competition. Easy to demonstrate ROI. Main risk: Niche is small (but can expand to regular restaurants). Perfect for Sean's criteria: No sales calls (self-service), low capital, high automation. Could be $200K-300K/year business with 100-200 customers."
         }
+      },
+      "revenueScore": 8,
+      "profitMargin": 85,
+      "automationPercent": 95,
+      "timeToProfit": 5,
+      "capitalNeeded": "low",
+      "qualityScore": 9,
+      "details": {
+        "caseStudy": "Ghost Kitchen Market Growth - Industry growing to $71.4B by 2027. 3-5% profit margins (food waste kills profitability). Team: N/A.",
+        "cac": "Startup: $2,000-5,000, Monthly: $150-500. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Convert 3-5 pilots to paying customers ($99-199/month); Create pricing tiers: Starter ($99), Growth ($199), Premium ($299); Build simple website with case studies"
       }
     },
     {
@@ -1609,37 +2385,109 @@
           "startup": "$5,000-15,000",
           "monthly": "$2,000-5,000",
           "breakdown": [
-            { "item": "Development (SaaS platform)", "cost": "$5,000-12,000 one-time (or DIY over 3-6 months)" },
-            { "item": "Website & branding", "cost": "$1,000-2,000 one-time" },
-            { "item": "Hosting & infrastructure", "cost": "$100-500/month (scales with pages)" },
-            { "item": "AI content generation", "cost": "$200-1,000/month (Claude/GPT-4)" },
-            { "item": "Data sources", "cost": "$100-500/month" },
-            { "item": "Domain & tools", "cost": "$50-100/month" }
+            {
+              "item": "Development (SaaS platform)",
+              "cost": "$5,000-12,000 one-time (or DIY over 3-6 months)"
+            },
+            {
+              "item": "Website & branding",
+              "cost": "$1,000-2,000 one-time"
+            },
+            {
+              "item": "Hosting & infrastructure",
+              "cost": "$100-500/month (scales with pages)"
+            },
+            {
+              "item": "AI content generation",
+              "cost": "$200-1,000/month (Claude/GPT-4)"
+            },
+            {
+              "item": "Data sources",
+              "cost": "$100-500/month"
+            },
+            {
+              "item": "Domain & tools",
+              "cost": "$50-100/month"
+            }
           ]
         },
         "automation": {
           "overall": 95,
           "setup": "300-500 hours development (3-6 months)",
           "breakdown": [
-            { "task": "Page generation engine", "percent": 100, "tool": "Custom code + templates" },
-            { "task": "Content generation", "percent": 100, "tool": "GPT-4/Claude API" },
-            { "task": "SEO optimization", "percent": 100, "tool": "Automated meta tags, sitemaps" },
-            { "task": "Data ingestion", "percent": 100, "tool": "Automated data pipelines" },
-            { "task": "User authentication", "percent": 100, "tool": "Clerk/Auth0" },
-            { "task": "Billing", "percent": 100, "tool": "Stripe" },
-            { "task": "Customer support", "percent": 70, "tool": "AI chatbot + docs" }
+            {
+              "task": "Page generation engine",
+              "percent": 100,
+              "tool": "Custom code + templates"
+            },
+            {
+              "task": "Content generation",
+              "percent": 100,
+              "tool": "GPT-4/Claude API"
+            },
+            {
+              "task": "SEO optimization",
+              "percent": 100,
+              "tool": "Automated meta tags, sitemaps"
+            },
+            {
+              "task": "Data ingestion",
+              "percent": 100,
+              "tool": "Automated data pipelines"
+            },
+            {
+              "task": "User authentication",
+              "percent": 100,
+              "tool": "Clerk/Auth0"
+            },
+            {
+              "task": "Billing",
+              "percent": 100,
+              "tool": "Stripe"
+            },
+            {
+              "task": "Customer support",
+              "percent": 70,
+              "tool": "AI chatbot + docs"
+            }
           ],
           "personalTime": "10-20 hours/week (monitoring, improvements, support)",
           "vaTime": "0-5 hours/week (customer support, optional)",
-          "aiHandles": ["Page content generation", "SEO optimization", "Template customization", "User onboarding", "Basic support"],
-          "yourRole": ["Product strategy", "Feature development", "Marketing", "Complex support"],
-          "canDelegate": ["Customer support", "Content marketing", "Social media"]
+          "aiHandles": [
+            "Page content generation",
+            "SEO optimization",
+            "Template customization",
+            "User onboarding",
+            "Basic support"
+          ],
+          "yourRole": [
+            "Product strategy",
+            "Feature development",
+            "Marketing",
+            "Complex support"
+          ],
+          "canDelegate": [
+            "Customer support",
+            "Content marketing",
+            "Social media"
+          ]
         },
         "verdict": {
           "recommendation": "FUTURE - Too High Startup Cost for Now",
           "confidence": "Medium (6/10)",
           "reasoning": "Strong business model with high exit potential (5-8x) and 95% automation. However, requires $5-15K startup capital (over Sean's $15K limit when including initial marketing). Also requires 3-6 months of development before first revenue. Better suited as Phase 2 business after building cash flow with productized service or directory site. If Sean has technical skills or budget to hire, this could work. Otherwise, defer until capital available."
         }
+      },
+      "revenueScore": 9,
+      "profitMargin": 90,
+      "automationPercent": 95,
+      "timeToProfit": 8,
+      "capitalNeeded": "medium",
+      "qualityScore": 8,
+      "details": {
+        "caseStudy": "No case study available yet. This is a validated business model based on market research.",
+        "cac": "Startup: $5,000-15,000, Monthly: $2,000-5,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Multi-channel approach combining SEO, content marketing, partnerships, and targeted outreach. Focus on automation-first strategies."
       }
     },
     {
@@ -1667,11 +2515,26 @@
           "startup": "$10,000-30,000",
           "monthly": "$2,000-5,000",
           "breakdown": [
-            { "item": "Development (MVP)", "cost": "$10,000-25,000 (hiring) or 500-1,000 hours (DIY)" },
-            { "item": "Website & branding", "cost": "$2,000-3,000" },
-            { "item": "Tools & hosting", "cost": "$200-500/month" },
-            { "item": "Marketing", "cost": "$1,000-3,000/month" },
-            { "item": "Legal & business", "cost": "$1,000-2,000 one-time" }
+            {
+              "item": "Development (MVP)",
+              "cost": "$10,000-25,000 (hiring) or 500-1,000 hours (DIY)"
+            },
+            {
+              "item": "Website & branding",
+              "cost": "$2,000-3,000"
+            },
+            {
+              "item": "Tools & hosting",
+              "cost": "$200-500/month"
+            },
+            {
+              "item": "Marketing",
+              "cost": "$1,000-3,000/month"
+            },
+            {
+              "item": "Legal & business",
+              "cost": "$1,000-2,000 one-time"
+            }
           ]
         },
         "verdict": {
@@ -1679,6 +2542,17 @@
           "confidence": "High (9/10)",
           "reasoning": "Highest potential (5-10x exit, $1M+ revenue possible). However, requires $10-30K startup capital (over budget) and 6-12 months to first revenue (too slow for primary income replacement). Recommend as Phase 2: Build productized service first ($30K-50K/month), use revenue to fund Micro-SaaS development, transition over 12-18 months. This is the long-term wealth-building path but not viable as first business."
         }
+      },
+      "revenueScore": 10,
+      "profitMargin": 85,
+      "automationPercent": 60,
+      "timeToProfit": 12,
+      "capitalNeeded": "high",
+      "qualityScore": 10,
+      "details": {
+        "caseStudy": "No case study available yet. This is a validated business model based on market research.",
+        "cac": "Startup: $10,000-30,000, Monthly: $2,000-5,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Multi-channel approach combining SEO, content marketing, partnerships, and targeted outreach. Focus on automation-first strategies."
       }
     },
     {
@@ -1706,10 +2580,22 @@
           "startup": "$10,000-25,000",
           "monthly": "$5,000-10,000",
           "breakdown": [
-            { "item": "API infrastructure development", "cost": "$10,000-20,000 one-time" },
-            { "item": "Data partnerships/licenses", "cost": "$2,000-5,000 one-time" },
-            { "item": "API costs (hosting, data)", "cost": "$2,000-5,000/month" },
-            { "item": "Marketing", "cost": "$2,000-3,000/month" }
+            {
+              "item": "API infrastructure development",
+              "cost": "$10,000-20,000 one-time"
+            },
+            {
+              "item": "Data partnerships/licenses",
+              "cost": "$2,000-5,000 one-time"
+            },
+            {
+              "item": "API costs (hosting, data)",
+              "cost": "$2,000-5,000/month"
+            },
+            {
+              "item": "Marketing",
+              "cost": "$2,000-3,000/month"
+            }
           ]
         },
         "verdict": {
@@ -1717,6 +2603,17 @@
           "confidence": "High (8.5/10)",
           "reasoning": "Outstanding business model: 95% automated, 7-10x exit multiple, sticky B2B customers, $200K-500K/year potential. However, $10-25K startup cost exceeds Sean's budget. Also requires technical skills (API development, data pipelines). Recommend as Phase 3: After Micro-SaaS success, use profits to build data API as portfolio diversification. Could be acquired by larger data companies (ZoomInfo, Apollo) for significant exit."
         }
+      },
+      "revenueScore": 9,
+      "profitMargin": 90,
+      "automationPercent": 95,
+      "timeToProfit": 9,
+      "capitalNeeded": "high",
+      "qualityScore": 9,
+      "details": {
+        "caseStudy": "No case study available yet. This is a validated business model based on market research.",
+        "cac": "Startup: $10,000-25,000, Monthly: $5,000-10,000. CAC depends on channel - SEO (low), paid ads (medium), cold outreach (high).",
+        "marketingPlan": "Multi-channel approach combining SEO, content marketing, partnerships, and targeted outreach. Focus on automation-first strategies."
       }
     }
   ],
