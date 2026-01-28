@@ -1,153 +1,109 @@
 {
+  "lastUpdate": "2026-01-27T18:35:00-08:00",
   "businessModels": [
     {
       "id": 1,
-      "title": "AI Automation Agency",
-      "summary": "Build custom AI workflows for local businesses. High margins, low overhead, growing demand.",
-      "revenueScore": 8,
-      "profitMargin": 75,
-      "automationPercent": 40,
-      "timeToProfit": 2,
+      "title": "Lead Gen/Agency Automation",
+      "summary": "Voice AI agents + lead gen systems for local businesses. $0→$38K MRR in 90 days case study. One person manages 50 clients.",
+      "revenueScore": 10,
+      "profitMargin": 73,
+      "automationPercent": 95,
+      "timeToProfit": 3,
       "capitalNeeded": "low",
       "details": {
-        "caseStudy": "Agency scaled to $15k/mo in 6 months serving 8 clients. Average client pays $1,800/mo for AI chatbots, email automation, and lead qualification systems.",
-        "cac": "$200-400 per client via LinkedIn outreach and local networking",
-        "marketingPlan": "LinkedIn content → Free AI audit → Paid pilot → Retainer. Focus on dental offices, law firms, real estate agents who need lead nurturing but lack tech skills."
+        "caseStudy": "Voice AI agency: $0 → $38K MRR in 90 days (73% profit margin). At 50 clients: $298K annual revenue, $179K net profit.",
+        "cac": "$500-900 (8:1 to 15:1 LTV:CAC ratio). Channels: Referrals $100-300, SEO $205-450, Organic Social $300-600",
+        "marketingPlan": "Target HVAC, dental, solar, legal, salons. Setup: $2K-5K + $1.2K-3.5K/month recurring. 95%+ automation via ElevenLabs/Bland AI + Make.com. Research: 88KB report with 90-day launch plan."
       }
     },
     {
       "id": 2,
-      "title": "Micro-SaaS (Niche Tools)",
-      "summary": "Build small software tools solving specific problems. Recurring revenue, scalable, can be mostly automated.",
+      "title": "AI Automation Services",
+      "summary": "AI customer support for e-commerce/SaaS. Writesonic $13.4M ARR case study. 60-80% of tickets handled autonomously.",
       "revenueScore": 9,
-      "profitMargin": 90,
-      "automationPercent": 85,
-      "timeToProfit": 4,
+      "profitMargin": 75,
+      "automationPercent": 97,
+      "timeToProfit": 12,
       "capitalNeeded": "low",
       "details": {
-        "caseStudy": "Developer built a $4k/mo tool for podcast editors in 3 months. Simple transcription + show notes generator. 120 users at $39/mo.",
-        "cac": "$15-30 via Reddit/Twitter in niche communities",
-        "marketingPlan": "Build in public on Twitter → ProductHunt launch → SEO content → Niche community engagement. Target micro-niches with painful manual work."
+        "caseStudy": "Writesonic: $13.4M ARR, 10M users. Kira Systems: $416K/month. Local lead gen sites: 80-95% margins at $500-$2,000/month per site.",
+        "cac": "$1,800-$2,800 blended. By channel: Partnerships $0-50, SEO $50-150, Cold Email $100-300, Paid Search $150-500",
+        "marketingPlan": "Target mid-market e-commerce/SaaS ($5M-$50M revenue). Pricing: $2,500-$25,000/month. Year 2: $1.5M ARR with 17 clients. Research: 45KB report with 10 underserved niches."
       }
     },
     {
       "id": 3,
-      "title": "Content Arbitrage",
-      "summary": "Repurpose viral content across platforms. Low skill barrier, fast setup, moderate income potential.",
-      "revenueScore": 6,
-      "profitMargin": 60,
-      "automationPercent": 70,
-      "timeToProfit": 1,
+      "title": "Content Monetization Empire",
+      "summary": "AI-automated newsletters + programmatic SEO. 1440 Newsletter: $15M/year with 4M subscribers.",
+      "revenueScore": 9,
+      "profitMargin": 84,
+      "automationPercent": 95,
+      "timeToProfit": 6,
       "capitalNeeded": "low",
       "details": {
-        "caseStudy": "Creator earning $3k/mo reposting Reddit stories to TikTok with AI voiceovers. 200k followers, 5M monthly views, monetized via TikTok Creator Fund + brand deals.",
-        "cac": "$0 - organic growth only",
-        "marketingPlan": "Post 3x daily → Use trending sounds → Hook in first 3 seconds → Cross-post to YouTube Shorts/Instagram Reels. Scale with AI tools for voice + editing."
+        "caseStudy": "1440 Newsletter: $15M/year (4M subs). Inception Point AI: 3,000 podcast episodes/week at $1/episode. Why We Buy: $1M/year at 84% margins.",
+        "cac": "$2-30 depending on channel. Newsletter subscriber acquisition: Meta ads $2-5, organic content near-zero.",
+        "marketingPlan": "Newsletter: $180K-$360K year-1, 65-85% margins. SEO site: $10K-$15K year-1, exit at $25K-$72K. 95-98% automation. Research: 55KB report with 5 case studies."
       }
     },
     {
       "id": 4,
-      "title": "Local Lead Generation",
-      "summary": "Rank local service websites, sell leads to contractors. Passive income once ranked, proven model.",
-      "revenueScore": 7,
-      "profitMargin": 80,
-      "automationPercent": 60,
-      "timeToProfit": 6,
+      "title": "Micro-SaaS",
+      "summary": "Solo founder B2B tools. TweetHunter $83K MRR, Bannerbear $40K MRR. 80-85% automation achievable.",
+      "revenueScore": 8,
+      "profitMargin": 50,
+      "automationPercent": 82,
+      "timeToProfit": 10,
       "capitalNeeded": "low",
       "details": {
-        "caseStudy": "Operator runs 12 lead gen sites earning $8k/mo. Each site ranks for 'roofing [city name]' and sells leads at $50-150 each to local roofers.",
-        "cac": "$500-1000 per site (domain, hosting, initial SEO)",
-        "marketingPlan": "Build simple site → Local SEO (GMB, citations, backlinks) → Rank in 4-8 months → Sell leads on pay-per-lead or monthly retainer basis."
+        "caseStudy": "TweetHunter: $83K+ MRR. Bannerbear: $40K+ MRR. Simple Analytics: $35K+ MRR. Storemapper: $25K+ MRR.",
+        "cac": "$15-400 by channel. SEO/Content: $30-80, Product-Led Growth: $15-50, Building in Public: $25-70, Paid Ads: $150-400 (scale only)",
+        "marketingPlan": "Focus: ONE problem solved perfectly, $29-99/mo pricing, underserved B2B niches. No-code stack: Bubble vs Webflow. Build time: 4-8 weeks MVP. Research: 38KB blueprint with 8 niches."
       }
     },
     {
       "id": 5,
-      "title": "Digital Product Empire",
-      "summary": "Sell courses, templates, guides in a niche you know. High margins, no inventory, infinite scale.",
+      "title": "Digital Products",
+      "summary": "Templates, courses, tools. FormulaBot $220K/mo, HeadshotPro $300K/mo. 95-99% automation, 70-85% margins.",
       "revenueScore": 8,
-      "profitMargin": 95,
-      "automationPercent": 80,
+      "profitMargin": 78,
+      "automationPercent": 97,
       "timeToProfit": 3,
       "capitalNeeded": "low",
       "details": {
-        "caseStudy": "Designer selling Notion templates makes $12k/mo. Portfolio of 15 templates at $19-79 each. Built audience of 40k on Twitter sharing free tips.",
-        "cac": "$0-20 via organic content and email list",
-        "marketingPlan": "Build audience with free value → Launch with waitlist → Upsell template bundle → Automate with Gumroad/Lemon Squeezy. Focus on specific outcome (e.g., 'Notion for freelancers')."
+        "caseStudy": "FormulaBot: $220k/month (Excel AI tool). HeadshotPro: $300k/month (AI headshots). NoteForms: $37k/month (Notion forms).",
+        "cac": "$40-4,664 by channel. Referrals: $40, organic content: $50-200, SEO: $100-300, paid ads: $500-2,000",
+        "marketingPlan": "Proven models: courses, templates, tools. $37K-$180K year-1 potential. Build audience with free value → Launch with waitlist → Automate with Gumroad/Lemon Squeezy. Research: 20KB report with 3 case studies."
       }
     },
     {
       "id": 6,
-      "title": "Affiliate SEO Sites",
-      "summary": "Review products, earn commissions. Passive once ranked, requires upfront content investment.",
+      "title": "Marketplace/Arbitrage",
+      "summary": "AI arbitrage agency + print-on-demand. FBA average $160K revenue, POD 95-98% automated with 20-40% margins.",
       "revenueScore": 7,
-      "profitMargin": 85,
-      "automationPercent": 75,
+      "profitMargin": 45,
+      "automationPercent": 93,
       "timeToProfit": 8,
-      "capitalNeeded": "low",
+      "capitalNeeded": "medium",
       "details": {
-        "caseStudy": "Site reviewing camping gear generates $5k/mo from Amazon Associates + brand partnerships. 150 articles, 50k monthly visitors, 8 months to profitability.",
-        "cac": "$300-600 per article (writer + editor)",
-        "marketingPlan": "Target long-tail buyer keywords → Publish comprehensive reviews → Build backlinks → Update seasonally. Focus on high-commission niches (software, tools, electronics)."
+        "caseStudy": "AI Arbitrage Agency: $231,700 year-1 net profit, 70-80% gross margins. Amazon FBA: Average seller $160K annual revenue (median $35K).",
+        "cac": "$200-800 per client (agency), $5-15 per customer (POD). Industry: $53-91, by channel: $212-379",
+        "marketingPlan": "Agency: 95% automation after setup. POD: 95-98% automation, 20-40% margins, break-even 6-12 months. Staircase strategy: start small, scale up. Research: 15KB report with 4 models."
       }
     },
     {
       "id": 7,
-      "title": "Done-For-You Service (Virtual)",
-      "summary": "Offer specialized service remotely. Quick to start, trades time for money initially, can scale with team.",
-      "revenueScore": 6,
-      "profitMargin": 60,
-      "automationPercent": 30,
-      "timeToProfit": 1,
+      "title": "YouTube Shorts Automation",
+      "summary": "Automated short-form video creation. Currently operational at $0.31/video, 2min 13sec per video.",
+      "revenueScore": 5,
+      "profitMargin": 50,
+      "automationPercent": 100,
+      "timeToProfit": 12,
       "capitalNeeded": "low",
       "details": {
-        "caseStudy": "Virtual bookkeeper serving e-commerce brands at $800/mo per client. Started solo, hired 2 VAs after 6 months, now manages 15 clients.",
-        "cac": "$100-300 via referrals and cold outreach",
-        "marketingPlan": "Niche down hard (e.g., Shopify stores only) → Join relevant communities → Offer free audit → Close on value. Scale by systematizing and hiring."
-      }
-    },
-    {
-      "id": 8,
-      "title": "Newsletter Empire",
-      "summary": "Curate valuable content, monetize via sponsors and products. Slow build but high upside.",
-      "revenueScore": 7,
-      "profitMargin": 90,
-      "automationPercent": 50,
-      "timeToProfit": 6,
-      "capitalNeeded": "low",
-      "details": {
-        "caseStudy": "AI newsletter with 25k subscribers earning $6k/mo. 2 sponsor slots at $2k each, plus $2k from affiliate links and paid recommendations.",
-        "cac": "$0.50-2 per subscriber via Twitter growth + referral program",
-        "marketingPlan": "Weekly valuable curation → Guest posts on larger newsletters → Referral incentives → Monetize at 5k+ subs. Use Beehiiv or ConvertKit for growth tools."
-      }
-    },
-    {
-      "id": 9,
-      "title": "E-commerce (Dropshipping/POD)",
-      "summary": "Sell physical products without inventory. Competitive but accessible, moderate margins.",
-      "revenueScore": 6,
-      "profitMargin": 35,
-      "automationPercent": 65,
-      "timeToProfit": 3,
-      "capitalNeeded": "medium",
-      "details": {
-        "caseStudy": "Print-on-demand store selling niche meme apparel: $8k/mo profit on $25k revenue. Uses Printful + Shopify, runs Meta ads to warm audiences.",
-        "cac": "$15-40 per customer via Facebook/Instagram ads",
-        "marketingPlan": "Find trending niche → Test designs with ads → Scale winners → Build retargeting funnels. Focus on passionate micro-communities (hobbies, professions, memes)."
-      }
-    },
-    {
-      "id": 10,
-      "title": "YouTube Automation",
-      "summary": "Faceless YouTube channels with outsourced production. High upside, requires content quality focus.",
-      "revenueScore": 8,
-      "profitMargin": 70,
-      "automationPercent": 80,
-      "timeToProfit": 6,
-      "capitalNeeded": "medium",
-      "details": {
-        "caseStudy": "Faceless finance channel earning $10k/mo from AdSense + sponsorships. 100k subs, outsources scripts ($50), voiceover ($30), editing ($100) per video. Posts 3x/week.",
-        "cac": "$0 organic + $200/video production cost",
-        "marketingPlan": "Pick evergreen niche (finance, history, tech) → Hire VA team → Optimize thumbnails/titles → Publish consistently. Monetize via ads, sponsors, affiliate links in description."
+        "caseStudy": "System launched: First Short published successfully. End-to-end pipeline: Script → Voiceover → S3 → Rendering → Upload in 2min 13sec.",
+        "cac": "$0 (organic growth). Cost per video: $0.31. Monthly capacity: 200 Shorts at $62/month (Shotstack $40, ElevenLabs $11, Claude API $10, S3 $1)",
+        "marketingPlan": "Full automation operational: Claude API script gen, ElevenLabs voice, Shotstack rendering, YouTube API upload. Captions synced, stock footage integrated. Ready for batch production."
       }
     }
   ],
@@ -155,79 +111,83 @@
     "activeProjects": [
       {
         "id": 1,
-        "name": "AI Chatbot MVP",
-        "progress": 65,
-        "dueDate": "2025-02-15",
-        "status": "on-track"
+        "name": "Business Model Research 2026",
+        "progress": 100,
+        "dueDate": "2026-01-27",
+        "status": "complete"
       },
       {
         "id": 2,
-        "name": "Content SEO Site",
-        "progress": 30,
-        "dueDate": "2025-03-01",
-        "status": "on-track"
+        "name": "YouTube Shorts Automation",
+        "progress": 100,
+        "dueDate": "2026-01-27",
+        "status": "complete"
       },
       {
         "id": 3,
-        "name": "Newsletter Launch",
-        "progress": 85,
-        "dueDate": "2025-01-20",
-        "status": "ahead"
+        "name": "Command Dashboard",
+        "progress": 100,
+        "dueDate": "2026-01-27",
+        "status": "complete"
       }
     ],
     "todos": [
       {
         "id": 1,
-        "task": "Finish chatbot demo for first client pitch",
+        "task": "Review 10 business research reports (300KB total)",
         "priority": "high",
-        "dueDate": "2025-01-18"
+        "dueDate": "2026-01-28"
       },
       {
         "id": 2,
-        "task": "Write 3 SEO articles for affiliate site",
-        "priority": "medium",
-        "dueDate": "2025-01-22"
+        "task": "Test live dashboard at bokjohn.github.io/dashboard-deploy",
+        "priority": "high",
+        "dueDate": "2026-01-27"
       },
       {
         "id": 3,
-        "task": "Record YouTube automation video #1",
-        "priority": "low",
-        "dueDate": "2025-01-25"
+        "task": "Select top 2-3 business models to pursue",
+        "priority": "high",
+        "dueDate": "2026-01-28"
       },
       {
         "id": 4,
-        "task": "Set up email sequence for newsletter",
-        "priority": "high",
-        "dueDate": "2025-01-19"
-      },
-      {
-        "id": 5,
-        "task": "Research Micro-SaaS ideas in productivity niche",
+        "task": "Watch first YouTube Short (quality check)",
         "priority": "medium",
-        "dueDate": "2025-01-28"
+        "dueDate": "2026-01-28"
       }
     ],
     "recentCompletions": [
       {
         "id": 1,
-        "task": "Domain + hosting setup for lead gen site",
-        "completedDate": "2025-01-14"
+        "task": "10 enhanced business research reports delivered (AI Services, Digital Products, Content, Marketplace, Lead Gen, Micro-SaaS)",
+        "completedDate": "2026-01-27"
       },
       {
         "id": 2,
-        "task": "First newsletter issue sent (250 subs)",
-        "completedDate": "2025-01-13"
+        "task": "Dashboard built and deployed to GitHub Pages with dark/light mode",
+        "completedDate": "2026-01-27"
       },
       {
         "id": 3,
-        "task": "Cold outreach campaign to 50 local businesses",
-        "completedDate": "2025-01-12"
+        "task": "Gateway config maxed: 16 concurrent ops, 20 sub-agents, full permissions",
+        "completedDate": "2026-01-27"
+      },
+      {
+        "id": 4,
+        "task": "BUSINESS-PRINCIPLES.md integrated into boot process (12 core principles)",
+        "completedDate": "2026-01-27"
+      },
+      {
+        "id": 5,
+        "task": "Core guidance files updated: removed construction references, added platform risk alerts",
+        "completedDate": "2026-01-27"
       }
     ],
     "nextActions": [
-      "Schedule client demo call for Friday",
-      "Batch-write newsletter content for next 4 weeks",
-      "Test Facebook ads for POD store ($50 budget)"
+      "Sean reviews dashboard and business research reports",
+      "Rank business models by ROI/speed/capital on request",
+      "Begin validation on selected top 2-3 models"
     ]
   }
 }
