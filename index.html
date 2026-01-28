@@ -1021,17 +1021,25 @@
         // Load data
         async function loadData() {
             try {
-                const response = await fetch('data.json');
-                data = await response.json();
+                const response = await fetch('./data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                const text = await response.text();
+                data = JSON.parse(text);
                 renderHeroMetrics();
                 renderBusinessCards();
             } catch (error) {
                 console.error('Error loading data:', error);
+                const errorDetails = error.message || 'Unknown error';
                 document.getElementById('businessGrid').innerHTML = `
                     <div class="empty-state">
                         <div class="empty-icon">⚠️</div>
                         <h3>Error loading data</h3>
-                        <p>Make sure data.json is in the same folder</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 8px;">${errorDetails}</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: 12px;">
+                            Try refreshing the page. If the issue persists, check browser console for details.
+                        </p>
                     </div>
                 `;
             }
@@ -1040,16 +1048,24 @@
         // Load command center data
         async function loadCommandCenterData() {
             try {
-                const response = await fetch('command-center-enhanced-structure.json');
-                commandCenterData = await response.json();
+                const response = await fetch('./command-center-enhanced-structure.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                const text = await response.text();
+                commandCenterData = JSON.parse(text);
                 renderCommandCenter();
             } catch (error) {
                 console.error('Error loading command center data:', error);
+                const errorDetails = error.message || 'Unknown error';
                 document.getElementById('commandCenterContent').innerHTML = `
                     <div class="empty-state">
                         <div class="empty-icon">⚠️</div>
                         <h3>Error loading command center</h3>
-                        <p>Make sure command-center-enhanced-structure.json is in the same folder</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 8px;">${errorDetails}</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: 12px;">
+                            Try refreshing the page. If the issue persists, check browser console for details.
+                        </p>
                     </div>
                 `;
             }
