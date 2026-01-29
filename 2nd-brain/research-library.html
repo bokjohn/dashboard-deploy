@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Library - 2nd Brain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-btn">← Back</a>
+            <h1>📚 Research Library</h1>
+            <p class="subtitle">Organized Knowledge & Findings</p>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search research topics..." />
+            <button id="search-btn">🔍</button>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Topics</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-value" id="total-topics">0</span>
+                <span class="stat-label">Topics</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="key-findings">0</span>
+                <span class="stat-label">Key Findings</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="total-sources">0</span>
+                <span class="stat-label">Sources</span>
+            </div>
+        </div>
+
+        <div id="research-list" class="content-section">
+            <!-- Research topics will be loaded here -->
+        </div>
+
+        <button class="fab" id="add-research" title="Add Research">+</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="research-library.js"></script>
+</body>
+</html>

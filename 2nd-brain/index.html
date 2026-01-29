@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal knowledge management dashboard">
+    <meta name="theme-color" content="#6366f1">
+    <title>2nd Brain Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 2nd Brain</h1>
+            <p class="subtitle">Your Personal Knowledge Hub</p>
+        </header>
+
+        <nav class="dashboard-grid">
+            <a href="decision-center.html" class="dashboard-card">
+                <div class="card-icon">⚖️</div>
+                <h2>Decision Center</h2>
+                <p>Track pending decisions with pros, cons & recommendations</p>
+                <span class="badge" id="pending-decisions">0</span>
+            </a>
+
+            <a href="research-library.html" class="dashboard-card">
+                <div class="card-icon">📚</div>
+                <h2>Research Library</h2>
+                <p>Organized research with key findings & insights</p>
+                <span class="badge" id="research-topics">0</span>
+            </a>
+
+            <a href="week-review.html" class="dashboard-card">
+                <div class="card-icon">📅</div>
+                <h2>Week in Review</h2>
+                <p>Timeline of conversations, progress & next actions</p>
+                <span class="badge success" id="week-actions">0</span>
+            </a>
+        </nav>
+
+        <footer>
+            <p>Last synced: <span id="last-sync">--</span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Update badges with current counts
+        window.addEventListener('DOMContentLoaded', () => {
+            updateDashboardStats();
+            document.getElementById('last-sync').textContent = new Date().toLocaleTimeString();
+        });
+    </script>
+</body>
+</html>

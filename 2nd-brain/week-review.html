@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week in Review - 2nd Brain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-btn">← Back</a>
+            <h1>📅 Week in Review</h1>
+            <p class="subtitle" id="week-range">Loading...</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-value" id="conversations">0</span>
+                <span class="stat-label">Conversations</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="decisions-made">0</span>
+                <span class="stat-label">Decisions</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="actions-taken">0</span>
+                <span class="stat-label">Actions</span>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-days="7">This Week</button>
+            <button class="filter-btn" data-days="14">2 Weeks</button>
+            <button class="filter-btn" data-days="30">Month</button>
+        </div>
+
+        <div class="content-section">
+            <h2>📊 Progress Summary</h2>
+            <div id="progress-summary" class="summary-cards">
+                <!-- Progress cards will be loaded here -->
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>⏰ Timeline</h2>
+            <div id="timeline" class="timeline">
+                <!-- Timeline events will be loaded here -->
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🎯 Next Actions</h2>
+            <div id="next-actions" class="action-list">
+                <!-- Next actions will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="week-review.js"></script>
+</body>
+</html>

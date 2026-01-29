@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Center - 2nd Brain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-btn">← Back</a>
+            <h1>⚖️ Decision Center</h1>
+            <p class="subtitle">Pending Decisions & Analysis</p>
+        </header>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="decided">Decided</button>
+            <button class="filter-btn" data-filter="archived">Archived</button>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-value" id="total-decisions">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="pending-count">0</span>
+                <span class="stat-label">Pending</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="decided-count">0</span>
+                <span class="stat-label">Decided</span>
+            </div>
+        </div>
+
+        <div id="decisions-list" class="content-section">
+            <!-- Decisions will be loaded here -->
+        </div>
+
+        <button class="fab" id="add-decision" title="Add Decision">+</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="decision-center.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+::1 - - [28/Jan/2026 17:22:09] "GET / HTTP/1.1" 200 -
+::1 - - [28/Jan/2026 17:22:48] "GET /decision-center.html HTTP/1.1" 200 -
+::1 - - [28/Jan/2026 17:22:48] "GET /research-library.html HTTP/1.1" 200 -
+::1 - - [28/Jan/2026 17:22:48] "GET /week-review.html HTTP/1.1" 200 -
